@@ -1,0 +1,3738 @@
+
+LCD.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000062  00800100  00001d64  00001df8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001d64  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          000002c7  00800162  00800162  00001e5a  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00001e5a  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001e8c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000170  00000000  00000000  00001ecc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000286e  00000000  00000000  0000203c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000b58  00000000  00000000  000048aa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001cff  00000000  00000000  00005402  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000004d0  00000000  00000000  00007104  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000009a2  00000000  00000000  000075d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001cd8  00000000  00000000  00007f76  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000002c8  00000000  00000000  00009c4e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	4d c0       	rjmp	.+154    	; 0x9c <__ctors_end>
+       2:	00 00       	nop
+       4:	6a c0       	rjmp	.+212    	; 0xda <__bad_interrupt>
+       6:	00 00       	nop
+       8:	68 c0       	rjmp	.+208    	; 0xda <__bad_interrupt>
+       a:	00 00       	nop
+       c:	66 c0       	rjmp	.+204    	; 0xda <__bad_interrupt>
+       e:	00 00       	nop
+      10:	64 c0       	rjmp	.+200    	; 0xda <__bad_interrupt>
+      12:	00 00       	nop
+      14:	62 c0       	rjmp	.+196    	; 0xda <__bad_interrupt>
+      16:	00 00       	nop
+      18:	60 c0       	rjmp	.+192    	; 0xda <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	5e c0       	rjmp	.+188    	; 0xda <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	5c c0       	rjmp	.+184    	; 0xda <__bad_interrupt>
+      22:	00 00       	nop
+      24:	5a c0       	rjmp	.+180    	; 0xda <__bad_interrupt>
+      26:	00 00       	nop
+      28:	58 c0       	rjmp	.+176    	; 0xda <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	56 c0       	rjmp	.+172    	; 0xda <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	54 c0       	rjmp	.+168    	; 0xda <__bad_interrupt>
+      32:	00 00       	nop
+      34:	0c 94 ff 0c 	jmp	0x19fe	; 0x19fe <__vector_13>
+      38:	50 c0       	rjmp	.+160    	; 0xda <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	4e c0       	rjmp	.+156    	; 0xda <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	4c c0       	rjmp	.+152    	; 0xda <__bad_interrupt>
+      42:	00 00       	nop
+      44:	4a c0       	rjmp	.+148    	; 0xda <__bad_interrupt>
+      46:	00 00       	nop
+      48:	48 c0       	rjmp	.+144    	; 0xda <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	46 c0       	rjmp	.+140    	; 0xda <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	44 c0       	rjmp	.+136    	; 0xda <__bad_interrupt>
+      52:	00 00       	nop
+      54:	42 c0       	rjmp	.+132    	; 0xda <__bad_interrupt>
+      56:	00 00       	nop
+      58:	40 c0       	rjmp	.+128    	; 0xda <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	3e c0       	rjmp	.+124    	; 0xda <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	3c c0       	rjmp	.+120    	; 0xda <__bad_interrupt>
+      62:	00 00       	nop
+      64:	3a c0       	rjmp	.+116    	; 0xda <__bad_interrupt>
+      66:	00 00       	nop
+      68:	38 c0       	rjmp	.+112    	; 0xda <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	36 c0       	rjmp	.+108    	; 0xda <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	34 c0       	rjmp	.+104    	; 0xda <__bad_interrupt>
+      72:	00 00       	nop
+      74:	32 c0       	rjmp	.+100    	; 0xda <__bad_interrupt>
+      76:	00 00       	nop
+      78:	30 c0       	rjmp	.+96     	; 0xda <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	2e c0       	rjmp	.+92     	; 0xda <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	2c c0       	rjmp	.+88     	; 0xda <__bad_interrupt>
+      82:	00 00       	nop
+      84:	2a c0       	rjmp	.+84     	; 0xda <__bad_interrupt>
+      86:	00 00       	nop
+      88:	28 c0       	rjmp	.+80     	; 0xda <__bad_interrupt>
+      8a:	00 00       	nop
+      8c:	0f 09       	sbc	r16, r15
+      8e:	14 09       	sbc	r17, r4
+      90:	31 09       	sbc	r19, r1
+      92:	3c 09       	sbc	r19, r12
+      94:	42 09       	sbc	r20, r2
+      96:	51 09       	sbc	r21, r1
+      98:	6c 09       	sbc	r22, r12
+      9a:	79 09       	sbc	r23, r9
+
+0000009c <__ctors_end>:
+      9c:	11 24       	eor	r1, r1
+      9e:	1f be       	out	0x3f, r1	; 63
+      a0:	cf ef       	ldi	r28, 0xFF	; 255
+      a2:	d0 e4       	ldi	r29, 0x40	; 64
+      a4:	de bf       	out	0x3e, r29	; 62
+      a6:	cd bf       	out	0x3d, r28	; 61
+
+000000a8 <__do_copy_data>:
+      a8:	11 e0       	ldi	r17, 0x01	; 1
+      aa:	a0 e0       	ldi	r26, 0x00	; 0
+      ac:	b1 e0       	ldi	r27, 0x01	; 1
+      ae:	e4 e6       	ldi	r30, 0x64	; 100
+      b0:	fd e1       	ldi	r31, 0x1D	; 29
+      b2:	00 e0       	ldi	r16, 0x00	; 0
+      b4:	0b bf       	out	0x3b, r16	; 59
+      b6:	02 c0       	rjmp	.+4      	; 0xbc <__do_copy_data+0x14>
+      b8:	07 90       	elpm	r0, Z+
+      ba:	0d 92       	st	X+, r0
+      bc:	a2 36       	cpi	r26, 0x62	; 98
+      be:	b1 07       	cpc	r27, r17
+      c0:	d9 f7       	brne	.-10     	; 0xb8 <__do_copy_data+0x10>
+
+000000c2 <__do_clear_bss>:
+      c2:	24 e0       	ldi	r18, 0x04	; 4
+      c4:	a2 e6       	ldi	r26, 0x62	; 98
+      c6:	b1 e0       	ldi	r27, 0x01	; 1
+      c8:	01 c0       	rjmp	.+2      	; 0xcc <.do_clear_bss_start>
+
+000000ca <.do_clear_bss_loop>:
+      ca:	1d 92       	st	X+, r1
+
+000000cc <.do_clear_bss_start>:
+      cc:	a9 32       	cpi	r26, 0x29	; 41
+      ce:	b2 07       	cpc	r27, r18
+      d0:	e1 f7       	brne	.-8      	; 0xca <.do_clear_bss_loop>
+      d2:	0e 94 64 0d 	call	0x1ac8	; 0x1ac8 <main>
+      d6:	0c 94 b0 0e 	jmp	0x1d60	; 0x1d60 <_exit>
+
+000000da <__bad_interrupt>:
+      da:	92 cf       	rjmp	.-220    	; 0x0 <__vectors>
+
+000000dc <write>:
+    _avr_timer_cntcurr = _avr_timer_M;
+    SREG |= 0x80; // 0x80: 1000000
+}
+
+void TimerOff() {
+    TCCR1B = 0x00; // bit3bit1bit0=000: timer off
+      dc:	2a 98       	cbi	0x05, 2	; 5
+      de:	66 23       	and	r22, r22
+      e0:	11 f0       	breq	.+4      	; 0xe6 <write+0xa>
+      e2:	2c 9a       	sbi	0x05, 4	; 5
+      e4:	15 c0       	rjmp	.+42     	; 0x110 <write+0x34>
+      e6:	2c 98       	cbi	0x05, 4	; 5
+      e8:	13 c0       	rjmp	.+38     	; 0x110 <write+0x34>
+      ea:	ac 01       	movw	r20, r24
+      ec:	02 2e       	mov	r0, r18
+      ee:	02 c0       	rjmp	.+4      	; 0xf4 <write+0x18>
+      f0:	55 95       	asr	r21
+      f2:	47 95       	ror	r20
+      f4:	0a 94       	dec	r0
+      f6:	e2 f7       	brpl	.-8      	; 0xf0 <write+0x14>
+      f8:	40 ff       	sbrs	r20, 0
+      fa:	02 c0       	rjmp	.+4      	; 0x100 <write+0x24>
+      fc:	2d 9a       	sbi	0x05, 5	; 5
+      fe:	01 c0       	rjmp	.+2      	; 0x102 <write+0x26>
+     100:	2d 98       	cbi	0x05, 5	; 5
+     102:	2e 9a       	sbi	0x05, 6	; 5
+     104:	2e 98       	cbi	0x05, 6	; 5
+     106:	21 50       	subi	r18, 0x01	; 1
+     108:	31 09       	sbc	r19, r1
+     10a:	78 f7       	brcc	.-34     	; 0xea <write+0xe>
+     10c:	2a 9a       	sbi	0x05, 2	; 5
+     10e:	08 95       	ret
+     110:	27 e0       	ldi	r18, 0x07	; 7
+     112:	30 e0       	ldi	r19, 0x00	; 0
+     114:	90 e0       	ldi	r25, 0x00	; 0
+     116:	e9 cf       	rjmp	.-46     	; 0xea <write+0xe>
+
+00000118 <write_cmd>:
+     118:	60 e0       	ldi	r22, 0x00	; 0
+     11a:	e0 cf       	rjmp	.-64     	; 0xdc <write>
+     11c:	08 95       	ret
+
+0000011e <Button_Tick>:
+     11e:	81 30       	cpi	r24, 0x01	; 1
+     120:	91 05       	cpc	r25, r1
+     122:	81 f0       	breq	.+32     	; 0x144 <Button_Tick+0x26>
+     124:	1c f4       	brge	.+6      	; 0x12c <Button_Tick+0xe>
+     126:	00 97       	sbiw	r24, 0x00	; 0
+     128:	41 f0       	breq	.+16     	; 0x13a <Button_Tick+0x1c>
+     12a:	22 c0       	rjmp	.+68     	; 0x170 <Button_Tick+0x52>
+     12c:	82 30       	cpi	r24, 0x02	; 2
+     12e:	91 05       	cpc	r25, r1
+     130:	b9 f0       	breq	.+46     	; 0x160 <Button_Tick+0x42>
+     132:	83 30       	cpi	r24, 0x03	; 3
+     134:	91 05       	cpc	r25, r1
+     136:	b9 f0       	breq	.+46     	; 0x166 <Button_Tick+0x48>
+     138:	1b c0       	rjmp	.+54     	; 0x170 <Button_Tick+0x52>
+     13a:	10 92 a3 03 	sts	0x03A3, r1	; 0x8003a3 <Bcnt>
+     13e:	10 92 25 04 	sts	0x0425, r1	; 0x800425 <resetG>
+     142:	1f c0       	rjmp	.+62     	; 0x182 <Button_Tick+0x64>
+     144:	80 b1       	in	r24, 0x00	; 0
+     146:	80 95       	com	r24
+     148:	8c 70       	andi	r24, 0x0C	; 12
+     14a:	80 93 67 01 	sts	0x0167, r24	; 0x800167 <TEMPA>
+     14e:	88 30       	cpi	r24, 0x08	; 8
+     150:	21 f4       	brne	.+8      	; 0x15a <Button_Tick+0x3c>
+     152:	81 e0       	ldi	r24, 0x01	; 1
+     154:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <resetG>
+     158:	14 c0       	rjmp	.+40     	; 0x182 <Button_Tick+0x64>
+     15a:	84 30       	cpi	r24, 0x04	; 4
+     15c:	b9 f0       	breq	.+46     	; 0x18c <Button_Tick+0x6e>
+     15e:	11 c0       	rjmp	.+34     	; 0x182 <Button_Tick+0x64>
+     160:	10 92 a3 03 	sts	0x03A3, r1	; 0x8003a3 <Bcnt>
+     164:	19 c0       	rjmp	.+50     	; 0x198 <Button_Tick+0x7a>
+     166:	80 91 a3 03 	lds	r24, 0x03A3	; 0x8003a3 <Bcnt>
+     16a:	82 30       	cpi	r24, 0x02	; 2
+     16c:	50 f4       	brcc	.+20     	; 0x182 <Button_Tick+0x64>
+     16e:	14 c0       	rjmp	.+40     	; 0x198 <Button_Tick+0x7a>
+     170:	82 30       	cpi	r24, 0x02	; 2
+     172:	91 05       	cpc	r25, r1
+     174:	59 f0       	breq	.+22     	; 0x18c <Button_Tick+0x6e>
+     176:	83 30       	cpi	r24, 0x03	; 3
+     178:	91 05       	cpc	r25, r1
+     17a:	71 f0       	breq	.+28     	; 0x198 <Button_Tick+0x7a>
+     17c:	81 30       	cpi	r24, 0x01	; 1
+     17e:	91 05       	cpc	r25, r1
+     180:	91 f4       	brne	.+36     	; 0x1a6 <Button_Tick+0x88>
+     182:	10 92 26 04 	sts	0x0426, r1	; 0x800426 <Press>
+     186:	81 e0       	ldi	r24, 0x01	; 1
+     188:	90 e0       	ldi	r25, 0x00	; 0
+     18a:	08 95       	ret
+     18c:	81 e0       	ldi	r24, 0x01	; 1
+     18e:	80 93 26 04 	sts	0x0426, r24	; 0x800426 <Press>
+     192:	82 e0       	ldi	r24, 0x02	; 2
+     194:	90 e0       	ldi	r25, 0x00	; 0
+     196:	08 95       	ret
+     198:	80 91 a3 03 	lds	r24, 0x03A3	; 0x8003a3 <Bcnt>
+     19c:	8f 5f       	subi	r24, 0xFF	; 255
+     19e:	80 93 a3 03 	sts	0x03A3, r24	; 0x8003a3 <Bcnt>
+     1a2:	83 e0       	ldi	r24, 0x03	; 3
+     1a4:	90 e0       	ldi	r25, 0x00	; 0
+     1a6:	08 95       	ret
+
+000001a8 <Joystick_Tick>:
+     1a8:	81 30       	cpi	r24, 0x01	; 1
+     1aa:	91 05       	cpc	r25, r1
+     1ac:	31 f0       	breq	.+12     	; 0x1ba <Joystick_Tick+0x12>
+     1ae:	82 30       	cpi	r24, 0x02	; 2
+     1b0:	91 05       	cpc	r25, r1
+     1b2:	31 f0       	breq	.+12     	; 0x1c0 <Joystick_Tick+0x18>
+     1b4:	00 97       	sbiw	r24, 0x00	; 0
+     1b6:	41 f4       	brne	.+16     	; 0x1c8 <Joystick_Tick+0x20>
+     1b8:	0f c0       	rjmp	.+30     	; 0x1d8 <Joystick_Tick+0x30>
+     1ba:	10 92 7c 00 	sts	0x007C, r1	; 0x80007c <__TEXT_REGION_LENGTH__+0x7e007c>
+     1be:	42 c0       	rjmp	.+132    	; 0x244 <Joystick_Tick+0x9c>
+     1c0:	81 e0       	ldi	r24, 0x01	; 1
+     1c2:	80 93 7c 00 	sts	0x007C, r24	; 0x80007c <__TEXT_REGION_LENGTH__+0x7e007c>
+     1c6:	08 c0       	rjmp	.+16     	; 0x1d8 <Joystick_Tick+0x30>
+     1c8:	81 30       	cpi	r24, 0x01	; 1
+     1ca:	91 05       	cpc	r25, r1
+     1cc:	29 f0       	breq	.+10     	; 0x1d8 <Joystick_Tick+0x30>
+     1ce:	82 30       	cpi	r24, 0x02	; 2
+     1d0:	91 05       	cpc	r25, r1
+     1d2:	09 f0       	breq	.+2      	; 0x1d6 <Joystick_Tick+0x2e>
+     1d4:	64 c0       	rjmp	.+200    	; 0x29e <Joystick_Tick+0xf6>
+     1d6:	36 c0       	rjmp	.+108    	; 0x244 <Joystick_Tick+0x9c>
+     1d8:	80 91 78 00 	lds	r24, 0x0078	; 0x800078 <__TEXT_REGION_LENGTH__+0x7e0078>
+     1dc:	90 91 79 00 	lds	r25, 0x0079	; 0x800079 <__TEXT_REGION_LENGTH__+0x7e0079>
+     1e0:	a0 e0       	ldi	r26, 0x00	; 0
+     1e2:	b0 e0       	ldi	r27, 0x00	; 0
+     1e4:	80 93 a6 03 	sts	0x03A6, r24	; 0x8003a6 <JSXcor>
+     1e8:	90 93 a7 03 	sts	0x03A7, r25	; 0x8003a7 <JSXcor+0x1>
+     1ec:	a0 93 a8 03 	sts	0x03A8, r26	; 0x8003a8 <JSXcor+0x2>
+     1f0:	b0 93 a9 03 	sts	0x03A9, r27	; 0x8003a9 <JSXcor+0x3>
+     1f4:	80 3a       	cpi	r24, 0xA0	; 160
+     1f6:	23 e0       	ldi	r18, 0x03	; 3
+     1f8:	92 07       	cpc	r25, r18
+     1fa:	a1 05       	cpc	r26, r1
+     1fc:	b1 05       	cpc	r27, r1
+     1fe:	08 f0       	brcs	.+2      	; 0x202 <Joystick_Tick+0x5a>
+     200:	46 c0       	rjmp	.+140    	; 0x28e <Joystick_Tick+0xe6>
+     202:	84 36       	cpi	r24, 0x64	; 100
+     204:	91 05       	cpc	r25, r1
+     206:	a1 05       	cpc	r26, r1
+     208:	b1 05       	cpc	r27, r1
+     20a:	30 f4       	brcc	.+12     	; 0x218 <Joystick_Tick+0x70>
+     20c:	81 e0       	ldi	r24, 0x01	; 1
+     20e:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <move>
+     212:	81 e0       	ldi	r24, 0x01	; 1
+     214:	90 e0       	ldi	r25, 0x00	; 0
+     216:	08 95       	ret
+     218:	80 91 21 04 	lds	r24, 0x0421	; 0x800421 <JSycord>
+     21c:	90 91 22 04 	lds	r25, 0x0422	; 0x800422 <JSycord+0x1>
+     220:	a0 91 23 04 	lds	r26, 0x0423	; 0x800423 <JSycord+0x2>
+     224:	b0 91 24 04 	lds	r27, 0x0424	; 0x800424 <JSycord+0x3>
+     228:	84 56       	subi	r24, 0x64	; 100
+     22a:	91 09       	sbc	r25, r1
+     22c:	a1 09       	sbc	r26, r1
+     22e:	b1 09       	sbc	r27, r1
+     230:	8c 33       	cpi	r24, 0x3C	; 60
+     232:	93 40       	sbci	r25, 0x03	; 3
+     234:	a1 05       	cpc	r26, r1
+     236:	b1 05       	cpc	r27, r1
+     238:	68 f5       	brcc	.+90     	; 0x294 <Joystick_Tick+0xec>
+     23a:	10 92 66 01 	sts	0x0166, r1	; 0x800166 <move>
+     23e:	81 e0       	ldi	r24, 0x01	; 1
+     240:	90 e0       	ldi	r25, 0x00	; 0
+     242:	08 95       	ret
+     244:	80 91 78 00 	lds	r24, 0x0078	; 0x800078 <__TEXT_REGION_LENGTH__+0x7e0078>
+     248:	90 91 79 00 	lds	r25, 0x0079	; 0x800079 <__TEXT_REGION_LENGTH__+0x7e0079>
+     24c:	a0 e0       	ldi	r26, 0x00	; 0
+     24e:	b0 e0       	ldi	r27, 0x00	; 0
+     250:	80 93 21 04 	sts	0x0421, r24	; 0x800421 <JSycord>
+     254:	90 93 22 04 	sts	0x0422, r25	; 0x800422 <JSycord+0x1>
+     258:	a0 93 23 04 	sts	0x0423, r26	; 0x800423 <JSycord+0x2>
+     25c:	b0 93 24 04 	sts	0x0424, r27	; 0x800424 <JSycord+0x3>
+     260:	80 3a       	cpi	r24, 0xA0	; 160
+     262:	23 e0       	ldi	r18, 0x03	; 3
+     264:	92 07       	cpc	r25, r18
+     266:	a1 05       	cpc	r26, r1
+     268:	b1 05       	cpc	r27, r1
+     26a:	30 f0       	brcs	.+12     	; 0x278 <Joystick_Tick+0xd0>
+     26c:	83 e0       	ldi	r24, 0x03	; 3
+     26e:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <move>
+     272:	82 e0       	ldi	r24, 0x02	; 2
+     274:	90 e0       	ldi	r25, 0x00	; 0
+     276:	08 95       	ret
+     278:	84 36       	cpi	r24, 0x64	; 100
+     27a:	91 05       	cpc	r25, r1
+     27c:	a1 05       	cpc	r26, r1
+     27e:	b1 05       	cpc	r27, r1
+     280:	60 f4       	brcc	.+24     	; 0x29a <Joystick_Tick+0xf2>
+     282:	82 e0       	ldi	r24, 0x02	; 2
+     284:	80 93 66 01 	sts	0x0166, r24	; 0x800166 <move>
+     288:	82 e0       	ldi	r24, 0x02	; 2
+     28a:	90 e0       	ldi	r25, 0x00	; 0
+     28c:	08 95       	ret
+     28e:	81 e0       	ldi	r24, 0x01	; 1
+     290:	90 e0       	ldi	r25, 0x00	; 0
+     292:	08 95       	ret
+     294:	81 e0       	ldi	r24, 0x01	; 1
+     296:	90 e0       	ldi	r25, 0x00	; 0
+     298:	08 95       	ret
+     29a:	82 e0       	ldi	r24, 0x02	; 2
+     29c:	90 e0       	ldi	r25, 0x00	; 0
+     29e:	08 95       	ret
+
+000002a0 <delay_ms>:
+     2a0:	18 16       	cp	r1, r24
+     2a2:	19 06       	cpc	r1, r25
+     2a4:	5c f0       	brlt	.+22     	; 0x2bc <delay_ms+0x1c>
+     2a6:	08 95       	ret
+     2a8:	00 00       	nop
+     2aa:	21 50       	subi	r18, 0x01	; 1
+     2ac:	31 09       	sbc	r19, r1
+     2ae:	e1 f7       	brne	.-8      	; 0x2a8 <delay_ms+0x8>
+     2b0:	4f 5f       	subi	r20, 0xFF	; 255
+     2b2:	5f 4f       	sbci	r21, 0xFF	; 255
+     2b4:	84 17       	cp	r24, r20
+     2b6:	95 07       	cpc	r25, r21
+     2b8:	19 f4       	brne	.+6      	; 0x2c0 <delay_ms+0x20>
+     2ba:	08 95       	ret
+     2bc:	40 e0       	ldi	r20, 0x00	; 0
+     2be:	50 e0       	ldi	r21, 0x00	; 0
+     2c0:	27 e0       	ldi	r18, 0x07	; 7
+     2c2:	33 e0       	ldi	r19, 0x03	; 3
+     2c4:	f1 cf       	rjmp	.-30     	; 0x2a8 <delay_ms+0x8>
+
+000002c6 <LCD_WriteCommand>:
+     2c6:	5e 98       	cbi	0x0b, 6	; 11
+     2c8:	88 b9       	out	0x08, r24	; 8
+     2ca:	5f 9a       	sbi	0x0b, 7	; 11
+     2cc:	00 00       	nop
+     2ce:	5f 98       	cbi	0x0b, 7	; 11
+     2d0:	82 e0       	ldi	r24, 0x02	; 2
+     2d2:	90 e0       	ldi	r25, 0x00	; 0
+     2d4:	e5 cf       	rjmp	.-54     	; 0x2a0 <delay_ms>
+     2d6:	08 95       	ret
+
+000002d8 <LCD_ClearScreen>:
+     2d8:	81 e0       	ldi	r24, 0x01	; 1
+     2da:	f5 cf       	rjmp	.-22     	; 0x2c6 <LCD_WriteCommand>
+     2dc:	08 95       	ret
+
+000002de <LCD_Cursor>:
+     2de:	81 31       	cpi	r24, 0x11	; 17
+     2e0:	18 f4       	brcc	.+6      	; 0x2e8 <LCD_Cursor+0xa>
+     2e2:	81 58       	subi	r24, 0x81	; 129
+     2e4:	f0 cf       	rjmp	.-32     	; 0x2c6 <LCD_WriteCommand>
+     2e6:	08 95       	ret
+     2e8:	81 55       	subi	r24, 0x51	; 81
+     2ea:	ed cf       	rjmp	.-38     	; 0x2c6 <LCD_WriteCommand>
+     2ec:	08 95       	ret
+
+000002ee <LCD_init>:
+     2ee:	84 e6       	ldi	r24, 0x64	; 100
+     2f0:	90 e0       	ldi	r25, 0x00	; 0
+     2f2:	d6 df       	rcall	.-84     	; 0x2a0 <delay_ms>
+     2f4:	88 e3       	ldi	r24, 0x38	; 56
+     2f6:	e7 df       	rcall	.-50     	; 0x2c6 <LCD_WriteCommand>
+     2f8:	86 e0       	ldi	r24, 0x06	; 6
+     2fa:	e5 df       	rcall	.-54     	; 0x2c6 <LCD_WriteCommand>
+     2fc:	8f e0       	ldi	r24, 0x0F	; 15
+     2fe:	e3 df       	rcall	.-58     	; 0x2c6 <LCD_WriteCommand>
+     300:	81 e0       	ldi	r24, 0x01	; 1
+     302:	e1 df       	rcall	.-62     	; 0x2c6 <LCD_WriteCommand>
+     304:	8a e0       	ldi	r24, 0x0A	; 10
+     306:	90 e0       	ldi	r25, 0x00	; 0
+     308:	cb cf       	rjmp	.-106    	; 0x2a0 <delay_ms>
+     30a:	08 95       	ret
+
+0000030c <LCD_WriteData>:
+     30c:	5e 9a       	sbi	0x0b, 6	; 11
+     30e:	88 b9       	out	0x08, r24	; 8
+     310:	5f 9a       	sbi	0x0b, 7	; 11
+     312:	00 00       	nop
+     314:	5f 98       	cbi	0x0b, 7	; 11
+     316:	81 e0       	ldi	r24, 0x01	; 1
+     318:	90 e0       	ldi	r25, 0x00	; 0
+     31a:	c2 cf       	rjmp	.-124    	; 0x2a0 <delay_ms>
+     31c:	08 95       	ret
+
+0000031e <LCD_DisplayString>:
+     31e:	0f 93       	push	r16
+     320:	1f 93       	push	r17
+     322:	cf 93       	push	r28
+     324:	df 93       	push	r29
+     326:	18 2f       	mov	r17, r24
+     328:	eb 01       	movw	r28, r22
+     32a:	d6 df       	rcall	.-84     	; 0x2d8 <LCD_ClearScreen>
+     32c:	88 81       	ld	r24, Y
+     32e:	88 23       	and	r24, r24
+     330:	51 f0       	breq	.+20     	; 0x346 <LCD_DisplayString+0x28>
+     332:	01 e0       	ldi	r16, 0x01	; 1
+     334:	01 0f       	add	r16, r17
+     336:	81 2f       	mov	r24, r17
+     338:	d2 df       	rcall	.-92     	; 0x2de <LCD_Cursor>
+     33a:	89 91       	ld	r24, Y+
+     33c:	e7 df       	rcall	.-50     	; 0x30c <LCD_WriteData>
+     33e:	10 2f       	mov	r17, r16
+     340:	88 81       	ld	r24, Y
+     342:	81 11       	cpse	r24, r1
+     344:	f6 cf       	rjmp	.-20     	; 0x332 <LCD_DisplayString+0x14>
+     346:	df 91       	pop	r29
+     348:	cf 91       	pop	r28
+     34a:	1f 91       	pop	r17
+     34c:	0f 91       	pop	r16
+     34e:	08 95       	ret
+
+00000350 <nokia_lcd_init>:
+     350:	cf 93       	push	r28
+     352:	df 93       	push	r29
+     354:	22 9a       	sbi	0x04, 2	; 4
+     356:	23 9a       	sbi	0x04, 3	; 4
+     358:	24 9a       	sbi	0x04, 4	; 4
+     35a:	25 9a       	sbi	0x04, 5	; 4
+     35c:	26 9a       	sbi	0x04, 6	; 4
+     35e:	2b 9a       	sbi	0x05, 3	; 5
+     360:	2a 9a       	sbi	0x05, 2	; 5
+     362:	83 ec       	ldi	r24, 0xC3	; 195
+     364:	99 e0       	ldi	r25, 0x09	; 9
+     366:	01 97       	sbiw	r24, 0x01	; 1
+     368:	f1 f7       	brne	.-4      	; 0x366 <nokia_lcd_init+0x16>
+     36a:	00 c0       	rjmp	.+0      	; 0x36c <nokia_lcd_init+0x1c>
+     36c:	00 00       	nop
+     36e:	2b 98       	cbi	0x05, 3	; 5
+     370:	8b e5       	ldi	r24, 0x5B	; 91
+     372:	94 e4       	ldi	r25, 0x44	; 68
+     374:	01 97       	sbiw	r24, 0x01	; 1
+     376:	f1 f7       	brne	.-4      	; 0x374 <nokia_lcd_init+0x24>
+     378:	00 c0       	rjmp	.+0      	; 0x37a <nokia_lcd_init+0x2a>
+     37a:	00 00       	nop
+     37c:	2b 9a       	sbi	0x05, 3	; 5
+     37e:	2a 98       	cbi	0x05, 2	; 5
+     380:	81 e2       	ldi	r24, 0x21	; 33
+     382:	ca de       	rcall	.-620    	; 0x118 <write_cmd>
+     384:	83 e1       	ldi	r24, 0x13	; 19
+     386:	c8 de       	rcall	.-624    	; 0x118 <write_cmd>
+     388:	86 e0       	ldi	r24, 0x06	; 6
+     38a:	c6 de       	rcall	.-628    	; 0x118 <write_cmd>
+     38c:	82 ec       	ldi	r24, 0xC2	; 194
+     38e:	c4 de       	rcall	.-632    	; 0x118 <write_cmd>
+     390:	80 e2       	ldi	r24, 0x20	; 32
+     392:	c2 de       	rcall	.-636    	; 0x118 <write_cmd>
+     394:	89 e0       	ldi	r24, 0x09	; 9
+     396:	c0 de       	rcall	.-640    	; 0x118 <write_cmd>
+     398:	80 e8       	ldi	r24, 0x80	; 128
+     39a:	be de       	rcall	.-644    	; 0x118 <write_cmd>
+     39c:	80 e4       	ldi	r24, 0x40	; 64
+     39e:	bc de       	rcall	.-648    	; 0x118 <write_cmd>
+     3a0:	c8 ef       	ldi	r28, 0xF8	; 248
+     3a2:	d1 e0       	ldi	r29, 0x01	; 1
+     3a4:	61 e0       	ldi	r22, 0x01	; 1
+     3a6:	80 e0       	ldi	r24, 0x00	; 0
+     3a8:	99 de       	rcall	.-718    	; 0xdc <write>
+     3aa:	21 97       	sbiw	r28, 0x01	; 1
+     3ac:	d9 f7       	brne	.-10     	; 0x3a4 <nokia_lcd_init+0x54>
+     3ae:	88 e0       	ldi	r24, 0x08	; 8
+     3b0:	b3 de       	rcall	.-666    	; 0x118 <write_cmd>
+     3b2:	8c e0       	ldi	r24, 0x0C	; 12
+     3b4:	b1 de       	rcall	.-670    	; 0x118 <write_cmd>
+     3b6:	df 91       	pop	r29
+     3b8:	cf 91       	pop	r28
+     3ba:	08 95       	ret
+
+000003bc <nokia_lcd_clear>:
+     3bc:	80 e8       	ldi	r24, 0x80	; 128
+     3be:	ac de       	rcall	.-680    	; 0x118 <write_cmd>
+     3c0:	80 e4       	ldi	r24, 0x40	; 64
+     3c2:	aa de       	rcall	.-684    	; 0x118 <write_cmd>
+     3c4:	10 92 65 03 	sts	0x0365, r1	; 0x800365 <nokia_lcd+0x1f8>
+     3c8:	10 92 66 03 	sts	0x0366, r1	; 0x800366 <nokia_lcd+0x1f9>
+     3cc:	ed e6       	ldi	r30, 0x6D	; 109
+     3ce:	f1 e0       	ldi	r31, 0x01	; 1
+     3d0:	85 e6       	ldi	r24, 0x65	; 101
+     3d2:	93 e0       	ldi	r25, 0x03	; 3
+     3d4:	11 92       	st	Z+, r1
+     3d6:	e8 17       	cp	r30, r24
+     3d8:	f9 07       	cpc	r31, r25
+     3da:	e1 f7       	brne	.-8      	; 0x3d4 <nokia_lcd_clear+0x18>
+     3dc:	08 95       	ret
+
+000003de <nokia_lcd_set_pixel>:
+     3de:	26 2f       	mov	r18, r22
+     3e0:	26 95       	lsr	r18
+     3e2:	26 95       	lsr	r18
+     3e4:	26 95       	lsr	r18
+     3e6:	90 e0       	ldi	r25, 0x00	; 0
+     3e8:	34 e5       	ldi	r19, 0x54	; 84
+     3ea:	23 9f       	mul	r18, r19
+     3ec:	80 0d       	add	r24, r0
+     3ee:	91 1d       	adc	r25, r1
+     3f0:	11 24       	eor	r1, r1
+     3f2:	44 23       	and	r20, r20
+     3f4:	79 f0       	breq	.+30     	; 0x414 <__LOCK_REGION_LENGTH__+0x14>
+     3f6:	fc 01       	movw	r30, r24
+     3f8:	e3 59       	subi	r30, 0x93	; 147
+     3fa:	fe 4f       	sbci	r31, 0xFE	; 254
+     3fc:	67 70       	andi	r22, 0x07	; 7
+     3fe:	81 e0       	ldi	r24, 0x01	; 1
+     400:	90 e0       	ldi	r25, 0x00	; 0
+     402:	02 c0       	rjmp	.+4      	; 0x408 <__LOCK_REGION_LENGTH__+0x8>
+     404:	88 0f       	add	r24, r24
+     406:	99 1f       	adc	r25, r25
+     408:	6a 95       	dec	r22
+     40a:	e2 f7       	brpl	.-8      	; 0x404 <__LOCK_REGION_LENGTH__+0x4>
+     40c:	90 81       	ld	r25, Z
+     40e:	89 2b       	or	r24, r25
+     410:	80 83       	st	Z, r24
+     412:	08 95       	ret
+     414:	fc 01       	movw	r30, r24
+     416:	e3 59       	subi	r30, 0x93	; 147
+     418:	fe 4f       	sbci	r31, 0xFE	; 254
+     41a:	67 70       	andi	r22, 0x07	; 7
+     41c:	81 e0       	ldi	r24, 0x01	; 1
+     41e:	90 e0       	ldi	r25, 0x00	; 0
+     420:	02 c0       	rjmp	.+4      	; 0x426 <__LOCK_REGION_LENGTH__+0x26>
+     422:	88 0f       	add	r24, r24
+     424:	99 1f       	adc	r25, r25
+     426:	6a 95       	dec	r22
+     428:	e2 f7       	brpl	.-8      	; 0x422 <__LOCK_REGION_LENGTH__+0x22>
+     42a:	80 95       	com	r24
+     42c:	90 81       	ld	r25, Z
+     42e:	89 23       	and	r24, r25
+     430:	80 83       	st	Z, r24
+     432:	08 95       	ret
+
+00000434 <nokia_lcd_render>:
+     434:	0f 93       	push	r16
+     436:	1f 93       	push	r17
+     438:	cf 93       	push	r28
+     43a:	df 93       	push	r29
+     43c:	80 e8       	ldi	r24, 0x80	; 128
+     43e:	6c de       	rcall	.-808    	; 0x118 <write_cmd>
+     440:	80 e4       	ldi	r24, 0x40	; 64
+     442:	6a de       	rcall	.-812    	; 0x118 <write_cmd>
+     444:	cd e6       	ldi	r28, 0x6D	; 109
+     446:	d1 e0       	ldi	r29, 0x01	; 1
+     448:	05 e6       	ldi	r16, 0x65	; 101
+     44a:	13 e0       	ldi	r17, 0x03	; 3
+     44c:	61 e0       	ldi	r22, 0x01	; 1
+     44e:	89 91       	ld	r24, Y+
+     450:	45 de       	rcall	.-886    	; 0xdc <write>
+     452:	c0 17       	cp	r28, r16
+     454:	d1 07       	cpc	r29, r17
+     456:	d1 f7       	brne	.-12     	; 0x44c <nokia_lcd_render+0x18>
+     458:	df 91       	pop	r29
+     45a:	cf 91       	pop	r28
+     45c:	1f 91       	pop	r17
+     45e:	0f 91       	pop	r16
+     460:	08 95       	ret
+
+00000462 <Tetris_safe_R_Move>:
+     462:	a1 e1       	ldi	r26, 0x11	; 17
+     464:	b4 e0       	ldi	r27, 0x04	; 4
+     466:	90 e0       	ldi	r25, 0x00	; 0
+     468:	fc 01       	movw	r30, r24
+     46a:	ee 0f       	add	r30, r30
+     46c:	ff 1f       	adc	r31, r31
+     46e:	e8 0f       	add	r30, r24
+     470:	f9 1f       	adc	r31, r25
+     472:	ee 0f       	add	r30, r30
+     474:	ff 1f       	adc	r31, r31
+     476:	ee 0f       	add	r30, r30
+     478:	ff 1f       	adc	r31, r31
+     47a:	e6 0f       	add	r30, r22
+     47c:	f1 1d       	adc	r31, r1
+     47e:	e0 56       	subi	r30, 0x60	; 96
+     480:	fc 4f       	sbci	r31, 0xFC	; 252
+     482:	25 e1       	ldi	r18, 0x15	; 21
+     484:	34 e0       	ldi	r19, 0x04	; 4
+     486:	81 e0       	ldi	r24, 0x01	; 1
+     488:	40 e0       	ldi	r20, 0x00	; 0
+     48a:	9d 91       	ld	r25, X+
+     48c:	91 11       	cpse	r25, r1
+     48e:	0a c0       	rjmp	.+20     	; 0x4a4 <Tetris_safe_R_Move+0x42>
+     490:	13 96       	adiw	r26, 0x03	; 3
+     492:	9c 91       	ld	r25, X
+     494:	13 97       	sbiw	r26, 0x03	; 3
+     496:	91 30       	cpi	r25, 0x01	; 1
+     498:	59 f4       	brne	.+22     	; 0x4b0 <Tetris_safe_R_Move+0x4e>
+     49a:	94 85       	ldd	r25, Z+12	; 0x0c
+     49c:	91 30       	cpi	r25, 0x01	; 1
+     49e:	41 f4       	brne	.+16     	; 0x4b0 <Tetris_safe_R_Move+0x4e>
+     4a0:	84 2f       	mov	r24, r20
+     4a2:	06 c0       	rjmp	.+12     	; 0x4b0 <Tetris_safe_R_Move+0x4e>
+     4a4:	91 30       	cpi	r25, 0x01	; 1
+     4a6:	21 f4       	brne	.+8      	; 0x4b0 <Tetris_safe_R_Move+0x4e>
+     4a8:	90 81       	ld	r25, Z
+     4aa:	91 30       	cpi	r25, 0x01	; 1
+     4ac:	09 f4       	brne	.+2      	; 0x4b0 <Tetris_safe_R_Move+0x4e>
+     4ae:	84 2f       	mov	r24, r20
+     4b0:	31 96       	adiw	r30, 0x01	; 1
+     4b2:	a2 17       	cp	r26, r18
+     4b4:	b3 07       	cpc	r27, r19
+     4b6:	49 f7       	brne	.-46     	; 0x48a <Tetris_safe_R_Move+0x28>
+     4b8:	08 95       	ret
+
+000004ba <Tetris_safe_L_Move>:
+     4ba:	0f 93       	push	r16
+     4bc:	1f 93       	push	r17
+     4be:	cf 93       	push	r28
+     4c0:	df 93       	push	r29
+     4c2:	40 91 10 04 	lds	r20, 0x0410	; 0x800410 <current+0x4>
+     4c6:	50 e0       	ldi	r21, 0x00	; 0
+     4c8:	9a 01       	movw	r18, r20
+     4ca:	28 0f       	add	r18, r24
+     4cc:	31 1d       	adc	r19, r1
+     4ce:	ca 01       	movw	r24, r20
+     4d0:	01 97       	sbiw	r24, 0x01	; 1
+     4d2:	88 0f       	add	r24, r24
+     4d4:	99 1f       	adc	r25, r25
+     4d6:	88 0f       	add	r24, r24
+     4d8:	99 1f       	adc	r25, r25
+     4da:	ac 01       	movw	r20, r24
+     4dc:	4f 5e       	subi	r20, 0xEF	; 239
+     4de:	5b 4f       	sbci	r21, 0xFB	; 251
+     4e0:	70 e0       	ldi	r23, 0x00	; 0
+     4e2:	f9 01       	movw	r30, r18
+     4e4:	ee 0f       	add	r30, r30
+     4e6:	ff 1f       	adc	r31, r31
+     4e8:	e2 0f       	add	r30, r18
+     4ea:	f3 1f       	adc	r31, r19
+     4ec:	ee 0f       	add	r30, r30
+     4ee:	ff 1f       	adc	r31, r31
+     4f0:	ee 0f       	add	r30, r30
+     4f2:	ff 1f       	adc	r31, r31
+     4f4:	e6 0f       	add	r30, r22
+     4f6:	f7 1f       	adc	r31, r23
+     4f8:	e4 55       	subi	r30, 0x54	; 84
+     4fa:	fc 4f       	sbci	r31, 0xFC	; 252
+     4fc:	21 50       	subi	r18, 0x01	; 1
+     4fe:	31 09       	sbc	r19, r1
+     500:	e9 01       	movw	r28, r18
+     502:	cc 0f       	add	r28, r28
+     504:	dd 1f       	adc	r29, r29
+     506:	2c 0f       	add	r18, r28
+     508:	3d 1f       	adc	r19, r29
+     50a:	e9 01       	movw	r28, r18
+     50c:	cc 0f       	add	r28, r28
+     50e:	dd 1f       	adc	r29, r29
+     510:	cc 0f       	add	r28, r28
+     512:	dd 1f       	adc	r29, r29
+     514:	6c 0f       	add	r22, r28
+     516:	7d 1f       	adc	r23, r29
+     518:	8b 01       	movw	r16, r22
+     51a:	04 55       	subi	r16, 0x54	; 84
+     51c:	1c 4f       	sbci	r17, 0xFC	; 252
+     51e:	dc 01       	movw	r26, r24
+     520:	a8 5f       	subi	r26, 0xF8	; 248
+     522:	bb 4f       	sbci	r27, 0xFB	; 251
+     524:	9c 01       	movw	r18, r24
+     526:	24 5f       	subi	r18, 0xF4	; 244
+     528:	3b 4f       	sbci	r19, 0xFB	; 251
+     52a:	81 e0       	ldi	r24, 0x01	; 1
+     52c:	60 e0       	ldi	r22, 0x00	; 0
+     52e:	ea 01       	movw	r28, r20
+     530:	99 91       	ld	r25, Y+
+     532:	ae 01       	movw	r20, r28
+     534:	91 11       	cpse	r25, r1
+     536:	0b c0       	rjmp	.+22     	; 0x54e <Tetris_safe_L_Move+0x94>
+     538:	15 96       	adiw	r26, 0x05	; 5
+     53a:	9c 91       	ld	r25, X
+     53c:	15 97       	sbiw	r26, 0x05	; 5
+     53e:	91 30       	cpi	r25, 0x01	; 1
+     540:	61 f4       	brne	.+24     	; 0x55a <Tetris_safe_L_Move+0xa0>
+     542:	e8 01       	movw	r28, r16
+     544:	98 81       	ld	r25, Y
+     546:	91 30       	cpi	r25, 0x01	; 1
+     548:	41 f4       	brne	.+16     	; 0x55a <Tetris_safe_L_Move+0xa0>
+     54a:	86 2f       	mov	r24, r22
+     54c:	06 c0       	rjmp	.+12     	; 0x55a <Tetris_safe_L_Move+0xa0>
+     54e:	91 30       	cpi	r25, 0x01	; 1
+     550:	21 f4       	brne	.+8      	; 0x55a <Tetris_safe_L_Move+0xa0>
+     552:	90 81       	ld	r25, Z
+     554:	91 30       	cpi	r25, 0x01	; 1
+     556:	09 f4       	brne	.+2      	; 0x55a <Tetris_safe_L_Move+0xa0>
+     558:	86 2f       	mov	r24, r22
+     55a:	31 96       	adiw	r30, 0x01	; 1
+     55c:	0f 5f       	subi	r16, 0xFF	; 255
+     55e:	1f 4f       	sbci	r17, 0xFF	; 255
+     560:	11 96       	adiw	r26, 0x01	; 1
+     562:	a2 17       	cp	r26, r18
+     564:	b3 07       	cpc	r27, r19
+     566:	19 f7       	brne	.-58     	; 0x52e <Tetris_safe_L_Move+0x74>
+     568:	df 91       	pop	r29
+     56a:	cf 91       	pop	r28
+     56c:	1f 91       	pop	r17
+     56e:	0f 91       	pop	r16
+     570:	08 95       	ret
+
+00000572 <EraseRow>:
+     572:	2d ea       	ldi	r18, 0xAD	; 173
+     574:	33 e0       	ldi	r19, 0x03	; 3
+     576:	6d e0       	ldi	r22, 0x0D	; 13
+     578:	74 e0       	ldi	r23, 0x04	; 4
+     57a:	48 2f       	mov	r20, r24
+     57c:	50 e0       	ldi	r21, 0x00	; 0
+     57e:	da 01       	movw	r26, r20
+     580:	11 97       	sbiw	r26, 0x01	; 1
+     582:	42 30       	cpi	r20, 0x02	; 2
+     584:	51 05       	cpc	r21, r1
+     586:	44 f0       	brlt	.+16     	; 0x598 <EraseRow+0x26>
+     588:	fd 01       	movw	r30, r26
+     58a:	e2 0f       	add	r30, r18
+     58c:	f3 1f       	adc	r31, r19
+     58e:	82 91       	ld	r24, -Z
+     590:	81 83       	std	Z+1, r24	; 0x01
+     592:	e2 17       	cp	r30, r18
+     594:	f3 07       	cpc	r31, r19
+     596:	d9 f7       	brne	.-10     	; 0x58e <EraseRow+0x1c>
+     598:	24 5f       	subi	r18, 0xF4	; 244
+     59a:	3f 4f       	sbci	r19, 0xFF	; 255
+     59c:	26 17       	cp	r18, r22
+     59e:	37 07       	cpc	r19, r23
+     5a0:	81 f7       	brne	.-32     	; 0x582 <EraseRow+0x10>
+     5a2:	80 91 ab 03 	lds	r24, 0x03AB	; 0x8003ab <level>
+     5a6:	8f 5f       	subi	r24, 0xFF	; 255
+     5a8:	80 93 ab 03 	sts	0x03AB, r24	; 0x8003ab <level>
+     5ac:	90 91 aa 03 	lds	r25, 0x03AA	; 0x8003aa <score>
+     5b0:	9b 5f       	subi	r25, 0xFB	; 251
+     5b2:	90 93 aa 03 	sts	0x03AA, r25	; 0x8003aa <score>
+     5b6:	87 30       	cpi	r24, 0x07	; 7
+     5b8:	30 f0       	brcs	.+12     	; 0x5c6 <EraseRow+0x54>
+     5ba:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <speedLevel>
+     5be:	81 50       	subi	r24, 0x01	; 1
+     5c0:	80 93 09 01 	sts	0x0109, r24	; 0x800109 <speedLevel>
+     5c4:	08 95       	ret
+     5c6:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <speedLevel>
+     5ca:	84 50       	subi	r24, 0x04	; 4
+     5cc:	80 93 09 01 	sts	0x0109, r24	; 0x800109 <speedLevel>
+     5d0:	08 95       	ret
+
+000005d2 <Tetris_check>:
+     5d2:	cf 93       	push	r28
+     5d4:	df 93       	push	r29
+     5d6:	10 92 28 04 	sts	0x0428, r1	; 0x800428 <RCount>
+     5da:	cb e0       	ldi	r28, 0x0B	; 11
+     5dc:	d0 e0       	ldi	r29, 0x00	; 0
+     5de:	14 c0       	rjmp	.+40     	; 0x608 <Tetris_check+0x36>
+     5e0:	80 81       	ld	r24, Z
+     5e2:	81 11       	cpse	r24, r1
+     5e4:	9f 5f       	subi	r25, 0xFF	; 255
+     5e6:	3c 96       	adiw	r30, 0x0c	; 12
+     5e8:	e2 17       	cp	r30, r18
+     5ea:	f3 07       	cpc	r31, r19
+     5ec:	c9 f7       	brne	.-14     	; 0x5e0 <Tetris_check+0xe>
+     5ee:	90 93 28 04 	sts	0x0428, r25	; 0x800428 <RCount>
+     5f2:	98 30       	cpi	r25, 0x08	; 8
+     5f4:	19 f4       	brne	.+6      	; 0x5fc <Tetris_check+0x2a>
+     5f6:	ce 01       	movw	r24, r28
+     5f8:	bc df       	rcall	.-136    	; 0x572 <EraseRow>
+     5fa:	21 96       	adiw	r28, 0x01	; 1
+     5fc:	10 92 28 04 	sts	0x0428, r1	; 0x800428 <RCount>
+     600:	21 97       	sbiw	r28, 0x01	; 1
+     602:	c2 30       	cpi	r28, 0x02	; 2
+     604:	d1 05       	cpc	r29, r1
+     606:	4c f0       	brlt	.+18     	; 0x61a <Tetris_check+0x48>
+     608:	90 91 28 04 	lds	r25, 0x0428	; 0x800428 <RCount>
+     60c:	fe 01       	movw	r30, r28
+     60e:	e4 55       	subi	r30, 0x54	; 84
+     610:	fc 4f       	sbci	r31, 0xFC	; 252
+     612:	9e 01       	movw	r18, r28
+     614:	24 5f       	subi	r18, 0xF4	; 244
+     616:	3b 4f       	sbci	r19, 0xFB	; 251
+     618:	e3 cf       	rjmp	.-58     	; 0x5e0 <Tetris_check+0xe>
+     61a:	df 91       	pop	r29
+     61c:	cf 91       	pop	r28
+     61e:	08 95       	ret
+
+00000620 <Tetris_Bottom_up>:
+     620:	98 2f       	mov	r25, r24
+     622:	68 2f       	mov	r22, r24
+     624:	70 e0       	ldi	r23, 0x00	; 0
+     626:	fb 01       	movw	r30, r22
+     628:	ee 0f       	add	r30, r30
+     62a:	ff 1f       	adc	r31, r31
+     62c:	e6 0f       	add	r30, r22
+     62e:	f7 1f       	adc	r31, r23
+     630:	ee 0f       	add	r30, r30
+     632:	ff 1f       	adc	r31, r31
+     634:	ee 0f       	add	r30, r30
+     636:	ff 1f       	adc	r31, r31
+     638:	e4 55       	subi	r30, 0x54	; 84
+     63a:	fc 4f       	sbci	r31, 0xFC	; 252
+     63c:	80 81       	ld	r24, Z
+     63e:	81 11       	cpse	r24, r1
+     640:	13 c0       	rjmp	.+38     	; 0x668 <Tetris_Bottom_up+0x48>
+     642:	9b 01       	movw	r18, r22
+     644:	f9 01       	movw	r30, r18
+     646:	ee 0f       	add	r30, r30
+     648:	ff 1f       	adc	r31, r31
+     64a:	e2 0f       	add	r30, r18
+     64c:	f3 1f       	adc	r31, r19
+     64e:	ee 0f       	add	r30, r30
+     650:	ff 1f       	adc	r31, r31
+     652:	ee 0f       	add	r30, r30
+     654:	ff 1f       	adc	r31, r31
+     656:	e3 55       	subi	r30, 0x53	; 83
+     658:	fc 4f       	sbci	r31, 0xFC	; 252
+     65a:	21 e0       	ldi	r18, 0x01	; 1
+     65c:	30 e0       	ldi	r19, 0x00	; 0
+     65e:	81 91       	ld	r24, Z+
+     660:	88 23       	and	r24, r24
+     662:	09 f4       	brne	.+2      	; 0x666 <Tetris_Bottom_up+0x46>
+     664:	6c c0       	rjmp	.+216    	; 0x73e <Tetris_Bottom_up+0x11e>
+     666:	02 c0       	rjmp	.+4      	; 0x66c <Tetris_Bottom_up+0x4c>
+     668:	20 e0       	ldi	r18, 0x00	; 0
+     66a:	30 e0       	ldi	r19, 0x00	; 0
+     66c:	40 91 0e 04 	lds	r20, 0x040E	; 0x80040e <current+0x2>
+     670:	04 2e       	mov	r0, r20
+     672:	00 0c       	add	r0, r0
+     674:	55 0b       	sbc	r21, r21
+     676:	42 17       	cp	r20, r18
+     678:	53 07       	cpc	r21, r19
+     67a:	0c f4       	brge	.+2      	; 0x67e <Tetris_Bottom_up+0x5e>
+     67c:	5d c0       	rjmp	.+186    	; 0x738 <Tetris_Bottom_up+0x118>
+     67e:	80 91 0c 04 	lds	r24, 0x040C	; 0x80040c <current>
+     682:	84 30       	cpi	r24, 0x04	; 4
+     684:	11 f0       	breq	.+4      	; 0x68a <Tetris_Bottom_up+0x6a>
+     686:	81 30       	cpi	r24, 0x01	; 1
+     688:	31 f4       	brne	.+12     	; 0x696 <Tetris_Bottom_up+0x76>
+     68a:	80 91 0d 04 	lds	r24, 0x040D	; 0x80040d <current+0x1>
+     68e:	81 30       	cpi	r24, 0x01	; 1
+     690:	11 f4       	brne	.+4      	; 0x696 <Tetris_Bottom_up+0x76>
+     692:	4f 5f       	subi	r20, 0xFF	; 255
+     694:	5f 4f       	sbci	r21, 0xFF	; 255
+     696:	fb 01       	movw	r30, r22
+     698:	ee 0f       	add	r30, r30
+     69a:	ff 1f       	adc	r31, r31
+     69c:	e6 0f       	add	r30, r22
+     69e:	f7 1f       	adc	r31, r23
+     6a0:	ee 0f       	add	r30, r30
+     6a2:	ff 1f       	adc	r31, r31
+     6a4:	ee 0f       	add	r30, r30
+     6a6:	ff 1f       	adc	r31, r31
+     6a8:	e4 55       	subi	r30, 0x54	; 84
+     6aa:	fc 4f       	sbci	r31, 0xFC	; 252
+     6ac:	e4 0f       	add	r30, r20
+     6ae:	f5 1f       	adc	r31, r21
+     6b0:	80 81       	ld	r24, Z
+     6b2:	81 30       	cpi	r24, 0x01	; 1
+     6b4:	a1 f4       	brne	.+40     	; 0x6de <Tetris_Bottom_up+0xbe>
+     6b6:	29 2f       	mov	r18, r25
+     6b8:	30 e0       	ldi	r19, 0x00	; 0
+     6ba:	f9 01       	movw	r30, r18
+     6bc:	ee 0f       	add	r30, r30
+     6be:	ff 1f       	adc	r31, r31
+     6c0:	e2 0f       	add	r30, r18
+     6c2:	f3 1f       	adc	r31, r19
+     6c4:	ee 0f       	add	r30, r30
+     6c6:	ff 1f       	adc	r31, r31
+     6c8:	ee 0f       	add	r30, r30
+     6ca:	ff 1f       	adc	r31, r31
+     6cc:	e4 0f       	add	r30, r20
+     6ce:	f5 1f       	adc	r31, r21
+     6d0:	e3 55       	subi	r30, 0x53	; 83
+     6d2:	fc 4f       	sbci	r31, 0xFC	; 252
+     6d4:	4f 5f       	subi	r20, 0xFF	; 255
+     6d6:	5f 4f       	sbci	r21, 0xFF	; 255
+     6d8:	81 91       	ld	r24, Z+
+     6da:	81 30       	cpi	r24, 0x01	; 1
+     6dc:	d9 f3       	breq	.-10     	; 0x6d4 <Tetris_Bottom_up+0xb4>
+     6de:	fb 01       	movw	r30, r22
+     6e0:	ee 0f       	add	r30, r30
+     6e2:	ff 1f       	adc	r31, r31
+     6e4:	e6 0f       	add	r30, r22
+     6e6:	f7 1f       	adc	r31, r23
+     6e8:	ee 0f       	add	r30, r30
+     6ea:	ff 1f       	adc	r31, r31
+     6ec:	ee 0f       	add	r30, r30
+     6ee:	ff 1f       	adc	r31, r31
+     6f0:	e4 55       	subi	r30, 0x54	; 84
+     6f2:	fc 4f       	sbci	r31, 0xFC	; 252
+     6f4:	e4 0f       	add	r30, r20
+     6f6:	f5 1f       	adc	r31, r21
+     6f8:	80 81       	ld	r24, Z
+     6fa:	81 11       	cpse	r24, r1
+     6fc:	1a c0       	rjmp	.+52     	; 0x732 <Tetris_Bottom_up+0x112>
+     6fe:	4c 30       	cpi	r20, 0x0C	; 12
+     700:	51 05       	cpc	r21, r1
+     702:	bc f4       	brge	.+46     	; 0x732 <Tetris_Bottom_up+0x112>
+     704:	89 2f       	mov	r24, r25
+     706:	90 e0       	ldi	r25, 0x00	; 0
+     708:	fc 01       	movw	r30, r24
+     70a:	ee 0f       	add	r30, r30
+     70c:	ff 1f       	adc	r31, r31
+     70e:	e8 0f       	add	r30, r24
+     710:	f9 1f       	adc	r31, r25
+     712:	ee 0f       	add	r30, r30
+     714:	ff 1f       	adc	r31, r31
+     716:	ee 0f       	add	r30, r30
+     718:	ff 1f       	adc	r31, r31
+     71a:	e4 0f       	add	r30, r20
+     71c:	f5 1f       	adc	r31, r21
+     71e:	e3 55       	subi	r30, 0x53	; 83
+     720:	fc 4f       	sbci	r31, 0xFC	; 252
+     722:	4f 5f       	subi	r20, 0xFF	; 255
+     724:	5f 4f       	sbci	r21, 0xFF	; 255
+     726:	81 91       	ld	r24, Z+
+     728:	81 11       	cpse	r24, r1
+     72a:	03 c0       	rjmp	.+6      	; 0x732 <Tetris_Bottom_up+0x112>
+     72c:	4c 30       	cpi	r20, 0x0C	; 12
+     72e:	51 05       	cpc	r21, r1
+     730:	c1 f7       	brne	.-16     	; 0x722 <Tetris_Bottom_up+0x102>
+     732:	8c e0       	ldi	r24, 0x0C	; 12
+     734:	84 1b       	sub	r24, r20
+     736:	08 95       	ret
+     738:	8c e0       	ldi	r24, 0x0C	; 12
+     73a:	82 1b       	sub	r24, r18
+     73c:	08 95       	ret
+     73e:	2f 5f       	subi	r18, 0xFF	; 255
+     740:	3f 4f       	sbci	r19, 0xFF	; 255
+     742:	2c 30       	cpi	r18, 0x0C	; 12
+     744:	31 05       	cpc	r19, r1
+     746:	09 f0       	breq	.+2      	; 0x74a <Tetris_Bottom_up+0x12a>
+     748:	8a cf       	rjmp	.-236    	; 0x65e <Tetris_Bottom_up+0x3e>
+     74a:	08 95       	ret
+
+0000074c <used>:
+     74c:	90 e0       	ldi	r25, 0x00	; 0
+     74e:	fc 01       	movw	r30, r24
+     750:	ee 0f       	add	r30, r30
+     752:	ff 1f       	adc	r31, r31
+     754:	ee 0f       	add	r30, r30
+     756:	ff 1f       	adc	r31, r31
+     758:	ec 5e       	subi	r30, 0xEC	; 236
+     75a:	fb 4f       	sbci	r31, 0xFB	; 251
+     75c:	20 81       	ld	r18, Z
+     75e:	21 11       	cpse	r18, r1
+     760:	24 c0       	rjmp	.+72     	; 0x7aa <used+0x5e>
+     762:	fc 01       	movw	r30, r24
+     764:	ee 0f       	add	r30, r30
+     766:	ff 1f       	adc	r31, r31
+     768:	ee 0f       	add	r30, r30
+     76a:	ff 1f       	adc	r31, r31
+     76c:	e4 5f       	subi	r30, 0xF4	; 244
+     76e:	fb 4f       	sbci	r31, 0xFB	; 251
+     770:	27 81       	ldd	r18, Z+7	; 0x07
+     772:	21 11       	cpse	r18, r1
+     774:	16 c0       	rjmp	.+44     	; 0x7a2 <used+0x56>
+     776:	fc 01       	movw	r30, r24
+     778:	ee 0f       	add	r30, r30
+     77a:	ff 1f       	adc	r31, r31
+     77c:	ee 0f       	add	r30, r30
+     77e:	ff 1f       	adc	r31, r31
+     780:	e4 5f       	subi	r30, 0xF4	; 244
+     782:	fb 4f       	sbci	r31, 0xFB	; 251
+     784:	26 81       	ldd	r18, Z+6	; 0x06
+     786:	21 11       	cpse	r18, r1
+     788:	0e c0       	rjmp	.+28     	; 0x7a6 <used+0x5a>
+     78a:	88 0f       	add	r24, r24
+     78c:	99 1f       	adc	r25, r25
+     78e:	88 0f       	add	r24, r24
+     790:	99 1f       	adc	r25, r25
+     792:	fc 01       	movw	r30, r24
+     794:	e4 5f       	subi	r30, 0xF4	; 244
+     796:	fb 4f       	sbci	r31, 0xFB	; 251
+     798:	85 81       	ldd	r24, Z+5	; 0x05
+     79a:	88 23       	and	r24, r24
+     79c:	41 f0       	breq	.+16     	; 0x7ae <used+0x62>
+     79e:	80 e0       	ldi	r24, 0x00	; 0
+     7a0:	05 c0       	rjmp	.+10     	; 0x7ac <used+0x60>
+     7a2:	82 e0       	ldi	r24, 0x02	; 2
+     7a4:	03 c0       	rjmp	.+6      	; 0x7ac <used+0x60>
+     7a6:	81 e0       	ldi	r24, 0x01	; 1
+     7a8:	01 c0       	rjmp	.+2      	; 0x7ac <used+0x60>
+     7aa:	83 e0       	ldi	r24, 0x03	; 3
+     7ac:	8f 5f       	subi	r24, 0xFF	; 255
+     7ae:	08 95       	ret
+
+000007b0 <Tetris_Draw_A_Sqaure>:
+     7b0:	af 92       	push	r10
+     7b2:	bf 92       	push	r11
+     7b4:	cf 92       	push	r12
+     7b6:	df 92       	push	r13
+     7b8:	ff 92       	push	r15
+     7ba:	0f 93       	push	r16
+     7bc:	1f 93       	push	r17
+     7be:	cf 93       	push	r28
+     7c0:	df 93       	push	r29
+     7c2:	90 e0       	ldi	r25, 0x00	; 0
+     7c4:	9c 01       	movw	r18, r24
+     7c6:	2f 5f       	subi	r18, 0xFF	; 255
+     7c8:	3f 4f       	sbci	r19, 0xFF	; 255
+     7ca:	07 96       	adiw	r24, 0x07	; 7
+     7cc:	28 17       	cp	r18, r24
+     7ce:	39 07       	cpc	r19, r25
+     7d0:	d4 f4       	brge	.+52     	; 0x806 <Tetris_Draw_A_Sqaure+0x56>
+     7d2:	f6 2e       	mov	r15, r22
+     7d4:	d2 2f       	mov	r29, r18
+     7d6:	06 e0       	ldi	r16, 0x06	; 6
+     7d8:	02 0f       	add	r16, r18
+     7da:	c6 2e       	mov	r12, r22
+     7dc:	d1 2c       	mov	r13, r1
+     7de:	56 01       	movw	r10, r12
+     7e0:	85 e0       	ldi	r24, 0x05	; 5
+     7e2:	a8 0e       	add	r10, r24
+     7e4:	b1 1c       	adc	r11, r1
+     7e6:	15 e0       	ldi	r17, 0x05	; 5
+     7e8:	16 0f       	add	r17, r22
+     7ea:	ca 14       	cp	r12, r10
+     7ec:	db 04       	cpc	r13, r11
+     7ee:	44 f4       	brge	.+16     	; 0x800 <Tetris_Draw_A_Sqaure+0x50>
+     7f0:	cf 2d       	mov	r28, r15
+     7f2:	41 e0       	ldi	r20, 0x01	; 1
+     7f4:	6c 2f       	mov	r22, r28
+     7f6:	8d 2f       	mov	r24, r29
+     7f8:	f2 dd       	rcall	.-1052   	; 0x3de <nokia_lcd_set_pixel>
+     7fa:	cf 5f       	subi	r28, 0xFF	; 255
+     7fc:	c1 13       	cpse	r28, r17
+     7fe:	f9 cf       	rjmp	.-14     	; 0x7f2 <Tetris_Draw_A_Sqaure+0x42>
+     800:	df 5f       	subi	r29, 0xFF	; 255
+     802:	d0 13       	cpse	r29, r16
+     804:	f2 cf       	rjmp	.-28     	; 0x7ea <Tetris_Draw_A_Sqaure+0x3a>
+     806:	df 91       	pop	r29
+     808:	cf 91       	pop	r28
+     80a:	1f 91       	pop	r17
+     80c:	0f 91       	pop	r16
+     80e:	ff 90       	pop	r15
+     810:	df 90       	pop	r13
+     812:	cf 90       	pop	r12
+     814:	bf 90       	pop	r11
+     816:	af 90       	pop	r10
+     818:	08 95       	ret
+
+0000081a <LCD_Tick>:
+     81a:	9f 92       	push	r9
+     81c:	af 92       	push	r10
+     81e:	bf 92       	push	r11
+     820:	cf 92       	push	r12
+     822:	df 92       	push	r13
+     824:	ef 92       	push	r14
+     826:	ff 92       	push	r15
+     828:	0f 93       	push	r16
+     82a:	1f 93       	push	r17
+     82c:	cf 93       	push	r28
+     82e:	df 93       	push	r29
+     830:	02 97       	sbiw	r24, 0x02	; 2
+     832:	08 f0       	brcs	.+2      	; 0x836 <LCD_Tick+0x1c>
+     834:	7c c0       	rjmp	.+248    	; 0x92e <LCD_Tick+0x114>
+     836:	c2 dd       	rcall	.-1148   	; 0x3bc <nokia_lcd_clear>
+     838:	90 90 63 01 	lds	r9, 0x0163	; 0x800163 <promt>
+     83c:	99 20       	and	r9, r9
+     83e:	41 f0       	breq	.+16     	; 0x850 <LCD_Tick+0x36>
+     840:	0f 2e       	mov	r0, r31
+     842:	fc ea       	ldi	r31, 0xAC	; 172
+     844:	ef 2e       	mov	r14, r31
+     846:	f3 e0       	ldi	r31, 0x03	; 3
+     848:	ff 2e       	mov	r15, r31
+     84a:	f0 2d       	mov	r31, r0
+     84c:	d0 e0       	ldi	r29, 0x00	; 0
+     84e:	68 c0       	rjmp	.+208    	; 0x920 <LCD_Tick+0x106>
+     850:	0f 2e       	mov	r0, r31
+     852:	f1 e1       	ldi	r31, 0x11	; 17
+     854:	cf 2e       	mov	r12, r31
+     856:	f4 e0       	ldi	r31, 0x04	; 4
+     858:	df 2e       	mov	r13, r31
+     85a:	f0 2d       	mov	r31, r0
+     85c:	a1 2c       	mov	r10, r1
+     85e:	b1 2c       	mov	r11, r1
+     860:	0f 2e       	mov	r0, r31
+     862:	fc e0       	ldi	r31, 0x0C	; 12
+     864:	ef 2e       	mov	r14, r31
+     866:	f4 e0       	ldi	r31, 0x04	; 4
+     868:	ff 2e       	mov	r15, r31
+     86a:	f0 2d       	mov	r31, r0
+     86c:	30 c0       	rjmp	.+96     	; 0x8ce <LCD_Tick+0xb4>
+     86e:	89 91       	ld	r24, Y+
+     870:	88 23       	and	r24, r24
+     872:	b1 f0       	breq	.+44     	; 0x8a0 <LCD_Tick+0x86>
+     874:	f7 01       	movw	r30, r14
+     876:	82 81       	ldd	r24, Z+2	; 0x02
+     878:	98 01       	movw	r18, r16
+     87a:	28 0f       	add	r18, r24
+     87c:	31 1d       	adc	r19, r1
+     87e:	87 fd       	sbrc	r24, 7
+     880:	3a 95       	dec	r19
+     882:	82 2f       	mov	r24, r18
+     884:	88 0f       	add	r24, r24
+     886:	88 0f       	add	r24, r24
+     888:	88 0f       	add	r24, r24
+     88a:	82 1b       	sub	r24, r18
+     88c:	4a f0       	brmi	.+18     	; 0x8a0 <LCD_Tick+0x86>
+     88e:	93 81       	ldd	r25, Z+3	; 0x03
+     890:	95 01       	movw	r18, r10
+     892:	29 0f       	add	r18, r25
+     894:	31 1d       	adc	r19, r1
+     896:	62 2f       	mov	r22, r18
+     898:	66 0f       	add	r22, r22
+     89a:	62 0f       	add	r22, r18
+     89c:	66 0f       	add	r22, r22
+     89e:	88 df       	rcall	.-240    	; 0x7b0 <Tetris_Draw_A_Sqaure>
+     8a0:	0f 5f       	subi	r16, 0xFF	; 255
+     8a2:	1f 4f       	sbci	r17, 0xFF	; 255
+     8a4:	04 30       	cpi	r16, 0x04	; 4
+     8a6:	11 05       	cpc	r17, r1
+     8a8:	11 f7       	brne	.-60     	; 0x86e <LCD_Tick+0x54>
+     8aa:	ff ef       	ldi	r31, 0xFF	; 255
+     8ac:	af 1a       	sub	r10, r31
+     8ae:	bf 0a       	sbc	r11, r31
+     8b0:	84 e0       	ldi	r24, 0x04	; 4
+     8b2:	c8 0e       	add	r12, r24
+     8b4:	d1 1c       	adc	r13, r1
+     8b6:	e4 e0       	ldi	r30, 0x04	; 4
+     8b8:	ae 16       	cp	r10, r30
+     8ba:	b1 04       	cpc	r11, r1
+     8bc:	41 f4       	brne	.+16     	; 0x8ce <LCD_Tick+0xb4>
+     8be:	0f 2e       	mov	r0, r31
+     8c0:	fc ea       	ldi	r31, 0xAC	; 172
+     8c2:	ef 2e       	mov	r14, r31
+     8c4:	f3 e0       	ldi	r31, 0x03	; 3
+     8c6:	ff 2e       	mov	r15, r31
+     8c8:	f0 2d       	mov	r31, r0
+     8ca:	d9 2d       	mov	r29, r9
+     8cc:	15 c0       	rjmp	.+42     	; 0x8f8 <LCD_Tick+0xde>
+     8ce:	e6 01       	movw	r28, r12
+     8d0:	00 e0       	ldi	r16, 0x00	; 0
+     8d2:	10 e0       	ldi	r17, 0x00	; 0
+     8d4:	cc cf       	rjmp	.-104    	; 0x86e <LCD_Tick+0x54>
+     8d6:	f8 01       	movw	r30, r16
+     8d8:	81 91       	ld	r24, Z+
+     8da:	8f 01       	movw	r16, r30
+     8dc:	88 23       	and	r24, r24
+     8de:	19 f0       	breq	.+6      	; 0x8e6 <LCD_Tick+0xcc>
+     8e0:	6d 2f       	mov	r22, r29
+     8e2:	8c 2f       	mov	r24, r28
+     8e4:	65 df       	rcall	.-310    	; 0x7b0 <Tetris_Draw_A_Sqaure>
+     8e6:	c9 5f       	subi	r28, 0xF9	; 249
+     8e8:	c4 35       	cpi	r28, 0x54	; 84
+     8ea:	a9 f7       	brne	.-22     	; 0x8d6 <LCD_Tick+0xbc>
+     8ec:	fc e0       	ldi	r31, 0x0C	; 12
+     8ee:	ef 0e       	add	r14, r31
+     8f0:	f1 1c       	adc	r15, r1
+     8f2:	da 5f       	subi	r29, 0xFA	; 250
+     8f4:	d0 33       	cpi	r29, 0x30	; 48
+     8f6:	b9 f0       	breq	.+46     	; 0x926 <LCD_Tick+0x10c>
+     8f8:	c9 2d       	mov	r28, r9
+     8fa:	87 01       	movw	r16, r14
+     8fc:	ec cf       	rjmp	.-40     	; 0x8d6 <LCD_Tick+0xbc>
+     8fe:	f8 01       	movw	r30, r16
+     900:	81 91       	ld	r24, Z+
+     902:	8f 01       	movw	r16, r30
+     904:	88 23       	and	r24, r24
+     906:	19 f0       	breq	.+6      	; 0x90e <LCD_Tick+0xf4>
+     908:	6d 2f       	mov	r22, r29
+     90a:	8c 2f       	mov	r24, r28
+     90c:	51 df       	rcall	.-350    	; 0x7b0 <Tetris_Draw_A_Sqaure>
+     90e:	c9 5f       	subi	r28, 0xF9	; 249
+     910:	c4 35       	cpi	r28, 0x54	; 84
+     912:	a9 f7       	brne	.-22     	; 0x8fe <LCD_Tick+0xe4>
+     914:	fc e0       	ldi	r31, 0x0C	; 12
+     916:	ef 0e       	add	r14, r31
+     918:	f1 1c       	adc	r15, r1
+     91a:	da 5f       	subi	r29, 0xFA	; 250
+     91c:	d0 33       	cpi	r29, 0x30	; 48
+     91e:	19 f0       	breq	.+6      	; 0x926 <LCD_Tick+0x10c>
+     920:	87 01       	movw	r16, r14
+     922:	c0 e0       	ldi	r28, 0x00	; 0
+     924:	ec cf       	rjmp	.-40     	; 0x8fe <LCD_Tick+0xe4>
+     926:	86 dd       	rcall	.-1268   	; 0x434 <nokia_lcd_render>
+     928:	81 e0       	ldi	r24, 0x01	; 1
+     92a:	90 e0       	ldi	r25, 0x00	; 0
+     92c:	02 c0       	rjmp	.+4      	; 0x932 <LCD_Tick+0x118>
+     92e:	80 e0       	ldi	r24, 0x00	; 0
+     930:	90 e0       	ldi	r25, 0x00	; 0
+     932:	df 91       	pop	r29
+     934:	cf 91       	pop	r28
+     936:	1f 91       	pop	r17
+     938:	0f 91       	pop	r16
+     93a:	ff 90       	pop	r15
+     93c:	ef 90       	pop	r14
+     93e:	df 90       	pop	r13
+     940:	cf 90       	pop	r12
+     942:	bf 90       	pop	r11
+     944:	af 90       	pop	r10
+     946:	9f 90       	pop	r9
+     948:	08 95       	ret
+
+0000094a <Tetris_erase_shape>:
+     94a:	ec e0       	ldi	r30, 0x0C	; 12
+     94c:	f4 e0       	ldi	r31, 0x04	; 4
+     94e:	8c e1       	ldi	r24, 0x1C	; 28
+     950:	94 e0       	ldi	r25, 0x04	; 4
+     952:	15 82       	std	Z+5, r1	; 0x05
+     954:	16 82       	std	Z+6, r1	; 0x06
+     956:	17 82       	std	Z+7, r1	; 0x07
+     958:	10 86       	std	Z+8, r1	; 0x08
+     95a:	34 96       	adiw	r30, 0x04	; 4
+     95c:	e8 17       	cp	r30, r24
+     95e:	f9 07       	cpc	r31, r25
+     960:	c1 f7       	brne	.-16     	; 0x952 <Tetris_erase_shape+0x8>
+     962:	08 95       	ret
+
+00000964 <changeFace>:
+     964:	ff 92       	push	r15
+     966:	0f 93       	push	r16
+     968:	1f 93       	push	r17
+     96a:	cf 93       	push	r28
+     96c:	df 93       	push	r29
+     96e:	d8 2f       	mov	r29, r24
+     970:	c6 2f       	mov	r28, r22
+     972:	86 30       	cpi	r24, 0x06	; 6
+     974:	91 f4       	brne	.+36     	; 0x99a <changeFace+0x36>
+     976:	8f ef       	ldi	r24, 0xFF	; 255
+     978:	86 0f       	add	r24, r22
+     97a:	84 30       	cpi	r24, 0x04	; 4
+     97c:	08 f0       	brcs	.+2      	; 0x980 <changeFace+0x1c>
+     97e:	0c c1       	rjmp	.+536    	; 0xb98 <changeFace+0x234>
+     980:	0c e0       	ldi	r16, 0x0C	; 12
+     982:	14 e0       	ldi	r17, 0x04	; 4
+     984:	82 e0       	ldi	r24, 0x02	; 2
+     986:	f8 01       	movw	r30, r16
+     988:	84 83       	std	Z+4, r24	; 0x04
+     98a:	df df       	rcall	.-66     	; 0x94a <Tetris_erase_shape>
+     98c:	81 e0       	ldi	r24, 0x01	; 1
+     98e:	f8 01       	movw	r30, r16
+     990:	85 83       	std	Z+5, r24	; 0x05
+     992:	86 83       	std	Z+6, r24	; 0x06
+     994:	82 87       	std	Z+10, r24	; 0x0a
+     996:	81 87       	std	Z+9, r24	; 0x09
+     998:	ff c0       	rjmp	.+510    	; 0xb98 <changeFace+0x234>
+     99a:	85 30       	cpi	r24, 0x05	; 5
+     99c:	09 f0       	breq	.+2      	; 0x9a0 <changeFace+0x3c>
+     99e:	4e c0       	rjmp	.+156    	; 0xa3c <changeFace+0xd8>
+     9a0:	86 2f       	mov	r24, r22
+     9a2:	8d 7f       	andi	r24, 0xFD	; 253
+     9a4:	81 30       	cpi	r24, 0x01	; 1
+     9a6:	61 f4       	brne	.+24     	; 0x9c0 <changeFace+0x5c>
+     9a8:	0c e0       	ldi	r16, 0x0C	; 12
+     9aa:	14 e0       	ldi	r17, 0x04	; 4
+     9ac:	ff 24       	eor	r15, r15
+     9ae:	f3 94       	inc	r15
+     9b0:	f8 01       	movw	r30, r16
+     9b2:	f4 82       	std	Z+4, r15	; 0x04
+     9b4:	ca df       	rcall	.-108    	; 0x94a <Tetris_erase_shape>
+     9b6:	f8 01       	movw	r30, r16
+     9b8:	f5 82       	std	Z+5, r15	; 0x05
+     9ba:	f6 82       	std	Z+6, r15	; 0x06
+     9bc:	f7 82       	std	Z+7, r15	; 0x07
+     9be:	f0 86       	std	Z+8, r15	; 0x08
+     9c0:	c2 30       	cpi	r28, 0x02	; 2
+     9c2:	19 f0       	breq	.+6      	; 0x9ca <changeFace+0x66>
+     9c4:	c4 30       	cpi	r28, 0x04	; 4
+     9c6:	09 f0       	breq	.+2      	; 0x9ca <changeFace+0x66>
+     9c8:	96 c1       	rjmp	.+812    	; 0xcf6 <changeFace+0x392>
+     9ca:	ec e0       	ldi	r30, 0x0C	; 12
+     9cc:	f4 e0       	ldi	r31, 0x04	; 4
+     9ce:	02 81       	ldd	r16, Z+2	; 0x02
+     9d0:	13 81       	ldd	r17, Z+3	; 0x03
+     9d2:	60 2f       	mov	r22, r16
+     9d4:	83 e0       	ldi	r24, 0x03	; 3
+     9d6:	81 0f       	add	r24, r17
+     9d8:	70 dd       	rcall	.-1312   	; 0x4ba <Tetris_safe_L_Move>
+     9da:	88 23       	and	r24, r24
+     9dc:	c9 f0       	breq	.+50     	; 0xa10 <changeFace+0xac>
+     9de:	60 2f       	mov	r22, r16
+     9e0:	82 e0       	ldi	r24, 0x02	; 2
+     9e2:	81 0f       	add	r24, r17
+     9e4:	6a dd       	rcall	.-1324   	; 0x4ba <Tetris_safe_L_Move>
+     9e6:	88 23       	and	r24, r24
+     9e8:	99 f0       	breq	.+38     	; 0xa10 <changeFace+0xac>
+     9ea:	60 2f       	mov	r22, r16
+     9ec:	81 2f       	mov	r24, r17
+     9ee:	65 dd       	rcall	.-1334   	; 0x4ba <Tetris_safe_L_Move>
+     9f0:	88 23       	and	r24, r24
+     9f2:	71 f0       	breq	.+28     	; 0xa10 <changeFace+0xac>
+     9f4:	60 2f       	mov	r22, r16
+     9f6:	81 e0       	ldi	r24, 0x01	; 1
+     9f8:	81 0f       	add	r24, r17
+     9fa:	5f dd       	rcall	.-1346   	; 0x4ba <Tetris_safe_L_Move>
+     9fc:	88 23       	and	r24, r24
+     9fe:	41 f0       	breq	.+16     	; 0xa10 <changeFace+0xac>
+     a00:	80 91 10 04 	lds	r24, 0x0410	; 0x800410 <current+0x4>
+     a04:	90 e0       	ldi	r25, 0x00	; 0
+     a06:	01 97       	sbiw	r24, 0x01	; 1
+     a08:	81 0f       	add	r24, r17
+     a0a:	91 1d       	adc	r25, r1
+     a0c:	07 97       	sbiw	r24, 0x07	; 7
+     a0e:	21 f4       	brne	.+8      	; 0xa18 <changeFace+0xb4>
+     a10:	81 e0       	ldi	r24, 0x01	; 1
+     a12:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     a16:	6f c1       	rjmp	.+734    	; 0xcf6 <changeFace+0x392>
+     a18:	15 30       	cpi	r17, 0x05	; 5
+     a1a:	18 f0       	brcs	.+6      	; 0xa22 <changeFace+0xbe>
+     a1c:	84 e0       	ldi	r24, 0x04	; 4
+     a1e:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     a22:	0c e0       	ldi	r16, 0x0C	; 12
+     a24:	14 e0       	ldi	r17, 0x04	; 4
+     a26:	84 e0       	ldi	r24, 0x04	; 4
+     a28:	f8 01       	movw	r30, r16
+     a2a:	84 83       	std	Z+4, r24	; 0x04
+     a2c:	8e df       	rcall	.-228    	; 0x94a <Tetris_erase_shape>
+     a2e:	81 e0       	ldi	r24, 0x01	; 1
+     a30:	f8 01       	movw	r30, r16
+     a32:	85 83       	std	Z+5, r24	; 0x05
+     a34:	81 87       	std	Z+9, r24	; 0x09
+     a36:	85 87       	std	Z+13, r24	; 0x0d
+     a38:	81 8b       	std	Z+17, r24	; 0x11
+     a3a:	5d c1       	rjmp	.+698    	; 0xcf6 <changeFace+0x392>
+     a3c:	81 11       	cpse	r24, r1
+     a3e:	ac c0       	rjmp	.+344    	; 0xb98 <changeFace+0x234>
+     a40:	61 30       	cpi	r22, 0x01	; 1
+     a42:	69 f4       	brne	.+26     	; 0xa5e <changeFace+0xfa>
+     a44:	0c e0       	ldi	r16, 0x0C	; 12
+     a46:	14 e0       	ldi	r17, 0x04	; 4
+     a48:	82 e0       	ldi	r24, 0x02	; 2
+     a4a:	f8 01       	movw	r30, r16
+     a4c:	84 83       	std	Z+4, r24	; 0x04
+     a4e:	7d df       	rcall	.-262    	; 0x94a <Tetris_erase_shape>
+     a50:	81 e0       	ldi	r24, 0x01	; 1
+     a52:	f8 01       	movw	r30, r16
+     a54:	85 83       	std	Z+5, r24	; 0x05
+     a56:	86 83       	std	Z+6, r24	; 0x06
+     a58:	87 83       	std	Z+7, r24	; 0x07
+     a5a:	82 87       	std	Z+10, r24	; 0x0a
+     a5c:	56 c0       	rjmp	.+172    	; 0xb0a <changeFace+0x1a6>
+     a5e:	62 30       	cpi	r22, 0x02	; 2
+     a60:	09 f0       	breq	.+2      	; 0xa64 <changeFace+0x100>
+     a62:	44 c0       	rjmp	.+136    	; 0xaec <changeFace+0x188>
+     a64:	ec e0       	ldi	r30, 0x0C	; 12
+     a66:	f4 e0       	ldi	r31, 0x04	; 4
+     a68:	02 81       	ldd	r16, Z+2	; 0x02
+     a6a:	13 81       	ldd	r17, Z+3	; 0x03
+     a6c:	60 2f       	mov	r22, r16
+     a6e:	81 2f       	mov	r24, r17
+     a70:	24 dd       	rcall	.-1464   	; 0x4ba <Tetris_safe_L_Move>
+     a72:	88 23       	and	r24, r24
+     a74:	41 f0       	breq	.+16     	; 0xa86 <changeFace+0x122>
+     a76:	80 91 10 04 	lds	r24, 0x0410	; 0x800410 <current+0x4>
+     a7a:	90 e0       	ldi	r25, 0x00	; 0
+     a7c:	01 97       	sbiw	r24, 0x01	; 1
+     a7e:	81 0f       	add	r24, r17
+     a80:	91 1d       	adc	r25, r1
+     a82:	07 97       	sbiw	r24, 0x07	; 7
+     a84:	09 f5       	brne	.+66     	; 0xac8 <changeFace+0x164>
+     a86:	60 2f       	mov	r22, r16
+     a88:	81 2f       	mov	r24, r17
+     a8a:	eb dc       	rcall	.-1578   	; 0x462 <Tetris_safe_R_Move>
+     a8c:	88 23       	and	r24, r24
+     a8e:	c1 f0       	breq	.+48     	; 0xac0 <changeFace+0x15c>
+     a90:	11 23       	and	r17, r17
+     a92:	b1 f0       	breq	.+44     	; 0xac0 <changeFace+0x15c>
+     a94:	11 50       	subi	r17, 0x01	; 1
+     a96:	16 30       	cpi	r17, 0x06	; 6
+     a98:	19 f0       	breq	.+6      	; 0xaa0 <changeFace+0x13c>
+     a9a:	10 93 0f 04 	sts	0x040F, r17	; 0x80040f <current+0x3>
+     a9e:	03 c0       	rjmp	.+6      	; 0xaa6 <changeFace+0x142>
+     aa0:	85 e0       	ldi	r24, 0x05	; 5
+     aa2:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     aa6:	0c e0       	ldi	r16, 0x0C	; 12
+     aa8:	14 e0       	ldi	r17, 0x04	; 4
+     aaa:	83 e0       	ldi	r24, 0x03	; 3
+     aac:	f8 01       	movw	r30, r16
+     aae:	84 83       	std	Z+4, r24	; 0x04
+     ab0:	4c df       	rcall	.-360    	; 0x94a <Tetris_erase_shape>
+     ab2:	81 e0       	ldi	r24, 0x01	; 1
+     ab4:	f8 01       	movw	r30, r16
+     ab6:	86 83       	std	Z+6, r24	; 0x06
+     ab8:	82 87       	std	Z+10, r24	; 0x0a
+     aba:	86 87       	std	Z+14, r24	; 0x0e
+     abc:	81 87       	std	Z+9, r24	; 0x09
+     abe:	c2 c1       	rjmp	.+900    	; 0xe44 <changeFace+0x4e0>
+     ac0:	81 e0       	ldi	r24, 0x01	; 1
+     ac2:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     ac6:	be c1       	rjmp	.+892    	; 0xe44 <changeFace+0x4e0>
+     ac8:	16 30       	cpi	r17, 0x06	; 6
+     aca:	19 f4       	brne	.+6      	; 0xad2 <changeFace+0x16e>
+     acc:	85 e0       	ldi	r24, 0x05	; 5
+     ace:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     ad2:	0c e0       	ldi	r16, 0x0C	; 12
+     ad4:	14 e0       	ldi	r17, 0x04	; 4
+     ad6:	83 e0       	ldi	r24, 0x03	; 3
+     ad8:	f8 01       	movw	r30, r16
+     ada:	84 83       	std	Z+4, r24	; 0x04
+     adc:	36 df       	rcall	.-404    	; 0x94a <Tetris_erase_shape>
+     ade:	81 e0       	ldi	r24, 0x01	; 1
+     ae0:	f8 01       	movw	r30, r16
+     ae2:	86 83       	std	Z+6, r24	; 0x06
+     ae4:	82 87       	std	Z+10, r24	; 0x0a
+     ae6:	86 87       	std	Z+14, r24	; 0x0e
+     ae8:	81 87       	std	Z+9, r24	; 0x09
+     aea:	ac c1       	rjmp	.+856    	; 0xe44 <changeFace+0x4e0>
+     aec:	63 30       	cpi	r22, 0x03	; 3
+     aee:	69 f4       	brne	.+26     	; 0xb0a <changeFace+0x1a6>
+     af0:	0c e0       	ldi	r16, 0x0C	; 12
+     af2:	14 e0       	ldi	r17, 0x04	; 4
+     af4:	82 e0       	ldi	r24, 0x02	; 2
+     af6:	f8 01       	movw	r30, r16
+     af8:	84 83       	std	Z+4, r24	; 0x04
+     afa:	27 df       	rcall	.-434    	; 0x94a <Tetris_erase_shape>
+     afc:	81 e0       	ldi	r24, 0x01	; 1
+     afe:	f8 01       	movw	r30, r16
+     b00:	86 83       	std	Z+6, r24	; 0x06
+     b02:	81 87       	std	Z+9, r24	; 0x09
+     b04:	82 87       	std	Z+10, r24	; 0x0a
+     b06:	83 87       	std	Z+11, r24	; 0x0b
+     b08:	f6 c0       	rjmp	.+492    	; 0xcf6 <changeFace+0x392>
+     b0a:	c4 30       	cpi	r28, 0x04	; 4
+     b0c:	09 f0       	breq	.+2      	; 0xb10 <changeFace+0x1ac>
+     b0e:	9a c1       	rjmp	.+820    	; 0xe44 <changeFace+0x4e0>
+     b10:	ec e0       	ldi	r30, 0x0C	; 12
+     b12:	f4 e0       	ldi	r31, 0x04	; 4
+     b14:	02 81       	ldd	r16, Z+2	; 0x02
+     b16:	13 81       	ldd	r17, Z+3	; 0x03
+     b18:	60 2f       	mov	r22, r16
+     b1a:	81 2f       	mov	r24, r17
+     b1c:	ce dc       	rcall	.-1636   	; 0x4ba <Tetris_safe_L_Move>
+     b1e:	88 23       	and	r24, r24
+     b20:	41 f0       	breq	.+16     	; 0xb32 <changeFace+0x1ce>
+     b22:	80 91 10 04 	lds	r24, 0x0410	; 0x800410 <current+0x4>
+     b26:	90 e0       	ldi	r25, 0x00	; 0
+     b28:	01 97       	sbiw	r24, 0x01	; 1
+     b2a:	81 0f       	add	r24, r17
+     b2c:	91 1d       	adc	r25, r1
+     b2e:	07 97       	sbiw	r24, 0x07	; 7
+     b30:	09 f5       	brne	.+66     	; 0xb74 <changeFace+0x210>
+     b32:	60 2f       	mov	r22, r16
+     b34:	81 2f       	mov	r24, r17
+     b36:	95 dc       	rcall	.-1750   	; 0x462 <Tetris_safe_R_Move>
+     b38:	88 23       	and	r24, r24
+     b3a:	c1 f0       	breq	.+48     	; 0xb6c <changeFace+0x208>
+     b3c:	11 23       	and	r17, r17
+     b3e:	b1 f0       	breq	.+44     	; 0xb6c <changeFace+0x208>
+     b40:	11 50       	subi	r17, 0x01	; 1
+     b42:	16 30       	cpi	r17, 0x06	; 6
+     b44:	19 f0       	breq	.+6      	; 0xb4c <changeFace+0x1e8>
+     b46:	10 93 0f 04 	sts	0x040F, r17	; 0x80040f <current+0x3>
+     b4a:	03 c0       	rjmp	.+6      	; 0xb52 <changeFace+0x1ee>
+     b4c:	85 e0       	ldi	r24, 0x05	; 5
+     b4e:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     b52:	0c e0       	ldi	r16, 0x0C	; 12
+     b54:	14 e0       	ldi	r17, 0x04	; 4
+     b56:	83 e0       	ldi	r24, 0x03	; 3
+     b58:	f8 01       	movw	r30, r16
+     b5a:	84 83       	std	Z+4, r24	; 0x04
+     b5c:	f6 de       	rcall	.-532    	; 0x94a <Tetris_erase_shape>
+     b5e:	81 e0       	ldi	r24, 0x01	; 1
+     b60:	f8 01       	movw	r30, r16
+     b62:	85 83       	std	Z+5, r24	; 0x05
+     b64:	81 87       	std	Z+9, r24	; 0x09
+     b66:	85 87       	std	Z+13, r24	; 0x0d
+     b68:	82 87       	std	Z+10, r24	; 0x0a
+     b6a:	6c c1       	rjmp	.+728    	; 0xe44 <changeFace+0x4e0>
+     b6c:	83 e0       	ldi	r24, 0x03	; 3
+     b6e:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     b72:	68 c1       	rjmp	.+720    	; 0xe44 <changeFace+0x4e0>
+     b74:	16 30       	cpi	r17, 0x06	; 6
+     b76:	19 f4       	brne	.+6      	; 0xb7e <changeFace+0x21a>
+     b78:	85 e0       	ldi	r24, 0x05	; 5
+     b7a:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     b7e:	0c e0       	ldi	r16, 0x0C	; 12
+     b80:	14 e0       	ldi	r17, 0x04	; 4
+     b82:	83 e0       	ldi	r24, 0x03	; 3
+     b84:	f8 01       	movw	r30, r16
+     b86:	84 83       	std	Z+4, r24	; 0x04
+     b88:	e0 de       	rcall	.-576    	; 0x94a <Tetris_erase_shape>
+     b8a:	81 e0       	ldi	r24, 0x01	; 1
+     b8c:	f8 01       	movw	r30, r16
+     b8e:	85 83       	std	Z+5, r24	; 0x05
+     b90:	81 87       	std	Z+9, r24	; 0x09
+     b92:	85 87       	std	Z+13, r24	; 0x0d
+     b94:	82 87       	std	Z+10, r24	; 0x0a
+     b96:	56 c1       	rjmp	.+684    	; 0xe44 <changeFace+0x4e0>
+     b98:	d4 30       	cpi	r29, 0x04	; 4
+     b9a:	09 f0       	breq	.+2      	; 0xb9e <changeFace+0x23a>
+     b9c:	ac c0       	rjmp	.+344    	; 0xcf6 <changeFace+0x392>
+     b9e:	c1 30       	cpi	r28, 0x01	; 1
+     ba0:	69 f4       	brne	.+26     	; 0xbbc <changeFace+0x258>
+     ba2:	0c e0       	ldi	r16, 0x0C	; 12
+     ba4:	14 e0       	ldi	r17, 0x04	; 4
+     ba6:	82 e0       	ldi	r24, 0x02	; 2
+     ba8:	f8 01       	movw	r30, r16
+     baa:	84 83       	std	Z+4, r24	; 0x04
+     bac:	ce de       	rcall	.-612    	; 0x94a <Tetris_erase_shape>
+     bae:	81 e0       	ldi	r24, 0x01	; 1
+     bb0:	f8 01       	movw	r30, r16
+     bb2:	81 87       	std	Z+9, r24	; 0x09
+     bb4:	82 87       	std	Z+10, r24	; 0x0a
+     bb6:	83 87       	std	Z+11, r24	; 0x0b
+     bb8:	87 83       	std	Z+7, r24	; 0x07
+     bba:	56 c0       	rjmp	.+172    	; 0xc68 <changeFace+0x304>
+     bbc:	c2 30       	cpi	r28, 0x02	; 2
+     bbe:	09 f0       	breq	.+2      	; 0xbc2 <changeFace+0x25e>
+     bc0:	44 c0       	rjmp	.+136    	; 0xc4a <changeFace+0x2e6>
+     bc2:	ec e0       	ldi	r30, 0x0C	; 12
+     bc4:	f4 e0       	ldi	r31, 0x04	; 4
+     bc6:	02 81       	ldd	r16, Z+2	; 0x02
+     bc8:	13 81       	ldd	r17, Z+3	; 0x03
+     bca:	60 2f       	mov	r22, r16
+     bcc:	81 2f       	mov	r24, r17
+     bce:	75 dc       	rcall	.-1814   	; 0x4ba <Tetris_safe_L_Move>
+     bd0:	88 23       	and	r24, r24
+     bd2:	41 f0       	breq	.+16     	; 0xbe4 <changeFace+0x280>
+     bd4:	80 91 10 04 	lds	r24, 0x0410	; 0x800410 <current+0x4>
+     bd8:	90 e0       	ldi	r25, 0x00	; 0
+     bda:	01 97       	sbiw	r24, 0x01	; 1
+     bdc:	81 0f       	add	r24, r17
+     bde:	91 1d       	adc	r25, r1
+     be0:	07 97       	sbiw	r24, 0x07	; 7
+     be2:	09 f5       	brne	.+66     	; 0xc26 <changeFace+0x2c2>
+     be4:	60 2f       	mov	r22, r16
+     be6:	81 2f       	mov	r24, r17
+     be8:	3c dc       	rcall	.-1928   	; 0x462 <Tetris_safe_R_Move>
+     bea:	88 23       	and	r24, r24
+     bec:	c1 f0       	breq	.+48     	; 0xc1e <changeFace+0x2ba>
+     bee:	11 23       	and	r17, r17
+     bf0:	b1 f0       	breq	.+44     	; 0xc1e <changeFace+0x2ba>
+     bf2:	11 50       	subi	r17, 0x01	; 1
+     bf4:	16 30       	cpi	r17, 0x06	; 6
+     bf6:	19 f0       	breq	.+6      	; 0xbfe <changeFace+0x29a>
+     bf8:	10 93 0f 04 	sts	0x040F, r17	; 0x80040f <current+0x3>
+     bfc:	03 c0       	rjmp	.+6      	; 0xc04 <changeFace+0x2a0>
+     bfe:	85 e0       	ldi	r24, 0x05	; 5
+     c00:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     c04:	0c e0       	ldi	r16, 0x0C	; 12
+     c06:	14 e0       	ldi	r17, 0x04	; 4
+     c08:	83 e0       	ldi	r24, 0x03	; 3
+     c0a:	f8 01       	movw	r30, r16
+     c0c:	84 83       	std	Z+4, r24	; 0x04
+     c0e:	9d de       	rcall	.-710    	; 0x94a <Tetris_erase_shape>
+     c10:	81 e0       	ldi	r24, 0x01	; 1
+     c12:	f8 01       	movw	r30, r16
+     c14:	86 83       	std	Z+6, r24	; 0x06
+     c16:	82 87       	std	Z+10, r24	; 0x0a
+     c18:	86 87       	std	Z+14, r24	; 0x0e
+     c1a:	85 83       	std	Z+5, r24	; 0x05
+     c1c:	6e c1       	rjmp	.+732    	; 0xefa <changeFace+0x596>
+     c1e:	81 e0       	ldi	r24, 0x01	; 1
+     c20:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     c24:	6a c1       	rjmp	.+724    	; 0xefa <changeFace+0x596>
+     c26:	16 30       	cpi	r17, 0x06	; 6
+     c28:	19 f4       	brne	.+6      	; 0xc30 <changeFace+0x2cc>
+     c2a:	85 e0       	ldi	r24, 0x05	; 5
+     c2c:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     c30:	0c e0       	ldi	r16, 0x0C	; 12
+     c32:	14 e0       	ldi	r17, 0x04	; 4
+     c34:	83 e0       	ldi	r24, 0x03	; 3
+     c36:	f8 01       	movw	r30, r16
+     c38:	84 83       	std	Z+4, r24	; 0x04
+     c3a:	87 de       	rcall	.-754    	; 0x94a <Tetris_erase_shape>
+     c3c:	81 e0       	ldi	r24, 0x01	; 1
+     c3e:	f8 01       	movw	r30, r16
+     c40:	86 83       	std	Z+6, r24	; 0x06
+     c42:	82 87       	std	Z+10, r24	; 0x0a
+     c44:	86 87       	std	Z+14, r24	; 0x0e
+     c46:	85 83       	std	Z+5, r24	; 0x05
+     c48:	58 c1       	rjmp	.+688    	; 0xefa <changeFace+0x596>
+     c4a:	c3 30       	cpi	r28, 0x03	; 3
+     c4c:	69 f4       	brne	.+26     	; 0xc68 <changeFace+0x304>
+     c4e:	0c e0       	ldi	r16, 0x0C	; 12
+     c50:	14 e0       	ldi	r17, 0x04	; 4
+     c52:	82 e0       	ldi	r24, 0x02	; 2
+     c54:	f8 01       	movw	r30, r16
+     c56:	84 83       	std	Z+4, r24	; 0x04
+     c58:	78 de       	rcall	.-784    	; 0x94a <Tetris_erase_shape>
+     c5a:	81 e0       	ldi	r24, 0x01	; 1
+     c5c:	f8 01       	movw	r30, r16
+     c5e:	81 87       	std	Z+9, r24	; 0x09
+     c60:	85 83       	std	Z+5, r24	; 0x05
+     c62:	86 83       	std	Z+6, r24	; 0x06
+     c64:	87 83       	std	Z+7, r24	; 0x07
+     c66:	ee c0       	rjmp	.+476    	; 0xe44 <changeFace+0x4e0>
+     c68:	c4 30       	cpi	r28, 0x04	; 4
+     c6a:	09 f0       	breq	.+2      	; 0xc6e <changeFace+0x30a>
+     c6c:	46 c1       	rjmp	.+652    	; 0xefa <changeFace+0x596>
+     c6e:	ec e0       	ldi	r30, 0x0C	; 12
+     c70:	f4 e0       	ldi	r31, 0x04	; 4
+     c72:	02 81       	ldd	r16, Z+2	; 0x02
+     c74:	13 81       	ldd	r17, Z+3	; 0x03
+     c76:	60 2f       	mov	r22, r16
+     c78:	81 2f       	mov	r24, r17
+     c7a:	1f dc       	rcall	.-1986   	; 0x4ba <Tetris_safe_L_Move>
+     c7c:	88 23       	and	r24, r24
+     c7e:	41 f0       	breq	.+16     	; 0xc90 <changeFace+0x32c>
+     c80:	80 91 10 04 	lds	r24, 0x0410	; 0x800410 <current+0x4>
+     c84:	90 e0       	ldi	r25, 0x00	; 0
+     c86:	01 97       	sbiw	r24, 0x01	; 1
+     c88:	81 0f       	add	r24, r17
+     c8a:	91 1d       	adc	r25, r1
+     c8c:	07 97       	sbiw	r24, 0x07	; 7
+     c8e:	09 f5       	brne	.+66     	; 0xcd2 <changeFace+0x36e>
+     c90:	60 2f       	mov	r22, r16
+     c92:	81 2f       	mov	r24, r17
+     c94:	e6 db       	rcall	.-2100   	; 0x462 <Tetris_safe_R_Move>
+     c96:	88 23       	and	r24, r24
+     c98:	c1 f0       	breq	.+48     	; 0xcca <changeFace+0x366>
+     c9a:	11 23       	and	r17, r17
+     c9c:	b1 f0       	breq	.+44     	; 0xcca <changeFace+0x366>
+     c9e:	11 50       	subi	r17, 0x01	; 1
+     ca0:	16 30       	cpi	r17, 0x06	; 6
+     ca2:	19 f0       	breq	.+6      	; 0xcaa <changeFace+0x346>
+     ca4:	10 93 0f 04 	sts	0x040F, r17	; 0x80040f <current+0x3>
+     ca8:	03 c0       	rjmp	.+6      	; 0xcb0 <changeFace+0x34c>
+     caa:	85 e0       	ldi	r24, 0x05	; 5
+     cac:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     cb0:	0c e0       	ldi	r16, 0x0C	; 12
+     cb2:	14 e0       	ldi	r17, 0x04	; 4
+     cb4:	83 e0       	ldi	r24, 0x03	; 3
+     cb6:	f8 01       	movw	r30, r16
+     cb8:	84 83       	std	Z+4, r24	; 0x04
+     cba:	47 de       	rcall	.-882    	; 0x94a <Tetris_erase_shape>
+     cbc:	81 e0       	ldi	r24, 0x01	; 1
+     cbe:	f8 01       	movw	r30, r16
+     cc0:	85 83       	std	Z+5, r24	; 0x05
+     cc2:	81 87       	std	Z+9, r24	; 0x09
+     cc4:	85 87       	std	Z+13, r24	; 0x0d
+     cc6:	86 87       	std	Z+14, r24	; 0x0e
+     cc8:	18 c1       	rjmp	.+560    	; 0xefa <changeFace+0x596>
+     cca:	83 e0       	ldi	r24, 0x03	; 3
+     ccc:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     cd0:	14 c1       	rjmp	.+552    	; 0xefa <changeFace+0x596>
+     cd2:	16 30       	cpi	r17, 0x06	; 6
+     cd4:	19 f4       	brne	.+6      	; 0xcdc <changeFace+0x378>
+     cd6:	85 e0       	ldi	r24, 0x05	; 5
+     cd8:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     cdc:	0c e0       	ldi	r16, 0x0C	; 12
+     cde:	14 e0       	ldi	r17, 0x04	; 4
+     ce0:	83 e0       	ldi	r24, 0x03	; 3
+     ce2:	f8 01       	movw	r30, r16
+     ce4:	84 83       	std	Z+4, r24	; 0x04
+     ce6:	31 de       	rcall	.-926    	; 0x94a <Tetris_erase_shape>
+     ce8:	81 e0       	ldi	r24, 0x01	; 1
+     cea:	f8 01       	movw	r30, r16
+     cec:	85 83       	std	Z+5, r24	; 0x05
+     cee:	81 87       	std	Z+9, r24	; 0x09
+     cf0:	85 87       	std	Z+13, r24	; 0x0d
+     cf2:	86 87       	std	Z+14, r24	; 0x0e
+     cf4:	02 c1       	rjmp	.+516    	; 0xefa <changeFace+0x596>
+     cf6:	d1 30       	cpi	r29, 0x01	; 1
+     cf8:	09 f0       	breq	.+2      	; 0xcfc <changeFace+0x398>
+     cfa:	a4 c0       	rjmp	.+328    	; 0xe44 <changeFace+0x4e0>
+     cfc:	c1 30       	cpi	r28, 0x01	; 1
+     cfe:	69 f4       	brne	.+26     	; 0xd1a <changeFace+0x3b6>
+     d00:	0c e0       	ldi	r16, 0x0C	; 12
+     d02:	14 e0       	ldi	r17, 0x04	; 4
+     d04:	82 e0       	ldi	r24, 0x02	; 2
+     d06:	f8 01       	movw	r30, r16
+     d08:	84 83       	std	Z+4, r24	; 0x04
+     d0a:	1f de       	rcall	.-962    	; 0x94a <Tetris_erase_shape>
+     d0c:	81 e0       	ldi	r24, 0x01	; 1
+     d0e:	f8 01       	movw	r30, r16
+     d10:	85 83       	std	Z+5, r24	; 0x05
+     d12:	86 83       	std	Z+6, r24	; 0x06
+     d14:	87 83       	std	Z+7, r24	; 0x07
+     d16:	83 87       	std	Z+11, r24	; 0x0b
+     d18:	52 c0       	rjmp	.+164    	; 0xdbe <changeFace+0x45a>
+     d1a:	c2 30       	cpi	r28, 0x02	; 2
+     d1c:	09 f0       	breq	.+2      	; 0xd20 <changeFace+0x3bc>
+     d1e:	40 c0       	rjmp	.+128    	; 0xda0 <changeFace+0x43c>
+     d20:	ec e0       	ldi	r30, 0x0C	; 12
+     d22:	f4 e0       	ldi	r31, 0x04	; 4
+     d24:	d2 81       	ldd	r29, Z+2	; 0x02
+     d26:	c3 81       	ldd	r28, Z+3	; 0x03
+     d28:	6d 2f       	mov	r22, r29
+     d2a:	8c 2f       	mov	r24, r28
+     d2c:	c6 db       	rcall	.-2164   	; 0x4ba <Tetris_safe_L_Move>
+     d2e:	88 23       	and	r24, r24
+     d30:	41 f0       	breq	.+16     	; 0xd42 <changeFace+0x3de>
+     d32:	80 91 10 04 	lds	r24, 0x0410	; 0x800410 <current+0x4>
+     d36:	90 e0       	ldi	r25, 0x00	; 0
+     d38:	01 97       	sbiw	r24, 0x01	; 1
+     d3a:	8c 0f       	add	r24, r28
+     d3c:	91 1d       	adc	r25, r1
+     d3e:	07 97       	sbiw	r24, 0x07	; 7
+     d40:	f9 f4       	brne	.+62     	; 0xd80 <changeFace+0x41c>
+     d42:	6d 2f       	mov	r22, r29
+     d44:	8c 2f       	mov	r24, r28
+     d46:	8d db       	rcall	.-2278   	; 0x462 <Tetris_safe_R_Move>
+     d48:	88 23       	and	r24, r24
+     d4a:	b1 f0       	breq	.+44     	; 0xd78 <changeFace+0x414>
+     d4c:	cc 23       	and	r28, r28
+     d4e:	a1 f0       	breq	.+40     	; 0xd78 <changeFace+0x414>
+     d50:	c1 50       	subi	r28, 0x01	; 1
+     d52:	c6 30       	cpi	r28, 0x06	; 6
+     d54:	19 f0       	breq	.+6      	; 0xd5c <changeFace+0x3f8>
+     d56:	c0 93 0f 04 	sts	0x040F, r28	; 0x80040f <current+0x3>
+     d5a:	03 c0       	rjmp	.+6      	; 0xd62 <changeFace+0x3fe>
+     d5c:	85 e0       	ldi	r24, 0x05	; 5
+     d5e:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     d62:	cc e0       	ldi	r28, 0x0C	; 12
+     d64:	d4 e0       	ldi	r29, 0x04	; 4
+     d66:	83 e0       	ldi	r24, 0x03	; 3
+     d68:	8c 83       	std	Y+4, r24	; 0x04
+     d6a:	ef dd       	rcall	.-1058   	; 0x94a <Tetris_erase_shape>
+     d6c:	81 e0       	ldi	r24, 0x01	; 1
+     d6e:	8e 83       	std	Y+6, r24	; 0x06
+     d70:	8a 87       	std	Y+10, r24	; 0x0a
+     d72:	8e 87       	std	Y+14, r24	; 0x0e
+     d74:	8d 87       	std	Y+13, r24	; 0x0d
+     d76:	12 c1       	rjmp	.+548    	; 0xf9c <changeFace+0x638>
+     d78:	81 e0       	ldi	r24, 0x01	; 1
+     d7a:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     d7e:	0e c1       	rjmp	.+540    	; 0xf9c <changeFace+0x638>
+     d80:	c6 30       	cpi	r28, 0x06	; 6
+     d82:	19 f4       	brne	.+6      	; 0xd8a <changeFace+0x426>
+     d84:	85 e0       	ldi	r24, 0x05	; 5
+     d86:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     d8a:	cc e0       	ldi	r28, 0x0C	; 12
+     d8c:	d4 e0       	ldi	r29, 0x04	; 4
+     d8e:	83 e0       	ldi	r24, 0x03	; 3
+     d90:	8c 83       	std	Y+4, r24	; 0x04
+     d92:	db dd       	rcall	.-1098   	; 0x94a <Tetris_erase_shape>
+     d94:	81 e0       	ldi	r24, 0x01	; 1
+     d96:	8e 83       	std	Y+6, r24	; 0x06
+     d98:	8a 87       	std	Y+10, r24	; 0x0a
+     d9a:	8e 87       	std	Y+14, r24	; 0x0e
+     d9c:	8d 87       	std	Y+13, r24	; 0x0d
+     d9e:	fe c0       	rjmp	.+508    	; 0xf9c <changeFace+0x638>
+     da0:	c3 30       	cpi	r28, 0x03	; 3
+     da2:	69 f4       	brne	.+26     	; 0xdbe <changeFace+0x45a>
+     da4:	0c e0       	ldi	r16, 0x0C	; 12
+     da6:	14 e0       	ldi	r17, 0x04	; 4
+     da8:	82 e0       	ldi	r24, 0x02	; 2
+     daa:	f8 01       	movw	r30, r16
+     dac:	84 83       	std	Z+4, r24	; 0x04
+     dae:	cd dd       	rcall	.-1126   	; 0x94a <Tetris_erase_shape>
+     db0:	81 e0       	ldi	r24, 0x01	; 1
+     db2:	f8 01       	movw	r30, r16
+     db4:	85 83       	std	Z+5, r24	; 0x05
+     db6:	81 87       	std	Z+9, r24	; 0x09
+     db8:	82 87       	std	Z+10, r24	; 0x0a
+     dba:	83 87       	std	Z+11, r24	; 0x0b
+     dbc:	9e c0       	rjmp	.+316    	; 0xefa <changeFace+0x596>
+     dbe:	c4 30       	cpi	r28, 0x04	; 4
+     dc0:	09 f0       	breq	.+2      	; 0xdc4 <changeFace+0x460>
+     dc2:	ec c0       	rjmp	.+472    	; 0xf9c <changeFace+0x638>
+     dc4:	ec e0       	ldi	r30, 0x0C	; 12
+     dc6:	f4 e0       	ldi	r31, 0x04	; 4
+     dc8:	d2 81       	ldd	r29, Z+2	; 0x02
+     dca:	c3 81       	ldd	r28, Z+3	; 0x03
+     dcc:	6d 2f       	mov	r22, r29
+     dce:	8c 2f       	mov	r24, r28
+     dd0:	74 db       	rcall	.-2328   	; 0x4ba <Tetris_safe_L_Move>
+     dd2:	88 23       	and	r24, r24
+     dd4:	41 f0       	breq	.+16     	; 0xde6 <changeFace+0x482>
+     dd6:	80 91 10 04 	lds	r24, 0x0410	; 0x800410 <current+0x4>
+     dda:	90 e0       	ldi	r25, 0x00	; 0
+     ddc:	01 97       	sbiw	r24, 0x01	; 1
+     dde:	8c 0f       	add	r24, r28
+     de0:	91 1d       	adc	r25, r1
+     de2:	07 97       	sbiw	r24, 0x07	; 7
+     de4:	f9 f4       	brne	.+62     	; 0xe24 <changeFace+0x4c0>
+     de6:	6d 2f       	mov	r22, r29
+     de8:	8c 2f       	mov	r24, r28
+     dea:	3b db       	rcall	.-2442   	; 0x462 <Tetris_safe_R_Move>
+     dec:	88 23       	and	r24, r24
+     dee:	b1 f0       	breq	.+44     	; 0xe1c <changeFace+0x4b8>
+     df0:	cc 23       	and	r28, r28
+     df2:	a1 f0       	breq	.+40     	; 0xe1c <changeFace+0x4b8>
+     df4:	c1 50       	subi	r28, 0x01	; 1
+     df6:	c6 30       	cpi	r28, 0x06	; 6
+     df8:	19 f0       	breq	.+6      	; 0xe00 <changeFace+0x49c>
+     dfa:	c0 93 0f 04 	sts	0x040F, r28	; 0x80040f <current+0x3>
+     dfe:	03 c0       	rjmp	.+6      	; 0xe06 <changeFace+0x4a2>
+     e00:	85 e0       	ldi	r24, 0x05	; 5
+     e02:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     e06:	cc e0       	ldi	r28, 0x0C	; 12
+     e08:	d4 e0       	ldi	r29, 0x04	; 4
+     e0a:	83 e0       	ldi	r24, 0x03	; 3
+     e0c:	8c 83       	std	Y+4, r24	; 0x04
+     e0e:	9d dd       	rcall	.-1222   	; 0x94a <Tetris_erase_shape>
+     e10:	81 e0       	ldi	r24, 0x01	; 1
+     e12:	8d 83       	std	Y+5, r24	; 0x05
+     e14:	89 87       	std	Y+9, r24	; 0x09
+     e16:	8d 87       	std	Y+13, r24	; 0x0d
+     e18:	8e 83       	std	Y+6, r24	; 0x06
+     e1a:	c0 c0       	rjmp	.+384    	; 0xf9c <changeFace+0x638>
+     e1c:	83 e0       	ldi	r24, 0x03	; 3
+     e1e:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     e22:	bc c0       	rjmp	.+376    	; 0xf9c <changeFace+0x638>
+     e24:	c6 30       	cpi	r28, 0x06	; 6
+     e26:	19 f4       	brne	.+6      	; 0xe2e <changeFace+0x4ca>
+     e28:	85 e0       	ldi	r24, 0x05	; 5
+     e2a:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     e2e:	cc e0       	ldi	r28, 0x0C	; 12
+     e30:	d4 e0       	ldi	r29, 0x04	; 4
+     e32:	83 e0       	ldi	r24, 0x03	; 3
+     e34:	8c 83       	std	Y+4, r24	; 0x04
+     e36:	89 dd       	rcall	.-1262   	; 0x94a <Tetris_erase_shape>
+     e38:	81 e0       	ldi	r24, 0x01	; 1
+     e3a:	8d 83       	std	Y+5, r24	; 0x05
+     e3c:	89 87       	std	Y+9, r24	; 0x09
+     e3e:	8d 87       	std	Y+13, r24	; 0x0d
+     e40:	8e 83       	std	Y+6, r24	; 0x06
+     e42:	ac c0       	rjmp	.+344    	; 0xf9c <changeFace+0x638>
+     e44:	d2 30       	cpi	r29, 0x02	; 2
+     e46:	09 f0       	breq	.+2      	; 0xe4a <changeFace+0x4e6>
+     e48:	58 c0       	rjmp	.+176    	; 0xefa <changeFace+0x596>
+     e4a:	8c 2f       	mov	r24, r28
+     e4c:	8d 7f       	andi	r24, 0xFD	; 253
+     e4e:	81 30       	cpi	r24, 0x01	; 1
+     e50:	09 f0       	breq	.+2      	; 0xe54 <changeFace+0x4f0>
+     e52:	43 c0       	rjmp	.+134    	; 0xeda <changeFace+0x576>
+     e54:	ec e0       	ldi	r30, 0x0C	; 12
+     e56:	f4 e0       	ldi	r31, 0x04	; 4
+     e58:	12 81       	ldd	r17, Z+2	; 0x02
+     e5a:	d3 81       	ldd	r29, Z+3	; 0x03
+     e5c:	61 2f       	mov	r22, r17
+     e5e:	8d 2f       	mov	r24, r29
+     e60:	2c db       	rcall	.-2472   	; 0x4ba <Tetris_safe_L_Move>
+     e62:	88 23       	and	r24, r24
+     e64:	41 f0       	breq	.+16     	; 0xe76 <changeFace+0x512>
+     e66:	80 91 10 04 	lds	r24, 0x0410	; 0x800410 <current+0x4>
+     e6a:	90 e0       	ldi	r25, 0x00	; 0
+     e6c:	01 97       	sbiw	r24, 0x01	; 1
+     e6e:	8d 0f       	add	r24, r29
+     e70:	91 1d       	adc	r25, r1
+     e72:	07 97       	sbiw	r24, 0x07	; 7
+     e74:	09 f5       	brne	.+66     	; 0xeb8 <changeFace+0x554>
+     e76:	61 2f       	mov	r22, r17
+     e78:	8d 2f       	mov	r24, r29
+     e7a:	f3 da       	rcall	.-2586   	; 0x462 <Tetris_safe_R_Move>
+     e7c:	88 23       	and	r24, r24
+     e7e:	c1 f0       	breq	.+48     	; 0xeb0 <changeFace+0x54c>
+     e80:	dd 23       	and	r29, r29
+     e82:	b1 f0       	breq	.+44     	; 0xeb0 <changeFace+0x54c>
+     e84:	d1 50       	subi	r29, 0x01	; 1
+     e86:	d6 30       	cpi	r29, 0x06	; 6
+     e88:	19 f0       	breq	.+6      	; 0xe90 <changeFace+0x52c>
+     e8a:	d0 93 0f 04 	sts	0x040F, r29	; 0x80040f <current+0x3>
+     e8e:	03 c0       	rjmp	.+6      	; 0xe96 <changeFace+0x532>
+     e90:	85 e0       	ldi	r24, 0x05	; 5
+     e92:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     e96:	0c e0       	ldi	r16, 0x0C	; 12
+     e98:	14 e0       	ldi	r17, 0x04	; 4
+     e9a:	83 e0       	ldi	r24, 0x03	; 3
+     e9c:	f8 01       	movw	r30, r16
+     e9e:	84 83       	std	Z+4, r24	; 0x04
+     ea0:	54 dd       	rcall	.-1368   	; 0x94a <Tetris_erase_shape>
+     ea2:	81 e0       	ldi	r24, 0x01	; 1
+     ea4:	f8 01       	movw	r30, r16
+     ea6:	81 87       	std	Z+9, r24	; 0x09
+     ea8:	82 87       	std	Z+10, r24	; 0x0a
+     eaa:	86 83       	std	Z+6, r24	; 0x06
+     eac:	85 87       	std	Z+13, r24	; 0x0d
+     eae:	15 c0       	rjmp	.+42     	; 0xeda <changeFace+0x576>
+     eb0:	82 e0       	ldi	r24, 0x02	; 2
+     eb2:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     eb6:	11 c0       	rjmp	.+34     	; 0xeda <changeFace+0x576>
+     eb8:	d6 30       	cpi	r29, 0x06	; 6
+     eba:	19 f4       	brne	.+6      	; 0xec2 <changeFace+0x55e>
+     ebc:	85 e0       	ldi	r24, 0x05	; 5
+     ebe:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     ec2:	0c e0       	ldi	r16, 0x0C	; 12
+     ec4:	14 e0       	ldi	r17, 0x04	; 4
+     ec6:	83 e0       	ldi	r24, 0x03	; 3
+     ec8:	f8 01       	movw	r30, r16
+     eca:	84 83       	std	Z+4, r24	; 0x04
+     ecc:	3e dd       	rcall	.-1412   	; 0x94a <Tetris_erase_shape>
+     ece:	81 e0       	ldi	r24, 0x01	; 1
+     ed0:	f8 01       	movw	r30, r16
+     ed2:	81 87       	std	Z+9, r24	; 0x09
+     ed4:	82 87       	std	Z+10, r24	; 0x0a
+     ed6:	86 83       	std	Z+6, r24	; 0x06
+     ed8:	85 87       	std	Z+13, r24	; 0x0d
+     eda:	c2 30       	cpi	r28, 0x02	; 2
+     edc:	19 f0       	breq	.+6      	; 0xee4 <changeFace+0x580>
+     ede:	c4 30       	cpi	r28, 0x04	; 4
+     ee0:	09 f0       	breq	.+2      	; 0xee4 <changeFace+0x580>
+     ee2:	5c c0       	rjmp	.+184    	; 0xf9c <changeFace+0x638>
+     ee4:	cc e0       	ldi	r28, 0x0C	; 12
+     ee6:	d4 e0       	ldi	r29, 0x04	; 4
+     ee8:	82 e0       	ldi	r24, 0x02	; 2
+     eea:	8c 83       	std	Y+4, r24	; 0x04
+     eec:	2e dd       	rcall	.-1444   	; 0x94a <Tetris_erase_shape>
+     eee:	81 e0       	ldi	r24, 0x01	; 1
+     ef0:	8d 83       	std	Y+5, r24	; 0x05
+     ef2:	8e 83       	std	Y+6, r24	; 0x06
+     ef4:	8a 87       	std	Y+10, r24	; 0x0a
+     ef6:	8b 87       	std	Y+11, r24	; 0x0b
+     ef8:	51 c0       	rjmp	.+162    	; 0xf9c <changeFace+0x638>
+     efa:	d3 30       	cpi	r29, 0x03	; 3
+     efc:	09 f0       	breq	.+2      	; 0xf00 <changeFace+0x59c>
+     efe:	4e c0       	rjmp	.+156    	; 0xf9c <changeFace+0x638>
+     f00:	8c 2f       	mov	r24, r28
+     f02:	8d 7f       	andi	r24, 0xFD	; 253
+     f04:	81 30       	cpi	r24, 0x01	; 1
+     f06:	09 f0       	breq	.+2      	; 0xf0a <changeFace+0x5a6>
+     f08:	3b c0       	rjmp	.+118    	; 0xf80 <changeFace+0x61c>
+     f0a:	ec e0       	ldi	r30, 0x0C	; 12
+     f0c:	f4 e0       	ldi	r31, 0x04	; 4
+     f0e:	12 81       	ldd	r17, Z+2	; 0x02
+     f10:	d3 81       	ldd	r29, Z+3	; 0x03
+     f12:	61 2f       	mov	r22, r17
+     f14:	8d 2f       	mov	r24, r29
+     f16:	d1 da       	rcall	.-2654   	; 0x4ba <Tetris_safe_L_Move>
+     f18:	81 11       	cpse	r24, r1
+     f1a:	21 c0       	rjmp	.+66     	; 0xf5e <changeFace+0x5fa>
+     f1c:	61 2f       	mov	r22, r17
+     f1e:	8d 2f       	mov	r24, r29
+     f20:	a0 da       	rcall	.-2752   	; 0x462 <Tetris_safe_R_Move>
+     f22:	88 23       	and	r24, r24
+     f24:	c1 f0       	breq	.+48     	; 0xf56 <changeFace+0x5f2>
+     f26:	dd 23       	and	r29, r29
+     f28:	b1 f0       	breq	.+44     	; 0xf56 <changeFace+0x5f2>
+     f2a:	d1 50       	subi	r29, 0x01	; 1
+     f2c:	d6 30       	cpi	r29, 0x06	; 6
+     f2e:	19 f0       	breq	.+6      	; 0xf36 <changeFace+0x5d2>
+     f30:	d0 93 0f 04 	sts	0x040F, r29	; 0x80040f <current+0x3>
+     f34:	03 c0       	rjmp	.+6      	; 0xf3c <changeFace+0x5d8>
+     f36:	85 e0       	ldi	r24, 0x05	; 5
+     f38:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     f3c:	0c e0       	ldi	r16, 0x0C	; 12
+     f3e:	14 e0       	ldi	r17, 0x04	; 4
+     f40:	83 e0       	ldi	r24, 0x03	; 3
+     f42:	f8 01       	movw	r30, r16
+     f44:	84 83       	std	Z+4, r24	; 0x04
+     f46:	01 dd       	rcall	.-1534   	; 0x94a <Tetris_erase_shape>
+     f48:	81 e0       	ldi	r24, 0x01	; 1
+     f4a:	f8 01       	movw	r30, r16
+     f4c:	85 83       	std	Z+5, r24	; 0x05
+     f4e:	81 87       	std	Z+9, r24	; 0x09
+     f50:	82 87       	std	Z+10, r24	; 0x0a
+     f52:	86 87       	std	Z+14, r24	; 0x0e
+     f54:	15 c0       	rjmp	.+42     	; 0xf80 <changeFace+0x61c>
+     f56:	82 e0       	ldi	r24, 0x02	; 2
+     f58:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+     f5c:	11 c0       	rjmp	.+34     	; 0xf80 <changeFace+0x61c>
+     f5e:	d6 30       	cpi	r29, 0x06	; 6
+     f60:	19 f4       	brne	.+6      	; 0xf68 <changeFace+0x604>
+     f62:	85 e0       	ldi	r24, 0x05	; 5
+     f64:	80 93 0f 04 	sts	0x040F, r24	; 0x80040f <current+0x3>
+     f68:	0c e0       	ldi	r16, 0x0C	; 12
+     f6a:	14 e0       	ldi	r17, 0x04	; 4
+     f6c:	83 e0       	ldi	r24, 0x03	; 3
+     f6e:	f8 01       	movw	r30, r16
+     f70:	84 83       	std	Z+4, r24	; 0x04
+     f72:	eb dc       	rcall	.-1578   	; 0x94a <Tetris_erase_shape>
+     f74:	81 e0       	ldi	r24, 0x01	; 1
+     f76:	f8 01       	movw	r30, r16
+     f78:	85 83       	std	Z+5, r24	; 0x05
+     f7a:	81 87       	std	Z+9, r24	; 0x09
+     f7c:	82 87       	std	Z+10, r24	; 0x0a
+     f7e:	86 87       	std	Z+14, r24	; 0x0e
+     f80:	c2 30       	cpi	r28, 0x02	; 2
+     f82:	11 f0       	breq	.+4      	; 0xf88 <changeFace+0x624>
+     f84:	c4 30       	cpi	r28, 0x04	; 4
+     f86:	51 f4       	brne	.+20     	; 0xf9c <changeFace+0x638>
+     f88:	cc e0       	ldi	r28, 0x0C	; 12
+     f8a:	d4 e0       	ldi	r29, 0x04	; 4
+     f8c:	82 e0       	ldi	r24, 0x02	; 2
+     f8e:	8c 83       	std	Y+4, r24	; 0x04
+     f90:	dc dc       	rcall	.-1608   	; 0x94a <Tetris_erase_shape>
+     f92:	81 e0       	ldi	r24, 0x01	; 1
+     f94:	8e 83       	std	Y+6, r24	; 0x06
+     f96:	8f 83       	std	Y+7, r24	; 0x07
+     f98:	8a 87       	std	Y+10, r24	; 0x0a
+     f9a:	89 87       	std	Y+9, r24	; 0x09
+     f9c:	df 91       	pop	r29
+     f9e:	cf 91       	pop	r28
+     fa0:	1f 91       	pop	r17
+     fa2:	0f 91       	pop	r16
+     fa4:	ff 90       	pop	r15
+     fa6:	08 95       	ret
+
+00000fa8 <Tetris_makeShape>:
+     fa8:	cf 93       	push	r28
+     faa:	df 93       	push	r29
+     fac:	c8 2f       	mov	r28, r24
+     fae:	6d d6       	rcall	.+3290   	; 0x1c8a <rand>
+     fb0:	d0 e0       	ldi	r29, 0x00	; 0
+     fb2:	be 01       	movw	r22, r28
+     fb4:	f3 d5       	rcall	.+3046   	; 0x1b9c <__divmodhi4>
+     fb6:	03 c0       	rjmp	.+6      	; 0xfbe <Tetris_makeShape+0x16>
+     fb8:	68 d6       	rcall	.+3280   	; 0x1c8a <rand>
+     fba:	be 01       	movw	r22, r28
+     fbc:	ef d5       	rcall	.+3038   	; 0x1b9c <__divmodhi4>
+     fbe:	90 91 6c 01 	lds	r25, 0x016C	; 0x80016c <prev>
+     fc2:	89 17       	cp	r24, r25
+     fc4:	c9 f3       	breq	.-14     	; 0xfb8 <Tetris_makeShape+0x10>
+     fc6:	85 30       	cpi	r24, 0x05	; 5
+     fc8:	b9 f3       	breq	.-18     	; 0xfb8 <Tetris_makeShape+0x10>
+     fca:	80 93 6c 01 	sts	0x016C, r24	; 0x80016c <prev>
+     fce:	ec e0       	ldi	r30, 0x0C	; 12
+     fd0:	f4 e0       	ldi	r31, 0x04	; 4
+     fd2:	80 83       	st	Z, r24
+     fd4:	91 e0       	ldi	r25, 0x01	; 1
+     fd6:	91 83       	std	Z+1, r25	; 0x01
+     fd8:	9d ef       	ldi	r25, 0xFD	; 253
+     fda:	92 83       	std	Z+2, r25	; 0x02
+     fdc:	93 e0       	ldi	r25, 0x03	; 3
+     fde:	93 83       	std	Z+3, r25	; 0x03
+     fe0:	61 e0       	ldi	r22, 0x01	; 1
+     fe2:	70 e0       	ldi	r23, 0x00	; 0
+     fe4:	90 e0       	ldi	r25, 0x00	; 0
+     fe6:	be dc       	rcall	.-1668   	; 0x964 <changeFace>
+     fe8:	df 91       	pop	r29
+     fea:	cf 91       	pop	r28
+     fec:	08 95       	ret
+
+00000fee <Tetris_screen_saver>:
+     fee:	ff 92       	push	r15
+     ff0:	0f 93       	push	r16
+     ff2:	1f 93       	push	r17
+     ff4:	cf 93       	push	r28
+     ff6:	df 93       	push	r29
+     ff8:	a8 dc       	rcall	.-1712   	; 0x94a <Tetris_erase_shape>
+     ffa:	cc ea       	ldi	r28, 0xAC	; 172
+     ffc:	d3 e0       	ldi	r29, 0x03	; 3
+     ffe:	8e 01       	movw	r16, r28
+    1000:	40 e0       	ldi	r20, 0x00	; 0
+    1002:	50 e0       	ldi	r21, 0x00	; 0
+    1004:	ff 24       	eor	r15, r15
+    1006:	f3 94       	inc	r15
+    1008:	19 c0       	rjmp	.+50     	; 0x103c <Tetris_screen_saver+0x4e>
+    100a:	10 82       	st	Z, r1
+    100c:	21 15       	cp	r18, r1
+    100e:	31 05       	cpc	r19, r1
+    1010:	21 f4       	brne	.+8      	; 0x101a <Tetris_screen_saver+0x2c>
+    1012:	80 fd       	sbrc	r24, 0
+    1014:	07 c0       	rjmp	.+14     	; 0x1024 <Tetris_screen_saver+0x36>
+    1016:	f0 82       	st	Z, r15
+    1018:	05 c0       	rjmp	.+10     	; 0x1024 <Tetris_screen_saver+0x36>
+    101a:	bc 01       	movw	r22, r24
+    101c:	6f 5f       	subi	r22, 0xFF	; 255
+    101e:	7f 4f       	sbci	r23, 0xFF	; 255
+    1020:	60 ff       	sbrs	r22, 0
+    1022:	f0 82       	st	Z, r15
+    1024:	01 96       	adiw	r24, 0x01	; 1
+    1026:	31 96       	adiw	r30, 0x01	; 1
+    1028:	84 30       	cpi	r24, 0x04	; 4
+    102a:	91 05       	cpc	r25, r1
+    102c:	71 f7       	brne	.-36     	; 0x100a <Tetris_screen_saver+0x1c>
+    102e:	4f 5f       	subi	r20, 0xFF	; 255
+    1030:	5f 4f       	sbci	r21, 0xFF	; 255
+    1032:	04 5f       	subi	r16, 0xF4	; 244
+    1034:	1f 4f       	sbci	r17, 0xFF	; 255
+    1036:	48 30       	cpi	r20, 0x08	; 8
+    1038:	51 05       	cpc	r21, r1
+    103a:	39 f0       	breq	.+14     	; 0x104a <Tetris_screen_saver+0x5c>
+    103c:	f8 01       	movw	r30, r16
+    103e:	80 e0       	ldi	r24, 0x00	; 0
+    1040:	90 e0       	ldi	r25, 0x00	; 0
+    1042:	9a 01       	movw	r18, r20
+    1044:	21 70       	andi	r18, 0x01	; 1
+    1046:	33 27       	eor	r19, r19
+    1048:	e0 cf       	rjmp	.-64     	; 0x100a <Tetris_screen_saver+0x1c>
+    104a:	85 e0       	ldi	r24, 0x05	; 5
+    104c:	ad df       	rcall	.-166    	; 0xfa8 <Tetris_makeShape>
+    104e:	80 91 0c 04 	lds	r24, 0x040C	; 0x80040c <current>
+    1052:	9e ef       	ldi	r25, 0xFE	; 254
+    1054:	98 0f       	add	r25, r24
+    1056:	92 30       	cpi	r25, 0x02	; 2
+    1058:	20 f4       	brcc	.+8      	; 0x1062 <Tetris_screen_saver+0x74>
+    105a:	62 e0       	ldi	r22, 0x02	; 2
+    105c:	70 e0       	ldi	r23, 0x00	; 0
+    105e:	90 e0       	ldi	r25, 0x00	; 0
+    1060:	81 dc       	rcall	.-1790   	; 0x964 <changeFace>
+    1062:	80 91 0c 04 	lds	r24, 0x040C	; 0x80040c <current>
+    1066:	84 30       	cpi	r24, 0x04	; 4
+    1068:	29 f4       	brne	.+10     	; 0x1074 <Tetris_screen_saver+0x86>
+    106a:	63 e0       	ldi	r22, 0x03	; 3
+    106c:	70 e0       	ldi	r23, 0x00	; 0
+    106e:	84 e0       	ldi	r24, 0x04	; 4
+    1070:	90 e0       	ldi	r25, 0x00	; 0
+    1072:	78 dc       	rcall	.-1808   	; 0x964 <changeFace>
+    1074:	ec e0       	ldi	r30, 0x0C	; 12
+    1076:	f4 e0       	ldi	r31, 0x04	; 4
+    1078:	13 82       	std	Z+3, r1	; 0x03
+    107a:	85 e0       	ldi	r24, 0x05	; 5
+    107c:	82 83       	std	Z+2, r24	; 0x02
+    107e:	64 81       	ldd	r22, Z+4	; 0x04
+    1080:	66 23       	and	r22, r22
+    1082:	09 f1       	breq	.+66     	; 0x10c6 <Tetris_screen_saver+0xd8>
+    1084:	85 e1       	ldi	r24, 0x15	; 21
+    1086:	94 e0       	ldi	r25, 0x04	; 4
+    1088:	70 e0       	ldi	r23, 0x00	; 0
+    108a:	66 0f       	add	r22, r22
+    108c:	77 1f       	adc	r23, r23
+    108e:	66 0f       	add	r22, r22
+    1090:	77 1f       	adc	r23, r23
+    1092:	6b 5e       	subi	r22, 0xEB	; 235
+    1094:	7b 4f       	sbci	r23, 0xFB	; 251
+    1096:	4c ea       	ldi	r20, 0xAC	; 172
+    1098:	53 e0       	ldi	r21, 0x03	; 3
+    109a:	31 e0       	ldi	r19, 0x01	; 1
+    109c:	10 c0       	rjmp	.+32     	; 0x10be <Tetris_screen_saver+0xd0>
+    109e:	21 91       	ld	r18, Z+
+    10a0:	22 23       	and	r18, r18
+    10a2:	19 f0       	breq	.+6      	; 0x10aa <Tetris_screen_saver+0xbc>
+    10a4:	15 96       	adiw	r26, 0x05	; 5
+    10a6:	3c 93       	st	X, r19
+    10a8:	15 97       	sbiw	r26, 0x05	; 5
+    10aa:	11 96       	adiw	r26, 0x01	; 1
+    10ac:	e8 17       	cp	r30, r24
+    10ae:	f9 07       	cpc	r31, r25
+    10b0:	b1 f7       	brne	.-20     	; 0x109e <Tetris_screen_saver+0xb0>
+    10b2:	04 96       	adiw	r24, 0x04	; 4
+    10b4:	44 5f       	subi	r20, 0xF4	; 244
+    10b6:	5f 4f       	sbci	r21, 0xFF	; 255
+    10b8:	86 17       	cp	r24, r22
+    10ba:	97 07       	cpc	r25, r23
+    10bc:	21 f0       	breq	.+8      	; 0x10c6 <Tetris_screen_saver+0xd8>
+    10be:	fc 01       	movw	r30, r24
+    10c0:	34 97       	sbiw	r30, 0x04	; 4
+    10c2:	da 01       	movw	r26, r20
+    10c4:	ec cf       	rjmp	.-40     	; 0x109e <Tetris_screen_saver+0xb0>
+    10c6:	85 e0       	ldi	r24, 0x05	; 5
+    10c8:	6f df       	rcall	.-290    	; 0xfa8 <Tetris_makeShape>
+    10ca:	80 91 0c 04 	lds	r24, 0x040C	; 0x80040c <current>
+    10ce:	9e ef       	ldi	r25, 0xFE	; 254
+    10d0:	98 0f       	add	r25, r24
+    10d2:	92 30       	cpi	r25, 0x02	; 2
+    10d4:	20 f4       	brcc	.+8      	; 0x10de <Tetris_screen_saver+0xf0>
+    10d6:	62 e0       	ldi	r22, 0x02	; 2
+    10d8:	70 e0       	ldi	r23, 0x00	; 0
+    10da:	90 e0       	ldi	r25, 0x00	; 0
+    10dc:	43 dc       	rcall	.-1914   	; 0x964 <changeFace>
+    10de:	80 91 0c 04 	lds	r24, 0x040C	; 0x80040c <current>
+    10e2:	84 30       	cpi	r24, 0x04	; 4
+    10e4:	29 f4       	brne	.+10     	; 0x10f0 <Tetris_screen_saver+0x102>
+    10e6:	63 e0       	ldi	r22, 0x03	; 3
+    10e8:	70 e0       	ldi	r23, 0x00	; 0
+    10ea:	84 e0       	ldi	r24, 0x04	; 4
+    10ec:	90 e0       	ldi	r25, 0x00	; 0
+    10ee:	3a dc       	rcall	.-1932   	; 0x964 <changeFace>
+    10f0:	ec e0       	ldi	r30, 0x0C	; 12
+    10f2:	f4 e0       	ldi	r31, 0x04	; 4
+    10f4:	83 e0       	ldi	r24, 0x03	; 3
+    10f6:	83 83       	std	Z+3, r24	; 0x03
+    10f8:	85 e0       	ldi	r24, 0x05	; 5
+    10fa:	82 83       	std	Z+2, r24	; 0x02
+    10fc:	64 81       	ldd	r22, Z+4	; 0x04
+    10fe:	66 23       	and	r22, r22
+    1100:	09 f1       	breq	.+66     	; 0x1144 <Tetris_screen_saver+0x156>
+    1102:	85 e1       	ldi	r24, 0x15	; 21
+    1104:	94 e0       	ldi	r25, 0x04	; 4
+    1106:	70 e0       	ldi	r23, 0x00	; 0
+    1108:	66 0f       	add	r22, r22
+    110a:	77 1f       	adc	r23, r23
+    110c:	66 0f       	add	r22, r22
+    110e:	77 1f       	adc	r23, r23
+    1110:	6b 5e       	subi	r22, 0xEB	; 235
+    1112:	7b 4f       	sbci	r23, 0xFB	; 251
+    1114:	4c ea       	ldi	r20, 0xAC	; 172
+    1116:	53 e0       	ldi	r21, 0x03	; 3
+    1118:	31 e0       	ldi	r19, 0x01	; 1
+    111a:	10 c0       	rjmp	.+32     	; 0x113c <Tetris_screen_saver+0x14e>
+    111c:	21 91       	ld	r18, Z+
+    111e:	22 23       	and	r18, r18
+    1120:	19 f0       	breq	.+6      	; 0x1128 <Tetris_screen_saver+0x13a>
+    1122:	99 96       	adiw	r26, 0x29	; 41
+    1124:	3c 93       	st	X, r19
+    1126:	99 97       	sbiw	r26, 0x29	; 41
+    1128:	11 96       	adiw	r26, 0x01	; 1
+    112a:	e8 17       	cp	r30, r24
+    112c:	f9 07       	cpc	r31, r25
+    112e:	b1 f7       	brne	.-20     	; 0x111c <Tetris_screen_saver+0x12e>
+    1130:	04 96       	adiw	r24, 0x04	; 4
+    1132:	44 5f       	subi	r20, 0xF4	; 244
+    1134:	5f 4f       	sbci	r21, 0xFF	; 255
+    1136:	86 17       	cp	r24, r22
+    1138:	97 07       	cpc	r25, r23
+    113a:	21 f0       	breq	.+8      	; 0x1144 <Tetris_screen_saver+0x156>
+    113c:	fc 01       	movw	r30, r24
+    113e:	34 97       	sbiw	r30, 0x04	; 4
+    1140:	da 01       	movw	r26, r20
+    1142:	ec cf       	rjmp	.-40     	; 0x111c <Tetris_screen_saver+0x12e>
+    1144:	85 e0       	ldi	r24, 0x05	; 5
+    1146:	30 df       	rcall	.-416    	; 0xfa8 <Tetris_makeShape>
+    1148:	80 91 0c 04 	lds	r24, 0x040C	; 0x80040c <current>
+    114c:	9e ef       	ldi	r25, 0xFE	; 254
+    114e:	98 0f       	add	r25, r24
+    1150:	92 30       	cpi	r25, 0x02	; 2
+    1152:	20 f4       	brcc	.+8      	; 0x115c <Tetris_screen_saver+0x16e>
+    1154:	62 e0       	ldi	r22, 0x02	; 2
+    1156:	70 e0       	ldi	r23, 0x00	; 0
+    1158:	90 e0       	ldi	r25, 0x00	; 0
+    115a:	04 dc       	rcall	.-2040   	; 0x964 <changeFace>
+    115c:	ec e0       	ldi	r30, 0x0C	; 12
+    115e:	f4 e0       	ldi	r31, 0x04	; 4
+    1160:	86 e0       	ldi	r24, 0x06	; 6
+    1162:	83 83       	std	Z+3, r24	; 0x03
+    1164:	85 e0       	ldi	r24, 0x05	; 5
+    1166:	82 83       	std	Z+2, r24	; 0x02
+    1168:	64 81       	ldd	r22, Z+4	; 0x04
+    116a:	66 23       	and	r22, r22
+    116c:	09 f4       	brne	.+2      	; 0x1170 <Tetris_screen_saver+0x182>
+    116e:	3d c0       	rjmp	.+122    	; 0x11ea <Tetris_screen_saver+0x1fc>
+    1170:	85 e1       	ldi	r24, 0x15	; 21
+    1172:	94 e0       	ldi	r25, 0x04	; 4
+    1174:	49 ef       	ldi	r20, 0xF9	; 249
+    1176:	53 e0       	ldi	r21, 0x03	; 3
+    1178:	70 e0       	ldi	r23, 0x00	; 0
+    117a:	66 0f       	add	r22, r22
+    117c:	77 1f       	adc	r23, r23
+    117e:	66 0f       	add	r22, r22
+    1180:	77 1f       	adc	r23, r23
+    1182:	6b 5e       	subi	r22, 0xEB	; 235
+    1184:	7b 4f       	sbci	r23, 0xFB	; 251
+    1186:	31 e0       	ldi	r19, 0x01	; 1
+    1188:	0d c0       	rjmp	.+26     	; 0x11a4 <Tetris_screen_saver+0x1b6>
+    118a:	21 91       	ld	r18, Z+
+    118c:	21 11       	cpse	r18, r1
+    118e:	3c 93       	st	X, r19
+    1190:	11 96       	adiw	r26, 0x01	; 1
+    1192:	e8 17       	cp	r30, r24
+    1194:	f9 07       	cpc	r31, r25
+    1196:	c9 f7       	brne	.-14     	; 0x118a <Tetris_screen_saver+0x19c>
+    1198:	04 96       	adiw	r24, 0x04	; 4
+    119a:	44 5f       	subi	r20, 0xF4	; 244
+    119c:	5f 4f       	sbci	r21, 0xFF	; 255
+    119e:	68 17       	cp	r22, r24
+    11a0:	79 07       	cpc	r23, r25
+    11a2:	19 f1       	breq	.+70     	; 0x11ea <Tetris_screen_saver+0x1fc>
+    11a4:	fc 01       	movw	r30, r24
+    11a6:	34 97       	sbiw	r30, 0x04	; 4
+    11a8:	da 01       	movw	r26, r20
+    11aa:	ef cf       	rjmp	.-34     	; 0x118a <Tetris_screen_saver+0x19c>
+    11ac:	11 86       	std	Z+9, r1	; 0x09
+    11ae:	41 15       	cp	r20, r1
+    11b0:	51 05       	cpc	r21, r1
+    11b2:	21 f4       	brne	.+8      	; 0x11bc <Tetris_screen_saver+0x1ce>
+    11b4:	80 fd       	sbrc	r24, 0
+    11b6:	07 c0       	rjmp	.+14     	; 0x11c6 <Tetris_screen_saver+0x1d8>
+    11b8:	11 87       	std	Z+9, r17	; 0x09
+    11ba:	05 c0       	rjmp	.+10     	; 0x11c6 <Tetris_screen_saver+0x1d8>
+    11bc:	bc 01       	movw	r22, r24
+    11be:	6f 5f       	subi	r22, 0xFF	; 255
+    11c0:	7f 4f       	sbci	r23, 0xFF	; 255
+    11c2:	60 ff       	sbrs	r22, 0
+    11c4:	11 87       	std	Z+9, r17	; 0x09
+    11c6:	01 96       	adiw	r24, 0x01	; 1
+    11c8:	31 96       	adiw	r30, 0x01	; 1
+    11ca:	8c 30       	cpi	r24, 0x0C	; 12
+    11cc:	91 05       	cpc	r25, r1
+    11ce:	71 f7       	brne	.-36     	; 0x11ac <Tetris_screen_saver+0x1be>
+    11d0:	2f 5f       	subi	r18, 0xFF	; 255
+    11d2:	3f 4f       	sbci	r19, 0xFF	; 255
+    11d4:	2c 96       	adiw	r28, 0x0c	; 12
+    11d6:	28 30       	cpi	r18, 0x08	; 8
+    11d8:	31 05       	cpc	r19, r1
+    11da:	59 f0       	breq	.+22     	; 0x11f2 <Tetris_screen_saver+0x204>
+    11dc:	fe 01       	movw	r30, r28
+    11de:	89 e0       	ldi	r24, 0x09	; 9
+    11e0:	90 e0       	ldi	r25, 0x00	; 0
+    11e2:	a9 01       	movw	r20, r18
+    11e4:	41 70       	andi	r20, 0x01	; 1
+    11e6:	55 27       	eor	r21, r21
+    11e8:	e1 cf       	rjmp	.-62     	; 0x11ac <Tetris_screen_saver+0x1be>
+    11ea:	20 e0       	ldi	r18, 0x00	; 0
+    11ec:	30 e0       	ldi	r19, 0x00	; 0
+    11ee:	11 e0       	ldi	r17, 0x01	; 1
+    11f0:	f5 cf       	rjmp	.-22     	; 0x11dc <Tetris_screen_saver+0x1ee>
+    11f2:	df 91       	pop	r29
+    11f4:	cf 91       	pop	r28
+    11f6:	1f 91       	pop	r17
+    11f8:	0f 91       	pop	r16
+    11fa:	ff 90       	pop	r15
+    11fc:	08 95       	ret
+
+000011fe <ScreenSpace_Tick>:
+    11fe:	cf 92       	push	r12
+    1200:	df 92       	push	r13
+    1202:	ef 92       	push	r14
+    1204:	ff 92       	push	r15
+    1206:	0f 93       	push	r16
+    1208:	1f 93       	push	r17
+    120a:	cf 93       	push	r28
+    120c:	df 93       	push	r29
+    120e:	88 30       	cpi	r24, 0x08	; 8
+    1210:	91 05       	cpc	r25, r1
+    1212:	08 f0       	brcs	.+2      	; 0x1216 <ScreenSpace_Tick+0x18>
+    1214:	7d c0       	rjmp	.+250    	; 0x1310 <ScreenSpace_Tick+0x112>
+    1216:	fc 01       	movw	r30, r24
+    1218:	ea 5b       	subi	r30, 0xBA	; 186
+    121a:	ff 4f       	sbci	r31, 0xFF	; 255
+    121c:	d2 c4       	rjmp	.+2468   	; 0x1bc2 <__tablejump2__>
+    121e:	ce d8       	rcall	.-3684   	; 0x3bc <nokia_lcd_clear>
+    1220:	e6 de       	rcall	.-564    	; 0xfee <Tetris_screen_saver>
+    1222:	81 e0       	ldi	r24, 0x01	; 1
+    1224:	90 e0       	ldi	r25, 0x00	; 0
+    1226:	9d c2       	rjmp	.+1338   	; 0x1762 <ScreenSpace_Tick+0x564>
+    1228:	20 91 26 04 	lds	r18, 0x0426	; 0x800426 <Press>
+    122c:	22 23       	and	r18, r18
+    122e:	09 f4       	brne	.+2      	; 0x1232 <ScreenSpace_Tick+0x34>
+    1230:	60 c2       	rjmp	.+1216   	; 0x16f2 <ScreenSpace_Tick+0x4f4>
+    1232:	10 92 26 04 	sts	0x0426, r1	; 0x800426 <Press>
+    1236:	10 92 63 01 	sts	0x0163, r1	; 0x800163 <promt>
+    123a:	81 e0       	ldi	r24, 0x01	; 1
+    123c:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <__data_end>
+    1240:	ec ea       	ldi	r30, 0xAC	; 172
+    1242:	f3 e0       	ldi	r31, 0x03	; 3
+    1244:	2c e0       	ldi	r18, 0x0C	; 12
+    1246:	34 e0       	ldi	r19, 0x04	; 4
+    1248:	09 c0       	rjmp	.+18     	; 0x125c <ScreenSpace_Tick+0x5e>
+    124a:	11 92       	st	Z+, r1
+    124c:	8e 17       	cp	r24, r30
+    124e:	9f 07       	cpc	r25, r31
+    1250:	e1 f7       	brne	.-8      	; 0x124a <ScreenSpace_Tick+0x4c>
+    1252:	fc 01       	movw	r30, r24
+    1254:	82 17       	cp	r24, r18
+    1256:	93 07       	cpc	r25, r19
+    1258:	09 f4       	brne	.+2      	; 0x125c <ScreenSpace_Tick+0x5e>
+    125a:	50 c2       	rjmp	.+1184   	; 0x16fc <ScreenSpace_Tick+0x4fe>
+    125c:	cf 01       	movw	r24, r30
+    125e:	0c 96       	adiw	r24, 0x0c	; 12
+    1260:	f4 cf       	rjmp	.-24     	; 0x124a <ScreenSpace_Tick+0x4c>
+    1262:	10 92 a4 03 	sts	0x03A4, r1	; 0x8003a4 <Lcnt>
+    1266:	8c e0       	ldi	r24, 0x0C	; 12
+    1268:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    126c:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1270:	88 23       	and	r24, r24
+    1272:	09 f4       	brne	.+2      	; 0x1276 <ScreenSpace_Tick+0x78>
+    1274:	70 c2       	rjmp	.+1248   	; 0x1756 <ScreenSpace_Tick+0x558>
+    1276:	88 c0       	rjmp	.+272    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    1278:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    127c:	88 23       	and	r24, r24
+    127e:	09 f4       	brne	.+2      	; 0x1282 <ScreenSpace_Tick+0x84>
+    1280:	a8 c1       	rjmp	.+848    	; 0x15d2 <ScreenSpace_Tick+0x3d4>
+    1282:	82 c0       	rjmp	.+260    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    1284:	80 91 27 04 	lds	r24, 0x0427	; 0x800427 <squaresLeft>
+    1288:	88 23       	and	r24, r24
+    128a:	0c f4       	brge	.+2      	; 0x128e <ScreenSpace_Tick+0x90>
+    128c:	53 c2       	rjmp	.+1190   	; 0x1734 <ScreenSpace_Tick+0x536>
+    128e:	80 91 66 01 	lds	r24, 0x0166	; 0x800166 <move>
+    1292:	81 11       	cpse	r24, r1
+    1294:	3e c2       	rjmp	.+1148   	; 0x1712 <ScreenSpace_Tick+0x514>
+    1296:	80 91 26 04 	lds	r24, 0x0426	; 0x800426 <Press>
+    129a:	88 23       	and	r24, r24
+    129c:	09 f4       	brne	.+2      	; 0x12a0 <ScreenSpace_Tick+0xa2>
+    129e:	45 c2       	rjmp	.+1162   	; 0x172a <ScreenSpace_Tick+0x52c>
+    12a0:	33 c2       	rjmp	.+1126   	; 0x1708 <ScreenSpace_Tick+0x50a>
+    12a2:	80 91 64 01 	lds	r24, 0x0164	; 0x800164 <gameOver>
+    12a6:	88 23       	and	r24, r24
+    12a8:	61 f0       	breq	.+24     	; 0x12c2 <ScreenSpace_Tick+0xc4>
+    12aa:	10 92 a4 03 	sts	0x03A4, r1	; 0x8003a4 <Lcnt>
+    12ae:	10 92 65 01 	sts	0x0165, r1	; 0x800165 <v>
+    12b2:	87 e0       	ldi	r24, 0x07	; 7
+    12b4:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <l>
+    12b8:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    12bc:	81 11       	cpse	r24, r1
+    12be:	64 c0       	rjmp	.+200    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    12c0:	cc c1       	rjmp	.+920    	; 0x165a <ScreenSpace_Tick+0x45c>
+    12c2:	80 91 aa 03 	lds	r24, 0x03AA	; 0x8003aa <score>
+    12c6:	8f 5f       	subi	r24, 0xFF	; 255
+    12c8:	80 93 aa 03 	sts	0x03AA, r24	; 0x8003aa <score>
+    12cc:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    12d0:	88 23       	and	r24, r24
+    12d2:	09 f4       	brne	.+2      	; 0x12d6 <ScreenSpace_Tick+0xd8>
+    12d4:	5e c0       	rjmp	.+188    	; 0x1392 <ScreenSpace_Tick+0x194>
+    12d6:	58 c0       	rjmp	.+176    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    12d8:	80 91 a4 03 	lds	r24, 0x03A4	; 0x8003a4 <Lcnt>
+    12dc:	80 32       	cpi	r24, 0x20	; 32
+    12de:	08 f4       	brcc	.+2      	; 0x12e2 <ScreenSpace_Tick+0xe4>
+    12e0:	2f c2       	rjmp	.+1118   	; 0x1740 <ScreenSpace_Tick+0x542>
+    12e2:	85 de       	rcall	.-758    	; 0xfee <Tetris_screen_saver>
+    12e4:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    12e8:	81 11       	cpse	r24, r1
+    12ea:	4e c0       	rjmp	.+156    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    12ec:	87 e0       	ldi	r24, 0x07	; 7
+    12ee:	90 e0       	ldi	r25, 0x00	; 0
+    12f0:	38 c2       	rjmp	.+1136   	; 0x1762 <ScreenSpace_Tick+0x564>
+    12f2:	20 91 26 04 	lds	r18, 0x0426	; 0x800426 <Press>
+    12f6:	22 23       	and	r18, r18
+    12f8:	09 f4       	brne	.+2      	; 0x12fc <ScreenSpace_Tick+0xfe>
+    12fa:	28 c2       	rjmp	.+1104   	; 0x174c <ScreenSpace_Tick+0x54e>
+    12fc:	10 92 26 04 	sts	0x0426, r1	; 0x800426 <Press>
+    1300:	10 92 64 01 	sts	0x0164, r1	; 0x800164 <gameOver>
+    1304:	81 e0       	ldi	r24, 0x01	; 1
+    1306:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <__data_end>
+    130a:	81 e0       	ldi	r24, 0x01	; 1
+    130c:	90 e0       	ldi	r25, 0x00	; 0
+    130e:	1e c2       	rjmp	.+1084   	; 0x174c <ScreenSpace_Tick+0x54e>
+    1310:	80 e0       	ldi	r24, 0x00	; 0
+    1312:	90 e0       	ldi	r25, 0x00	; 0
+    1314:	83 30       	cpi	r24, 0x03	; 3
+    1316:	91 05       	cpc	r25, r1
+    1318:	09 f4       	brne	.+2      	; 0x131c <ScreenSpace_Tick+0x11e>
+    131a:	40 c0       	rjmp	.+128    	; 0x139c <ScreenSpace_Tick+0x19e>
+    131c:	3c f4       	brge	.+14     	; 0x132c <ScreenSpace_Tick+0x12e>
+    131e:	00 97       	sbiw	r24, 0x00	; 0
+    1320:	99 f1       	breq	.+102    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    1322:	82 30       	cpi	r24, 0x02	; 2
+    1324:	91 05       	cpc	r25, r1
+    1326:	09 f0       	breq	.+2      	; 0x132a <ScreenSpace_Tick+0x12c>
+    1328:	1c c2       	rjmp	.+1080   	; 0x1762 <ScreenSpace_Tick+0x564>
+    132a:	33 c0       	rjmp	.+102    	; 0x1392 <ScreenSpace_Tick+0x194>
+    132c:	85 30       	cpi	r24, 0x05	; 5
+    132e:	91 05       	cpc	r25, r1
+    1330:	39 f0       	breq	.+14     	; 0x1340 <ScreenSpace_Tick+0x142>
+    1332:	0c f4       	brge	.+2      	; 0x1336 <ScreenSpace_Tick+0x138>
+    1334:	4e c1       	rjmp	.+668    	; 0x15d2 <ScreenSpace_Tick+0x3d4>
+    1336:	86 30       	cpi	r24, 0x06	; 6
+    1338:	91 05       	cpc	r25, r1
+    133a:	09 f4       	brne	.+2      	; 0x133e <ScreenSpace_Tick+0x140>
+    133c:	8e c1       	rjmp	.+796    	; 0x165a <ScreenSpace_Tick+0x45c>
+    133e:	11 c2       	rjmp	.+1058   	; 0x1762 <ScreenSpace_Tick+0x564>
+    1340:	60 91 10 04 	lds	r22, 0x0410	; 0x800410 <current+0x4>
+    1344:	66 23       	and	r22, r22
+    1346:	09 f4       	brne	.+2      	; 0x134a <ScreenSpace_Tick+0x14c>
+    1348:	73 c1       	rjmp	.+742    	; 0x1630 <ScreenSpace_Tick+0x432>
+    134a:	85 e1       	ldi	r24, 0x15	; 21
+    134c:	94 e0       	ldi	r25, 0x04	; 4
+    134e:	ec e0       	ldi	r30, 0x0C	; 12
+    1350:	f4 e0       	ldi	r31, 0x04	; 4
+    1352:	23 81       	ldd	r18, Z+3	; 0x03
+    1354:	30 e0       	ldi	r19, 0x00	; 0
+    1356:	a9 01       	movw	r20, r18
+    1358:	44 0f       	add	r20, r20
+    135a:	55 1f       	adc	r21, r21
+    135c:	42 0f       	add	r20, r18
+    135e:	53 1f       	adc	r21, r19
+    1360:	44 0f       	add	r20, r20
+    1362:	55 1f       	adc	r21, r21
+    1364:	44 0f       	add	r20, r20
+    1366:	55 1f       	adc	r21, r21
+    1368:	22 81       	ldd	r18, Z+2	; 0x02
+    136a:	42 0f       	add	r20, r18
+    136c:	51 1d       	adc	r21, r1
+    136e:	27 fd       	sbrc	r18, 7
+    1370:	5a 95       	dec	r21
+    1372:	44 55       	subi	r20, 0x54	; 84
+    1374:	5c 4f       	sbci	r21, 0xFC	; 252
+    1376:	70 e0       	ldi	r23, 0x00	; 0
+    1378:	66 0f       	add	r22, r22
+    137a:	77 1f       	adc	r23, r23
+    137c:	66 0f       	add	r22, r22
+    137e:	77 1f       	adc	r23, r23
+    1380:	6b 5e       	subi	r22, 0xEB	; 235
+    1382:	7b 4f       	sbci	r23, 0xFB	; 251
+    1384:	31 e0       	ldi	r19, 0x01	; 1
+    1386:	50 c1       	rjmp	.+672    	; 0x1628 <ScreenSpace_Tick+0x42a>
+    1388:	19 d8       	rcall	.-4046   	; 0x3bc <nokia_lcd_clear>
+    138a:	31 de       	rcall	.-926    	; 0xfee <Tetris_screen_saver>
+    138c:	80 e0       	ldi	r24, 0x00	; 0
+    138e:	90 e0       	ldi	r25, 0x00	; 0
+    1390:	e8 c1       	rjmp	.+976    	; 0x1762 <ScreenSpace_Tick+0x564>
+    1392:	87 e0       	ldi	r24, 0x07	; 7
+    1394:	09 de       	rcall	.-1006   	; 0xfa8 <Tetris_makeShape>
+    1396:	82 e0       	ldi	r24, 0x02	; 2
+    1398:	90 e0       	ldi	r25, 0x00	; 0
+    139a:	e3 c1       	rjmp	.+966    	; 0x1762 <ScreenSpace_Tick+0x564>
+    139c:	80 91 66 01 	lds	r24, 0x0166	; 0x800166 <move>
+    13a0:	81 30       	cpi	r24, 0x01	; 1
+    13a2:	91 f5       	brne	.+100    	; 0x1408 <ScreenSpace_Tick+0x20a>
+    13a4:	80 91 27 04 	lds	r24, 0x0427	; 0x800427 <squaresLeft>
+    13a8:	18 16       	cp	r1, r24
+    13aa:	0c f0       	brlt	.+2      	; 0x13ae <ScreenSpace_Tick+0x1b0>
+    13ac:	0d c1       	rjmp	.+538    	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    13ae:	ec e0       	ldi	r30, 0x0C	; 12
+    13b0:	f4 e0       	ldi	r31, 0x04	; 4
+    13b2:	d2 80       	ldd	r13, Z+2	; 0x02
+    13b4:	d3 94       	inc	r13
+    13b6:	d2 82       	std	Z+2, r13	; 0x02
+    13b8:	8c e0       	ldi	r24, 0x0C	; 12
+    13ba:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    13be:	e4 80       	ldd	r14, Z+4	; 0x04
+    13c0:	f1 2c       	mov	r15, r1
+    13c2:	1e 14       	cp	r1, r14
+    13c4:	1f 04       	cpc	r1, r15
+    13c6:	0c f0       	brlt	.+2      	; 0x13ca <ScreenSpace_Tick+0x1cc>
+    13c8:	ff c0       	rjmp	.+510    	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    13ca:	10 91 0f 04 	lds	r17, 0x040F	; 0x80040f <current+0x3>
+    13ce:	c0 e0       	ldi	r28, 0x00	; 0
+    13d0:	d0 e0       	ldi	r29, 0x00	; 0
+    13d2:	0f 2e       	mov	r0, r31
+    13d4:	fc e0       	ldi	r31, 0x0C	; 12
+    13d6:	cf 2e       	mov	r12, r31
+    13d8:	f0 2d       	mov	r31, r0
+    13da:	81 2f       	mov	r24, r17
+    13dc:	21 d9       	rcall	.-3518   	; 0x620 <Tetris_Bottom_up>
+    13de:	08 2f       	mov	r16, r24
+    13e0:	8c 2f       	mov	r24, r28
+    13e2:	b4 d9       	rcall	.-3224   	; 0x74c <used>
+    13e4:	9c 2d       	mov	r25, r12
+    13e6:	98 1b       	sub	r25, r24
+    13e8:	89 2f       	mov	r24, r25
+    13ea:	80 1b       	sub	r24, r16
+    13ec:	90 91 27 04 	lds	r25, 0x0427	; 0x800427 <squaresLeft>
+    13f0:	8d 19       	sub	r24, r13
+    13f2:	98 17       	cp	r25, r24
+    13f4:	08 f4       	brcc	.+2      	; 0x13f8 <ScreenSpace_Tick+0x1fa>
+    13f6:	89 2f       	mov	r24, r25
+    13f8:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    13fc:	21 96       	adiw	r28, 0x01	; 1
+    13fe:	1f 5f       	subi	r17, 0xFF	; 255
+    1400:	ce 15       	cp	r28, r14
+    1402:	df 05       	cpc	r29, r15
+    1404:	51 f7       	brne	.-44     	; 0x13da <ScreenSpace_Tick+0x1dc>
+    1406:	e0 c0       	rjmp	.+448    	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    1408:	82 30       	cpi	r24, 0x02	; 2
+    140a:	09 f0       	breq	.+2      	; 0x140e <ScreenSpace_Tick+0x210>
+    140c:	3c c0       	rjmp	.+120    	; 0x1486 <ScreenSpace_Tick+0x288>
+    140e:	8c e0       	ldi	r24, 0x0C	; 12
+    1410:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    1414:	ec e0       	ldi	r30, 0x0C	; 12
+    1416:	f4 e0       	ldi	r31, 0x04	; 4
+    1418:	c3 81       	ldd	r28, Z+3	; 0x03
+    141a:	e4 80       	ldd	r14, Z+4	; 0x04
+    141c:	f1 2c       	mov	r15, r1
+    141e:	c7 01       	movw	r24, r14
+    1420:	01 97       	sbiw	r24, 0x01	; 1
+    1422:	8c 0f       	add	r24, r28
+    1424:	91 1d       	adc	r25, r1
+    1426:	07 97       	sbiw	r24, 0x07	; 7
+    1428:	4c f4       	brge	.+18     	; 0x143c <ScreenSpace_Tick+0x23e>
+    142a:	60 91 0e 04 	lds	r22, 0x040E	; 0x80040e <current+0x2>
+    142e:	8c 2f       	mov	r24, r28
+    1430:	44 d8       	rcall	.-3960   	; 0x4ba <Tetris_safe_L_Move>
+    1432:	88 23       	and	r24, r24
+    1434:	19 f0       	breq	.+6      	; 0x143c <ScreenSpace_Tick+0x23e>
+    1436:	cf 5f       	subi	r28, 0xFF	; 255
+    1438:	c0 93 0f 04 	sts	0x040F, r28	; 0x80040f <current+0x3>
+    143c:	1e 14       	cp	r1, r14
+    143e:	1f 04       	cpc	r1, r15
+    1440:	0c f0       	brlt	.+2      	; 0x1444 <ScreenSpace_Tick+0x246>
+    1442:	c2 c0       	rjmp	.+388    	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    1444:	ec e0       	ldi	r30, 0x0C	; 12
+    1446:	f4 e0       	ldi	r31, 0x04	; 4
+    1448:	13 81       	ldd	r17, Z+3	; 0x03
+    144a:	c2 80       	ldd	r12, Z+2	; 0x02
+    144c:	c0 e0       	ldi	r28, 0x00	; 0
+    144e:	d0 e0       	ldi	r29, 0x00	; 0
+    1450:	0f 2e       	mov	r0, r31
+    1452:	fc e0       	ldi	r31, 0x0C	; 12
+    1454:	df 2e       	mov	r13, r31
+    1456:	f0 2d       	mov	r31, r0
+    1458:	81 2f       	mov	r24, r17
+    145a:	e2 d8       	rcall	.-3644   	; 0x620 <Tetris_Bottom_up>
+    145c:	08 2f       	mov	r16, r24
+    145e:	8c 2f       	mov	r24, r28
+    1460:	75 d9       	rcall	.-3350   	; 0x74c <used>
+    1462:	9d 2d       	mov	r25, r13
+    1464:	98 1b       	sub	r25, r24
+    1466:	89 2f       	mov	r24, r25
+    1468:	80 1b       	sub	r24, r16
+    146a:	90 91 27 04 	lds	r25, 0x0427	; 0x800427 <squaresLeft>
+    146e:	8c 19       	sub	r24, r12
+    1470:	98 17       	cp	r25, r24
+    1472:	08 f4       	brcc	.+2      	; 0x1476 <ScreenSpace_Tick+0x278>
+    1474:	89 2f       	mov	r24, r25
+    1476:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    147a:	21 96       	adiw	r28, 0x01	; 1
+    147c:	1f 5f       	subi	r17, 0xFF	; 255
+    147e:	ec 16       	cp	r14, r28
+    1480:	fd 06       	cpc	r15, r29
+    1482:	51 f7       	brne	.-44     	; 0x1458 <ScreenSpace_Tick+0x25a>
+    1484:	a1 c0       	rjmp	.+322    	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    1486:	83 30       	cpi	r24, 0x03	; 3
+    1488:	c9 f5       	brne	.+114    	; 0x14fc <ScreenSpace_Tick+0x2fe>
+    148a:	8c e0       	ldi	r24, 0x0C	; 12
+    148c:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    1490:	c0 91 0f 04 	lds	r28, 0x040F	; 0x80040f <current+0x3>
+    1494:	cc 23       	and	r28, r28
+    1496:	51 f0       	breq	.+20     	; 0x14ac <ScreenSpace_Tick+0x2ae>
+    1498:	60 91 0e 04 	lds	r22, 0x040E	; 0x80040e <current+0x2>
+    149c:	8c 2f       	mov	r24, r28
+    149e:	0e 94 31 02 	call	0x462	; 0x462 <Tetris_safe_R_Move>
+    14a2:	88 23       	and	r24, r24
+    14a4:	19 f0       	breq	.+6      	; 0x14ac <ScreenSpace_Tick+0x2ae>
+    14a6:	c1 50       	subi	r28, 0x01	; 1
+    14a8:	c0 93 0f 04 	sts	0x040F, r28	; 0x80040f <current+0x3>
+    14ac:	e0 90 10 04 	lds	r14, 0x0410	; 0x800410 <current+0x4>
+    14b0:	f1 2c       	mov	r15, r1
+    14b2:	1e 14       	cp	r1, r14
+    14b4:	1f 04       	cpc	r1, r15
+    14b6:	0c f0       	brlt	.+2      	; 0x14ba <ScreenSpace_Tick+0x2bc>
+    14b8:	87 c0       	rjmp	.+270    	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    14ba:	ec e0       	ldi	r30, 0x0C	; 12
+    14bc:	f4 e0       	ldi	r31, 0x04	; 4
+    14be:	13 81       	ldd	r17, Z+3	; 0x03
+    14c0:	c2 80       	ldd	r12, Z+2	; 0x02
+    14c2:	c0 e0       	ldi	r28, 0x00	; 0
+    14c4:	d0 e0       	ldi	r29, 0x00	; 0
+    14c6:	0f 2e       	mov	r0, r31
+    14c8:	fc e0       	ldi	r31, 0x0C	; 12
+    14ca:	df 2e       	mov	r13, r31
+    14cc:	f0 2d       	mov	r31, r0
+    14ce:	81 2f       	mov	r24, r17
+    14d0:	a7 d8       	rcall	.-3762   	; 0x620 <Tetris_Bottom_up>
+    14d2:	08 2f       	mov	r16, r24
+    14d4:	8c 2f       	mov	r24, r28
+    14d6:	3a d9       	rcall	.-3468   	; 0x74c <used>
+    14d8:	9d 2d       	mov	r25, r13
+    14da:	98 1b       	sub	r25, r24
+    14dc:	89 2f       	mov	r24, r25
+    14de:	80 1b       	sub	r24, r16
+    14e0:	90 91 27 04 	lds	r25, 0x0427	; 0x800427 <squaresLeft>
+    14e4:	8c 19       	sub	r24, r12
+    14e6:	98 17       	cp	r25, r24
+    14e8:	08 f4       	brcc	.+2      	; 0x14ec <ScreenSpace_Tick+0x2ee>
+    14ea:	89 2f       	mov	r24, r25
+    14ec:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    14f0:	21 96       	adiw	r28, 0x01	; 1
+    14f2:	1f 5f       	subi	r17, 0xFF	; 255
+    14f4:	ce 15       	cp	r28, r14
+    14f6:	df 05       	cpc	r29, r15
+    14f8:	51 f7       	brne	.-44     	; 0x14ce <ScreenSpace_Tick+0x2d0>
+    14fa:	66 c0       	rjmp	.+204    	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    14fc:	80 91 26 04 	lds	r24, 0x0426	; 0x800426 <Press>
+    1500:	88 23       	and	r24, r24
+    1502:	c9 f1       	breq	.+114    	; 0x1576 <ScreenSpace_Tick+0x378>
+    1504:	8c e0       	ldi	r24, 0x0C	; 12
+    1506:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    150a:	80 91 0d 04 	lds	r24, 0x040D	; 0x80040d <current+0x1>
+    150e:	84 30       	cpi	r24, 0x04	; 4
+    1510:	21 f4       	brne	.+8      	; 0x151a <ScreenSpace_Tick+0x31c>
+    1512:	81 e0       	ldi	r24, 0x01	; 1
+    1514:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+    1518:	03 c0       	rjmp	.+6      	; 0x1520 <ScreenSpace_Tick+0x322>
+    151a:	8f 5f       	subi	r24, 0xFF	; 255
+    151c:	80 93 0d 04 	sts	0x040D, r24	; 0x80040d <current+0x1>
+    1520:	cc e0       	ldi	r28, 0x0C	; 12
+    1522:	d4 e0       	ldi	r29, 0x04	; 4
+    1524:	69 81       	ldd	r22, Y+1	; 0x01
+    1526:	88 81       	ld	r24, Y
+    1528:	1d da       	rcall	.-3014   	; 0x964 <changeFace>
+    152a:	ec 80       	ldd	r14, Y+4	; 0x04
+    152c:	f1 2c       	mov	r15, r1
+    152e:	1e 14       	cp	r1, r14
+    1530:	1f 04       	cpc	r1, r15
+    1532:	f4 f4       	brge	.+60     	; 0x1570 <ScreenSpace_Tick+0x372>
+    1534:	1b 81       	ldd	r17, Y+3	; 0x03
+    1536:	ca 80       	ldd	r12, Y+2	; 0x02
+    1538:	c0 e0       	ldi	r28, 0x00	; 0
+    153a:	d0 e0       	ldi	r29, 0x00	; 0
+    153c:	0f 2e       	mov	r0, r31
+    153e:	fc e0       	ldi	r31, 0x0C	; 12
+    1540:	df 2e       	mov	r13, r31
+    1542:	f0 2d       	mov	r31, r0
+    1544:	81 2f       	mov	r24, r17
+    1546:	6c d8       	rcall	.-3880   	; 0x620 <Tetris_Bottom_up>
+    1548:	08 2f       	mov	r16, r24
+    154a:	8c 2f       	mov	r24, r28
+    154c:	ff d8       	rcall	.-3586   	; 0x74c <used>
+    154e:	9d 2d       	mov	r25, r13
+    1550:	98 1b       	sub	r25, r24
+    1552:	89 2f       	mov	r24, r25
+    1554:	80 1b       	sub	r24, r16
+    1556:	90 91 27 04 	lds	r25, 0x0427	; 0x800427 <squaresLeft>
+    155a:	8c 19       	sub	r24, r12
+    155c:	98 17       	cp	r25, r24
+    155e:	08 f4       	brcc	.+2      	; 0x1562 <ScreenSpace_Tick+0x364>
+    1560:	89 2f       	mov	r24, r25
+    1562:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    1566:	21 96       	adiw	r28, 0x01	; 1
+    1568:	1f 5f       	subi	r17, 0xFF	; 255
+    156a:	ce 15       	cp	r28, r14
+    156c:	df 05       	cpc	r29, r15
+    156e:	51 f7       	brne	.-44     	; 0x1544 <ScreenSpace_Tick+0x346>
+    1570:	10 92 26 04 	sts	0x0426, r1	; 0x800426 <Press>
+    1574:	29 c0       	rjmp	.+82     	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    1576:	8d e0       	ldi	r24, 0x0D	; 13
+    1578:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    157c:	e0 90 10 04 	lds	r14, 0x0410	; 0x800410 <current+0x4>
+    1580:	f1 2c       	mov	r15, r1
+    1582:	1e 14       	cp	r1, r14
+    1584:	1f 04       	cpc	r1, r15
+    1586:	04 f5       	brge	.+64     	; 0x15c8 <ScreenSpace_Tick+0x3ca>
+    1588:	ec e0       	ldi	r30, 0x0C	; 12
+    158a:	f4 e0       	ldi	r31, 0x04	; 4
+    158c:	13 81       	ldd	r17, Z+3	; 0x03
+    158e:	c2 80       	ldd	r12, Z+2	; 0x02
+    1590:	c0 e0       	ldi	r28, 0x00	; 0
+    1592:	d0 e0       	ldi	r29, 0x00	; 0
+    1594:	0f 2e       	mov	r0, r31
+    1596:	fc e0       	ldi	r31, 0x0C	; 12
+    1598:	df 2e       	mov	r13, r31
+    159a:	f0 2d       	mov	r31, r0
+    159c:	81 2f       	mov	r24, r17
+    159e:	40 d8       	rcall	.-3968   	; 0x620 <Tetris_Bottom_up>
+    15a0:	08 2f       	mov	r16, r24
+    15a2:	8c 2f       	mov	r24, r28
+    15a4:	d3 d8       	rcall	.-3674   	; 0x74c <used>
+    15a6:	9d 2d       	mov	r25, r13
+    15a8:	98 1b       	sub	r25, r24
+    15aa:	89 2f       	mov	r24, r25
+    15ac:	80 1b       	sub	r24, r16
+    15ae:	90 91 27 04 	lds	r25, 0x0427	; 0x800427 <squaresLeft>
+    15b2:	8c 19       	sub	r24, r12
+    15b4:	98 17       	cp	r25, r24
+    15b6:	08 f4       	brcc	.+2      	; 0x15ba <ScreenSpace_Tick+0x3bc>
+    15b8:	89 2f       	mov	r24, r25
+    15ba:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    15be:	21 96       	adiw	r28, 0x01	; 1
+    15c0:	1f 5f       	subi	r17, 0xFF	; 255
+    15c2:	ce 15       	cp	r28, r14
+    15c4:	df 05       	cpc	r29, r15
+    15c6:	51 f7       	brne	.-44     	; 0x159c <ScreenSpace_Tick+0x39e>
+    15c8:	10 92 66 01 	sts	0x0166, r1	; 0x800166 <move>
+    15cc:	83 e0       	ldi	r24, 0x03	; 3
+    15ce:	90 e0       	ldi	r25, 0x00	; 0
+    15d0:	c8 c0       	rjmp	.+400    	; 0x1762 <ScreenSpace_Tick+0x564>
+    15d2:	80 91 a4 03 	lds	r24, 0x03A4	; 0x8003a4 <Lcnt>
+    15d6:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <speedLevel>
+    15da:	89 17       	cp	r24, r25
+    15dc:	30 f4       	brcc	.+12     	; 0x15ea <ScreenSpace_Tick+0x3ec>
+    15de:	8f 5f       	subi	r24, 0xFF	; 255
+    15e0:	80 93 a4 03 	sts	0x03A4, r24	; 0x8003a4 <Lcnt>
+    15e4:	84 e0       	ldi	r24, 0x04	; 4
+    15e6:	90 e0       	ldi	r25, 0x00	; 0
+    15e8:	bc c0       	rjmp	.+376    	; 0x1762 <ScreenSpace_Tick+0x564>
+    15ea:	80 91 27 04 	lds	r24, 0x0427	; 0x800427 <squaresLeft>
+    15ee:	18 16       	cp	r1, r24
+    15f0:	2c f4       	brge	.+10     	; 0x15fc <ScreenSpace_Tick+0x3fe>
+    15f2:	ec e0       	ldi	r30, 0x0C	; 12
+    15f4:	f4 e0       	ldi	r31, 0x04	; 4
+    15f6:	92 81       	ldd	r25, Z+2	; 0x02
+    15f8:	9f 5f       	subi	r25, 0xFF	; 255
+    15fa:	92 83       	std	Z+2, r25	; 0x02
+    15fc:	81 50       	subi	r24, 0x01	; 1
+    15fe:	80 93 27 04 	sts	0x0427, r24	; 0x800427 <squaresLeft>
+    1602:	81 e0       	ldi	r24, 0x01	; 1
+    1604:	80 93 a4 03 	sts	0x03A4, r24	; 0x8003a4 <Lcnt>
+    1608:	84 e0       	ldi	r24, 0x04	; 4
+    160a:	90 e0       	ldi	r25, 0x00	; 0
+    160c:	aa c0       	rjmp	.+340    	; 0x1762 <ScreenSpace_Tick+0x564>
+    160e:	21 91       	ld	r18, Z+
+    1610:	21 11       	cpse	r18, r1
+    1612:	3c 93       	st	X, r19
+    1614:	11 96       	adiw	r26, 0x01	; 1
+    1616:	8e 17       	cp	r24, r30
+    1618:	9f 07       	cpc	r25, r31
+    161a:	c9 f7       	brne	.-14     	; 0x160e <ScreenSpace_Tick+0x410>
+    161c:	04 96       	adiw	r24, 0x04	; 4
+    161e:	44 5f       	subi	r20, 0xF4	; 244
+    1620:	5f 4f       	sbci	r21, 0xFF	; 255
+    1622:	86 17       	cp	r24, r22
+    1624:	97 07       	cpc	r25, r23
+    1626:	21 f0       	breq	.+8      	; 0x1630 <ScreenSpace_Tick+0x432>
+    1628:	fc 01       	movw	r30, r24
+    162a:	34 97       	sbiw	r30, 0x04	; 4
+    162c:	da 01       	movw	r26, r20
+    162e:	ef cf       	rjmp	.-34     	; 0x160e <ScreenSpace_Tick+0x410>
+    1630:	0e 94 e9 02 	call	0x5d2	; 0x5d2 <Tetris_check>
+    1634:	90 91 64 01 	lds	r25, 0x0164	; 0x800164 <gameOver>
+    1638:	ec ea       	ldi	r30, 0xAC	; 172
+    163a:	f3 e0       	ldi	r31, 0x03	; 3
+    163c:	2c e0       	ldi	r18, 0x0C	; 12
+    163e:	34 e0       	ldi	r19, 0x04	; 4
+    1640:	41 e0       	ldi	r20, 0x01	; 1
+    1642:	80 81       	ld	r24, Z
+    1644:	81 11       	cpse	r24, r1
+    1646:	94 2f       	mov	r25, r20
+    1648:	3c 96       	adiw	r30, 0x0c	; 12
+    164a:	2e 17       	cp	r18, r30
+    164c:	3f 07       	cpc	r19, r31
+    164e:	c9 f7       	brne	.-14     	; 0x1642 <ScreenSpace_Tick+0x444>
+    1650:	90 93 64 01 	sts	0x0164, r25	; 0x800164 <gameOver>
+    1654:	85 e0       	ldi	r24, 0x05	; 5
+    1656:	90 e0       	ldi	r25, 0x00	; 0
+    1658:	84 c0       	rjmp	.+264    	; 0x1762 <ScreenSpace_Tick+0x564>
+    165a:	20 91 a4 03 	lds	r18, 0x03A4	; 0x8003a4 <Lcnt>
+    165e:	20 fd       	sbrc	r18, 0
+    1660:	42 c0       	rjmp	.+132    	; 0x16e6 <ScreenSpace_Tick+0x4e8>
+    1662:	40 91 65 01 	lds	r20, 0x0165	; 0x800165 <v>
+    1666:	48 30       	cpi	r20, 0x08	; 8
+    1668:	10 f5       	brcc	.+68     	; 0x16ae <ScreenSpace_Tick+0x4b0>
+    166a:	84 2f       	mov	r24, r20
+    166c:	90 e0       	ldi	r25, 0x00	; 0
+    166e:	fc 01       	movw	r30, r24
+    1670:	ee 0f       	add	r30, r30
+    1672:	ff 1f       	adc	r31, r31
+    1674:	e8 0f       	add	r30, r24
+    1676:	f9 1f       	adc	r31, r25
+    1678:	ee 0f       	add	r30, r30
+    167a:	ff 1f       	adc	r31, r31
+    167c:	ee 0f       	add	r30, r30
+    167e:	ff 1f       	adc	r31, r31
+    1680:	e4 55       	subi	r30, 0x54	; 84
+    1682:	fc 4f       	sbci	r31, 0xFC	; 252
+    1684:	01 96       	adiw	r24, 0x01	; 1
+    1686:	bc 01       	movw	r22, r24
+    1688:	66 0f       	add	r22, r22
+    168a:	77 1f       	adc	r23, r23
+    168c:	86 0f       	add	r24, r22
+    168e:	97 1f       	adc	r25, r23
+    1690:	88 0f       	add	r24, r24
+    1692:	99 1f       	adc	r25, r25
+    1694:	88 0f       	add	r24, r24
+    1696:	99 1f       	adc	r25, r25
+    1698:	84 55       	subi	r24, 0x54	; 84
+    169a:	9c 4f       	sbci	r25, 0xFC	; 252
+    169c:	31 e0       	ldi	r19, 0x01	; 1
+    169e:	31 93       	st	Z+, r19
+    16a0:	e8 17       	cp	r30, r24
+    16a2:	f9 07       	cpc	r31, r25
+    16a4:	e1 f7       	brne	.-8      	; 0x169e <ScreenSpace_Tick+0x4a0>
+    16a6:	4f 5f       	subi	r20, 0xFF	; 255
+    16a8:	40 93 65 01 	sts	0x0165, r20	; 0x800165 <v>
+    16ac:	1c c0       	rjmp	.+56     	; 0x16e6 <ScreenSpace_Tick+0x4e8>
+    16ae:	30 91 04 01 	lds	r19, 0x0104	; 0x800104 <l>
+    16b2:	83 2f       	mov	r24, r19
+    16b4:	90 e0       	ldi	r25, 0x00	; 0
+    16b6:	ac 01       	movw	r20, r24
+    16b8:	44 0f       	add	r20, r20
+    16ba:	55 1f       	adc	r21, r21
+    16bc:	84 0f       	add	r24, r20
+    16be:	95 1f       	adc	r25, r21
+    16c0:	88 0f       	add	r24, r24
+    16c2:	99 1f       	adc	r25, r25
+    16c4:	88 0f       	add	r24, r24
+    16c6:	99 1f       	adc	r25, r25
+    16c8:	fc 01       	movw	r30, r24
+    16ca:	e4 55       	subi	r30, 0x54	; 84
+    16cc:	fc 4f       	sbci	r31, 0xFC	; 252
+    16ce:	88 54       	subi	r24, 0x48	; 72
+    16d0:	9c 4f       	sbci	r25, 0xFC	; 252
+    16d2:	11 92       	st	Z+, r1
+    16d4:	8e 17       	cp	r24, r30
+    16d6:	9f 07       	cpc	r25, r31
+    16d8:	e1 f7       	brne	.-8      	; 0x16d2 <ScreenSpace_Tick+0x4d4>
+    16da:	31 50       	subi	r19, 0x01	; 1
+    16dc:	30 93 04 01 	sts	0x0104, r19	; 0x800104 <l>
+    16e0:	81 e0       	ldi	r24, 0x01	; 1
+    16e2:	80 93 63 01 	sts	0x0163, r24	; 0x800163 <promt>
+    16e6:	2f 5f       	subi	r18, 0xFF	; 255
+    16e8:	20 93 a4 03 	sts	0x03A4, r18	; 0x8003a4 <Lcnt>
+    16ec:	86 e0       	ldi	r24, 0x06	; 6
+    16ee:	90 e0       	ldi	r25, 0x00	; 0
+    16f0:	38 c0       	rjmp	.+112    	; 0x1762 <ScreenSpace_Tick+0x564>
+    16f2:	20 91 25 04 	lds	r18, 0x0425	; 0x800425 <resetG>
+    16f6:	21 11       	cpse	r18, r1
+    16f8:	47 ce       	rjmp	.-882    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    16fa:	33 c0       	rjmp	.+102    	; 0x1762 <ScreenSpace_Tick+0x564>
+    16fc:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1700:	88 23       	and	r24, r24
+    1702:	09 f4       	brne	.+2      	; 0x1706 <ScreenSpace_Tick+0x508>
+    1704:	46 ce       	rjmp	.-884    	; 0x1392 <ScreenSpace_Tick+0x194>
+    1706:	40 ce       	rjmp	.-896    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    1708:	80 91 26 04 	lds	r24, 0x0426	; 0x800426 <Press>
+    170c:	81 11       	cpse	r24, r1
+    170e:	08 c0       	rjmp	.+16     	; 0x1720 <ScreenSpace_Tick+0x522>
+    1710:	11 c0       	rjmp	.+34     	; 0x1734 <ScreenSpace_Tick+0x536>
+    1712:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1716:	81 11       	cpse	r24, r1
+    1718:	37 ce       	rjmp	.-914    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    171a:	83 e0       	ldi	r24, 0x03	; 3
+    171c:	90 e0       	ldi	r25, 0x00	; 0
+    171e:	fa cd       	rjmp	.-1036   	; 0x1314 <ScreenSpace_Tick+0x116>
+    1720:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1724:	81 11       	cpse	r24, r1
+    1726:	30 ce       	rjmp	.-928    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    1728:	39 ce       	rjmp	.-910    	; 0x139c <ScreenSpace_Tick+0x19e>
+    172a:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    172e:	81 11       	cpse	r24, r1
+    1730:	2b ce       	rjmp	.-938    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    1732:	4f cf       	rjmp	.-354    	; 0x15d2 <ScreenSpace_Tick+0x3d4>
+    1734:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1738:	88 23       	and	r24, r24
+    173a:	09 f4       	brne	.+2      	; 0x173e <ScreenSpace_Tick+0x540>
+    173c:	01 ce       	rjmp	.-1022   	; 0x1340 <ScreenSpace_Tick+0x142>
+    173e:	24 ce       	rjmp	.-952    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    1740:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1744:	88 23       	and	r24, r24
+    1746:	09 f4       	brne	.+2      	; 0x174a <ScreenSpace_Tick+0x54c>
+    1748:	88 cf       	rjmp	.-240    	; 0x165a <ScreenSpace_Tick+0x45c>
+    174a:	1e ce       	rjmp	.-964    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    174c:	20 91 25 04 	lds	r18, 0x0425	; 0x800425 <resetG>
+    1750:	21 11       	cpse	r18, r1
+    1752:	1a ce       	rjmp	.-972    	; 0x1388 <ScreenSpace_Tick+0x18a>
+    1754:	06 c0       	rjmp	.+12     	; 0x1762 <ScreenSpace_Tick+0x564>
+    1756:	80 91 66 01 	lds	r24, 0x0166	; 0x800166 <move>
+    175a:	81 30       	cpi	r24, 0x01	; 1
+    175c:	09 f0       	breq	.+2      	; 0x1760 <ScreenSpace_Tick+0x562>
+    175e:	54 ce       	rjmp	.-856    	; 0x1408 <ScreenSpace_Tick+0x20a>
+    1760:	26 ce       	rjmp	.-948    	; 0x13ae <ScreenSpace_Tick+0x1b0>
+    1762:	df 91       	pop	r29
+    1764:	cf 91       	pop	r28
+    1766:	1f 91       	pop	r17
+    1768:	0f 91       	pop	r16
+    176a:	ff 90       	pop	r15
+    176c:	ef 90       	pop	r14
+    176e:	df 90       	pop	r13
+    1770:	cf 90       	pop	r12
+    1772:	08 95       	ret
+
+00001774 <Tetris_score>:
+    1774:	cf 93       	push	r28
+    1776:	df 93       	push	r29
+    1778:	d8 2f       	mov	r29, r24
+    177a:	c0 91 aa 03 	lds	r28, 0x03AA	; 0x8003aa <score>
+    177e:	ca 30       	cpi	r28, 0x0A	; 10
+    1780:	40 f4       	brcc	.+16     	; 0x1792 <Tetris_score+0x1e>
+    1782:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    1786:	80 91 aa 03 	lds	r24, 0x03AA	; 0x8003aa <score>
+    178a:	80 5d       	subi	r24, 0xD0	; 208
+    178c:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    1790:	5f c0       	rjmp	.+190    	; 0x1850 <Tetris_score+0xdc>
+    1792:	c4 31       	cpi	r28, 0x14	; 20
+    1794:	70 f4       	brcc	.+28     	; 0x17b2 <Tetris_score+0x3e>
+    1796:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    179a:	81 e3       	ldi	r24, 0x31	; 49
+    179c:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    17a0:	81 e0       	ldi	r24, 0x01	; 1
+    17a2:	8d 0f       	add	r24, r29
+    17a4:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    17a8:	86 e2       	ldi	r24, 0x26	; 38
+    17aa:	8c 0f       	add	r24, r28
+    17ac:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    17b0:	4f c0       	rjmp	.+158    	; 0x1850 <Tetris_score+0xdc>
+    17b2:	ce 31       	cpi	r28, 0x1E	; 30
+    17b4:	70 f4       	brcc	.+28     	; 0x17d2 <Tetris_score+0x5e>
+    17b6:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    17ba:	82 e3       	ldi	r24, 0x32	; 50
+    17bc:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    17c0:	81 e0       	ldi	r24, 0x01	; 1
+    17c2:	8d 0f       	add	r24, r29
+    17c4:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    17c8:	8c e1       	ldi	r24, 0x1C	; 28
+    17ca:	8c 0f       	add	r24, r28
+    17cc:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    17d0:	3f c0       	rjmp	.+126    	; 0x1850 <Tetris_score+0xdc>
+    17d2:	c8 32       	cpi	r28, 0x28	; 40
+    17d4:	70 f4       	brcc	.+28     	; 0x17f2 <Tetris_score+0x7e>
+    17d6:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    17da:	83 e3       	ldi	r24, 0x33	; 51
+    17dc:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    17e0:	81 e0       	ldi	r24, 0x01	; 1
+    17e2:	8d 0f       	add	r24, r29
+    17e4:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    17e8:	82 e1       	ldi	r24, 0x12	; 18
+    17ea:	8c 0f       	add	r24, r28
+    17ec:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    17f0:	2f c0       	rjmp	.+94     	; 0x1850 <Tetris_score+0xdc>
+    17f2:	c2 33       	cpi	r28, 0x32	; 50
+    17f4:	70 f4       	brcc	.+28     	; 0x1812 <Tetris_score+0x9e>
+    17f6:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    17fa:	83 e3       	ldi	r24, 0x33	; 51
+    17fc:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    1800:	81 e0       	ldi	r24, 0x01	; 1
+    1802:	8d 0f       	add	r24, r29
+    1804:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    1808:	88 e0       	ldi	r24, 0x08	; 8
+    180a:	8c 0f       	add	r24, r28
+    180c:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    1810:	1f c0       	rjmp	.+62     	; 0x1850 <Tetris_score+0xdc>
+    1812:	cc 33       	cpi	r28, 0x3C	; 60
+    1814:	70 f4       	brcc	.+28     	; 0x1832 <Tetris_score+0xbe>
+    1816:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    181a:	83 e3       	ldi	r24, 0x33	; 51
+    181c:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    1820:	81 e0       	ldi	r24, 0x01	; 1
+    1822:	8d 0f       	add	r24, r29
+    1824:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    1828:	8e ef       	ldi	r24, 0xFE	; 254
+    182a:	8c 0f       	add	r24, r28
+    182c:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    1830:	0f c0       	rjmp	.+30     	; 0x1850 <Tetris_score+0xdc>
+    1832:	c6 34       	cpi	r28, 0x46	; 70
+    1834:	68 f4       	brcc	.+26     	; 0x1850 <Tetris_score+0xdc>
+    1836:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    183a:	83 e3       	ldi	r24, 0x33	; 51
+    183c:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    1840:	81 e0       	ldi	r24, 0x01	; 1
+    1842:	8d 0f       	add	r24, r29
+    1844:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    1848:	84 ef       	ldi	r24, 0xF4	; 244
+    184a:	8c 0f       	add	r24, r28
+    184c:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    1850:	df 91       	pop	r29
+    1852:	cf 91       	pop	r28
+    1854:	08 95       	ret
+
+00001856 <LS_Tick>:
+    1856:	81 30       	cpi	r24, 0x01	; 1
+    1858:	91 05       	cpc	r25, r1
+    185a:	69 f0       	breq	.+26     	; 0x1876 <LS_Tick+0x20>
+    185c:	1c f4       	brge	.+6      	; 0x1864 <LS_Tick+0xe>
+    185e:	89 2b       	or	r24, r25
+    1860:	39 f0       	breq	.+14     	; 0x1870 <LS_Tick+0x1a>
+    1862:	51 c0       	rjmp	.+162    	; 0x1906 <LS_Tick+0xb0>
+    1864:	82 30       	cpi	r24, 0x02	; 2
+    1866:	91 05       	cpc	r25, r1
+    1868:	d1 f0       	breq	.+52     	; 0x189e <LS_Tick+0x48>
+    186a:	03 97       	sbiw	r24, 0x03	; 3
+    186c:	e9 f0       	breq	.+58     	; 0x18a8 <LS_Tick+0x52>
+    186e:	4b c0       	rjmp	.+150    	; 0x1906 <LS_Tick+0xb0>
+    1870:	10 92 25 04 	sts	0x0425, r1	; 0x800425 <resetG>
+    1874:	24 c0       	rjmp	.+72     	; 0x18be <LS_Tick+0x68>
+    1876:	80 91 62 01 	lds	r24, 0x0162	; 0x800162 <__data_end>
+    187a:	88 23       	and	r24, r24
+    187c:	09 f4       	brne	.+2      	; 0x1880 <LS_Tick+0x2a>
+    187e:	49 c0       	rjmp	.+146    	; 0x1912 <LS_Tick+0xbc>
+    1880:	10 92 aa 03 	sts	0x03AA, r1	; 0x8003aa <score>
+    1884:	81 e0       	ldi	r24, 0x01	; 1
+    1886:	80 93 ab 03 	sts	0x03AB, r24	; 0x8003ab <level>
+    188a:	8e e1       	ldi	r24, 0x1E	; 30
+    188c:	80 93 09 01 	sts	0x0109, r24	; 0x800109 <speedLevel>
+    1890:	10 92 62 01 	sts	0x0162, r1	; 0x800162 <__data_end>
+    1894:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1898:	88 23       	and	r24, r24
+    189a:	c9 f0       	breq	.+50     	; 0x18ce <LS_Tick+0x78>
+    189c:	37 c0       	rjmp	.+110    	; 0x190c <LS_Tick+0xb6>
+    189e:	80 91 64 01 	lds	r24, 0x0164	; 0x800164 <gameOver>
+    18a2:	81 11       	cpse	r24, r1
+    18a4:	40 c0       	rjmp	.+128    	; 0x1926 <LS_Tick+0xd0>
+    18a6:	3a c0       	rjmp	.+116    	; 0x191c <LS_Tick+0xc6>
+    18a8:	80 91 62 01 	lds	r24, 0x0162	; 0x800162 <__data_end>
+    18ac:	88 23       	and	r24, r24
+    18ae:	09 f4       	brne	.+2      	; 0x18b2 <LS_Tick+0x5c>
+    18b0:	3f c0       	rjmp	.+126    	; 0x1930 <LS_Tick+0xda>
+    18b2:	10 92 62 01 	sts	0x0162, r1	; 0x800162 <__data_end>
+    18b6:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    18ba:	81 11       	cpse	r24, r1
+    18bc:	27 c0       	rjmp	.+78     	; 0x190c <LS_Tick+0xb6>
+    18be:	6a e0       	ldi	r22, 0x0A	; 10
+    18c0:	71 e0       	ldi	r23, 0x01	; 1
+    18c2:	81 e0       	ldi	r24, 0x01	; 1
+    18c4:	0e 94 8f 01 	call	0x31e	; 0x31e <LCD_DisplayString>
+    18c8:	81 e0       	ldi	r24, 0x01	; 1
+    18ca:	90 e0       	ldi	r25, 0x00	; 0
+    18cc:	08 95       	ret
+    18ce:	6a e2       	ldi	r22, 0x2A	; 42
+    18d0:	71 e0       	ldi	r23, 0x01	; 1
+    18d2:	81 e0       	ldi	r24, 0x01	; 1
+    18d4:	0e 94 8f 01 	call	0x31e	; 0x31e <LCD_DisplayString>
+    18d8:	88 e0       	ldi	r24, 0x08	; 8
+    18da:	4c df       	rcall	.-360    	; 0x1774 <Tetris_score>
+    18dc:	88 e1       	ldi	r24, 0x18	; 24
+    18de:	0e 94 6f 01 	call	0x2de	; 0x2de <LCD_Cursor>
+    18e2:	80 91 ab 03 	lds	r24, 0x03AB	; 0x8003ab <level>
+    18e6:	80 5d       	subi	r24, 0xD0	; 208
+    18e8:	0e 94 86 01 	call	0x30c	; 0x30c <LCD_WriteData>
+    18ec:	82 e0       	ldi	r24, 0x02	; 2
+    18ee:	90 e0       	ldi	r25, 0x00	; 0
+    18f0:	08 95       	ret
+    18f2:	61 e4       	ldi	r22, 0x41	; 65
+    18f4:	71 e0       	ldi	r23, 0x01	; 1
+    18f6:	81 e0       	ldi	r24, 0x01	; 1
+    18f8:	0e 94 8f 01 	call	0x31e	; 0x31e <LCD_DisplayString>
+    18fc:	8d e1       	ldi	r24, 0x1D	; 29
+    18fe:	3a df       	rcall	.-396    	; 0x1774 <Tetris_score>
+    1900:	83 e0       	ldi	r24, 0x03	; 3
+    1902:	90 e0       	ldi	r25, 0x00	; 0
+    1904:	08 95       	ret
+    1906:	80 e0       	ldi	r24, 0x00	; 0
+    1908:	90 e0       	ldi	r25, 0x00	; 0
+    190a:	08 95       	ret
+    190c:	80 e0       	ldi	r24, 0x00	; 0
+    190e:	90 e0       	ldi	r25, 0x00	; 0
+    1910:	08 95       	ret
+    1912:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1916:	81 11       	cpse	r24, r1
+    1918:	f9 cf       	rjmp	.-14     	; 0x190c <LS_Tick+0xb6>
+    191a:	d1 cf       	rjmp	.-94     	; 0x18be <LS_Tick+0x68>
+    191c:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1920:	81 11       	cpse	r24, r1
+    1922:	f4 cf       	rjmp	.-24     	; 0x190c <LS_Tick+0xb6>
+    1924:	d4 cf       	rjmp	.-88     	; 0x18ce <LS_Tick+0x78>
+    1926:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    192a:	88 23       	and	r24, r24
+    192c:	11 f3       	breq	.-60     	; 0x18f2 <LS_Tick+0x9c>
+    192e:	ee cf       	rjmp	.-36     	; 0x190c <LS_Tick+0xb6>
+    1930:	80 91 25 04 	lds	r24, 0x0425	; 0x800425 <resetG>
+    1934:	88 23       	and	r24, r24
+    1936:	e9 f2       	breq	.-70     	; 0x18f2 <LS_Tick+0x9c>
+    1938:	e9 cf       	rjmp	.-46     	; 0x190c <LS_Tick+0xb6>
+
+0000193a <TimerOn>:
+    193a:	8b e0       	ldi	r24, 0x0B	; 11
+    193c:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7e0081>
+    1940:	8d e7       	ldi	r24, 0x7D	; 125
+    1942:	90 e0       	ldi	r25, 0x00	; 0
+    1944:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+    1948:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+    194c:	82 e0       	ldi	r24, 0x02	; 2
+    194e:	80 93 6f 00 	sts	0x006F, r24	; 0x80006f <__TEXT_REGION_LENGTH__+0x7e006f>
+    1952:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7e0085>
+    1956:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7e0084>
+    195a:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <_avr_timer_M>
+    195e:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <_avr_timer_M+0x1>
+    1962:	a0 91 07 01 	lds	r26, 0x0107	; 0x800107 <_avr_timer_M+0x2>
+    1966:	b0 91 08 01 	lds	r27, 0x0108	; 0x800108 <_avr_timer_M+0x3>
+    196a:	80 93 68 01 	sts	0x0168, r24	; 0x800168 <_avr_timer_cntcurr>
+    196e:	90 93 69 01 	sts	0x0169, r25	; 0x800169 <_avr_timer_cntcurr+0x1>
+    1972:	a0 93 6a 01 	sts	0x016A, r26	; 0x80016a <_avr_timer_cntcurr+0x2>
+    1976:	b0 93 6b 01 	sts	0x016B, r27	; 0x80016b <_avr_timer_cntcurr+0x3>
+    197a:	8f b7       	in	r24, 0x3f	; 63
+    197c:	80 68       	ori	r24, 0x80	; 128
+    197e:	8f bf       	out	0x3f, r24	; 63
+    1980:	08 95       	ret
+
+00001982 <TimerISR>:
+}
+//void TimerISR() { TimerFlag = 1; }
+void TimerISR() {
+    1982:	ef 92       	push	r14
+    1984:	ff 92       	push	r15
+    1986:	0f 93       	push	r16
+    1988:	1f 93       	push	r17
+    198a:	cf 93       	push	r28
+    198c:	df 93       	push	r29
+    198e:	c7 e6       	ldi	r28, 0x67	; 103
+    1990:	d3 e0       	ldi	r29, 0x03	; 3
+    1992:	0f 2e       	mov	r0, r31
+    1994:	f3 ea       	ldi	r31, 0xA3	; 163
+    1996:	ef 2e       	mov	r14, r31
+    1998:	f3 e0       	ldi	r31, 0x03	; 3
+    199a:	ff 2e       	mov	r15, r31
+    199c:	f0 2d       	mov	r31, r0
+    199e:	8e 01       	movw	r16, r28
+    unsigned char i;
+    for (i = 0; i < tasksNum; ++i) {                     // Heart of the scheduler code
+        if ( tasks[i].elapsedTime >= tasks[i].period ) { // Ready
+    19a0:	4e 81       	ldd	r20, Y+6	; 0x06
+    19a2:	5f 81       	ldd	r21, Y+7	; 0x07
+    19a4:	68 85       	ldd	r22, Y+8	; 0x08
+    19a6:	79 85       	ldd	r23, Y+9	; 0x09
+    19a8:	8a 81       	ldd	r24, Y+2	; 0x02
+    19aa:	9b 81       	ldd	r25, Y+3	; 0x03
+    19ac:	ac 81       	ldd	r26, Y+4	; 0x04
+    19ae:	bd 81       	ldd	r27, Y+5	; 0x05
+    19b0:	48 17       	cp	r20, r24
+    19b2:	59 07       	cpc	r21, r25
+    19b4:	6a 07       	cpc	r22, r26
+    19b6:	7b 07       	cpc	r23, r27
+    19b8:	58 f0       	brcs	.+22     	; 0x19d0 <TimerISR+0x4e>
+            tasks[i].state = tasks[i].TickFct(tasks[i].state);
+    19ba:	ea 85       	ldd	r30, Y+10	; 0x0a
+    19bc:	fb 85       	ldd	r31, Y+11	; 0x0b
+    19be:	88 81       	ld	r24, Y
+    19c0:	99 81       	ldd	r25, Y+1	; 0x01
+    19c2:	09 95       	icall
+    19c4:	99 83       	std	Y+1, r25	; 0x01
+    19c6:	88 83       	st	Y, r24
+            tasks[i].elapsedTime = 0;
+    19c8:	1e 82       	std	Y+6, r1	; 0x06
+    19ca:	1f 82       	std	Y+7, r1	; 0x07
+    19cc:	18 86       	std	Y+8, r1	; 0x08
+    19ce:	19 86       	std	Y+9, r1	; 0x09
+        }
+        tasks[i].elapsedTime += tasksPeriodGCD;
+    19d0:	f8 01       	movw	r30, r16
+    19d2:	86 81       	ldd	r24, Z+6	; 0x06
+    19d4:	97 81       	ldd	r25, Z+7	; 0x07
+    19d6:	a0 85       	ldd	r26, Z+8	; 0x08
+    19d8:	b1 85       	ldd	r27, Z+9	; 0x09
+    19da:	05 96       	adiw	r24, 0x05	; 5
+    19dc:	a1 1d       	adc	r26, r1
+    19de:	b1 1d       	adc	r27, r1
+    19e0:	86 83       	std	Z+6, r24	; 0x06
+    19e2:	97 83       	std	Z+7, r25	; 0x07
+    19e4:	a0 87       	std	Z+8, r26	; 0x08
+    19e6:	b1 87       	std	Z+9, r27	; 0x09
+    19e8:	2c 96       	adiw	r28, 0x0c	; 12
+    TCCR1B = 0x00; // bit3bit1bit0=000: timer off
+}
+//void TimerISR() { TimerFlag = 1; }
+void TimerISR() {
+    unsigned char i;
+    for (i = 0; i < tasksNum; ++i) {                     // Heart of the scheduler code
+    19ea:	ce 15       	cp	r28, r14
+    19ec:	df 05       	cpc	r29, r15
+    19ee:	b9 f6       	brne	.-82     	; 0x199e <TimerISR+0x1c>
+            tasks[i].state = tasks[i].TickFct(tasks[i].state);
+            tasks[i].elapsedTime = 0;
+        }
+        tasks[i].elapsedTime += tasksPeriodGCD;
+    }
+}
+    19f0:	df 91       	pop	r29
+    19f2:	cf 91       	pop	r28
+    19f4:	1f 91       	pop	r17
+    19f6:	0f 91       	pop	r16
+    19f8:	ff 90       	pop	r15
+    19fa:	ef 90       	pop	r14
+    19fc:	08 95       	ret
+
+000019fe <__vector_13>:
+// In our approach, the C programmer does not touch this ISR, but rather TimerISR()
+ISR(TIMER1_COMPA_vect) {
+    19fe:	1f 92       	push	r1
+    1a00:	0f 92       	push	r0
+    1a02:	0f b6       	in	r0, 0x3f	; 63
+    1a04:	0f 92       	push	r0
+    1a06:	11 24       	eor	r1, r1
+    1a08:	0b b6       	in	r0, 0x3b	; 59
+    1a0a:	0f 92       	push	r0
+    1a0c:	2f 93       	push	r18
+    1a0e:	3f 93       	push	r19
+    1a10:	4f 93       	push	r20
+    1a12:	5f 93       	push	r21
+    1a14:	6f 93       	push	r22
+    1a16:	7f 93       	push	r23
+    1a18:	8f 93       	push	r24
+    1a1a:	9f 93       	push	r25
+    1a1c:	af 93       	push	r26
+    1a1e:	bf 93       	push	r27
+    1a20:	ef 93       	push	r30
+    1a22:	ff 93       	push	r31
+    // CPU automatically calls when TCNT1 == OCR1 (every 1 ms per TimerOn settings)
+    _avr_timer_cntcurr--; // Count down to 0 rather than up to TOP
+    1a24:	80 91 68 01 	lds	r24, 0x0168	; 0x800168 <_avr_timer_cntcurr>
+    1a28:	90 91 69 01 	lds	r25, 0x0169	; 0x800169 <_avr_timer_cntcurr+0x1>
+    1a2c:	a0 91 6a 01 	lds	r26, 0x016A	; 0x80016a <_avr_timer_cntcurr+0x2>
+    1a30:	b0 91 6b 01 	lds	r27, 0x016B	; 0x80016b <_avr_timer_cntcurr+0x3>
+    1a34:	01 97       	sbiw	r24, 0x01	; 1
+    1a36:	a1 09       	sbc	r26, r1
+    1a38:	b1 09       	sbc	r27, r1
+    1a3a:	80 93 68 01 	sts	0x0168, r24	; 0x800168 <_avr_timer_cntcurr>
+    1a3e:	90 93 69 01 	sts	0x0169, r25	; 0x800169 <_avr_timer_cntcurr+0x1>
+    1a42:	a0 93 6a 01 	sts	0x016A, r26	; 0x80016a <_avr_timer_cntcurr+0x2>
+    1a46:	b0 93 6b 01 	sts	0x016B, r27	; 0x80016b <_avr_timer_cntcurr+0x3>
+    if (_avr_timer_cntcurr == 0) { // results in a more efficient compare
+    1a4a:	89 2b       	or	r24, r25
+    1a4c:	8a 2b       	or	r24, r26
+    1a4e:	8b 2b       	or	r24, r27
+    1a50:	89 f4       	brne	.+34     	; 0x1a74 <__vector_13+0x76>
+        TimerISR(); // Call the ISR that the user uses
+    1a52:	97 df       	rcall	.-210    	; 0x1982 <TimerISR>
+        _avr_timer_cntcurr = _avr_timer_M;
+    1a54:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <_avr_timer_M>
+    1a58:	90 91 06 01 	lds	r25, 0x0106	; 0x800106 <_avr_timer_M+0x1>
+    1a5c:	a0 91 07 01 	lds	r26, 0x0107	; 0x800107 <_avr_timer_M+0x2>
+    1a60:	b0 91 08 01 	lds	r27, 0x0108	; 0x800108 <_avr_timer_M+0x3>
+    1a64:	80 93 68 01 	sts	0x0168, r24	; 0x800168 <_avr_timer_cntcurr>
+    1a68:	90 93 69 01 	sts	0x0169, r25	; 0x800169 <_avr_timer_cntcurr+0x1>
+    1a6c:	a0 93 6a 01 	sts	0x016A, r26	; 0x80016a <_avr_timer_cntcurr+0x2>
+    1a70:	b0 93 6b 01 	sts	0x016B, r27	; 0x80016b <_avr_timer_cntcurr+0x3>
+    }
+}
+    1a74:	ff 91       	pop	r31
+    1a76:	ef 91       	pop	r30
+    1a78:	bf 91       	pop	r27
+    1a7a:	af 91       	pop	r26
+    1a7c:	9f 91       	pop	r25
+    1a7e:	8f 91       	pop	r24
+    1a80:	7f 91       	pop	r23
+    1a82:	6f 91       	pop	r22
+    1a84:	5f 91       	pop	r21
+    1a86:	4f 91       	pop	r20
+    1a88:	3f 91       	pop	r19
+    1a8a:	2f 91       	pop	r18
+    1a8c:	0f 90       	pop	r0
+    1a8e:	0b be       	out	0x3b, r0	; 59
+    1a90:	0f 90       	pop	r0
+    1a92:	0f be       	out	0x3f, r0	; 63
+    1a94:	0f 90       	pop	r0
+    1a96:	1f 90       	pop	r1
+    1a98:	18 95       	reti
+
+00001a9a <TimerSet>:
+
+// Set TimerISR() to tick every M ms
+void TimerSet(unsigned long M) {
+    _avr_timer_M = M;
+    1a9a:	60 93 05 01 	sts	0x0105, r22	; 0x800105 <_avr_timer_M>
+    1a9e:	70 93 06 01 	sts	0x0106, r23	; 0x800106 <_avr_timer_M+0x1>
+    1aa2:	80 93 07 01 	sts	0x0107, r24	; 0x800107 <_avr_timer_M+0x2>
+    1aa6:	90 93 08 01 	sts	0x0108, r25	; 0x800108 <_avr_timer_M+0x3>
+    _avr_timer_cntcurr = _avr_timer_M;
+    1aaa:	60 93 68 01 	sts	0x0168, r22	; 0x800168 <_avr_timer_cntcurr>
+    1aae:	70 93 69 01 	sts	0x0169, r23	; 0x800169 <_avr_timer_cntcurr+0x1>
+    1ab2:	80 93 6a 01 	sts	0x016A, r24	; 0x80016a <_avr_timer_cntcurr+0x2>
+    1ab6:	90 93 6b 01 	sts	0x016B, r25	; 0x80016b <_avr_timer_cntcurr+0x3>
+    1aba:	08 95       	ret
+
+00001abc <ADC_init>:
+}
+void ADC_init() {
+	ADCSRA |= (1 << ADEN) | (1 << ADSC) | (1 << ADATE);
+    1abc:	ea e7       	ldi	r30, 0x7A	; 122
+    1abe:	f0 e0       	ldi	r31, 0x00	; 0
+    1ac0:	80 81       	ld	r24, Z
+    1ac2:	80 6e       	ori	r24, 0xE0	; 224
+    1ac4:	80 83       	st	Z, r24
+    1ac6:	08 95       	ret
+
+00001ac8 <main>:
+{
+
+    //========== Initialize Structure with Task=========///
+    unsigned char i=0;
+
+    tasks[i].state = JS_start;
+    1ac8:	e7 e6       	ldi	r30, 0x67	; 103
+    1aca:	f3 e0       	ldi	r31, 0x03	; 3
+    1acc:	11 82       	std	Z+1, r1	; 0x01
+    1ace:	10 82       	st	Z, r1
+    tasks[i].period = JoystickPeriod;
+    1ad0:	82 e3       	ldi	r24, 0x32	; 50
+    1ad2:	90 e0       	ldi	r25, 0x00	; 0
+    1ad4:	a0 e0       	ldi	r26, 0x00	; 0
+    1ad6:	b0 e0       	ldi	r27, 0x00	; 0
+    1ad8:	82 83       	std	Z+2, r24	; 0x02
+    1ada:	93 83       	std	Z+3, r25	; 0x03
+    1adc:	a4 83       	std	Z+4, r26	; 0x04
+    1ade:	b5 83       	std	Z+5, r27	; 0x05
+    tasks[i].elapsedTime = tasks[i].period;
+    1ae0:	86 83       	std	Z+6, r24	; 0x06
+    1ae2:	97 83       	std	Z+7, r25	; 0x07
+    1ae4:	a0 87       	std	Z+8, r26	; 0x08
+    1ae6:	b1 87       	std	Z+9, r27	; 0x09
+    tasks[i].TickFct = &Joystick_Tick;	
+    1ae8:	24 ed       	ldi	r18, 0xD4	; 212
+    1aea:	30 e0       	ldi	r19, 0x00	; 0
+    1aec:	33 87       	std	Z+11, r19	; 0x0b
+    1aee:	22 87       	std	Z+10, r18	; 0x0a
+	i++;
+	tasks[i].state = Bstart;
+    1af0:	15 86       	std	Z+13, r1	; 0x0d
+    1af2:	14 86       	std	Z+12, r1	; 0x0c
+	tasks[i].period = ButtonPeriod;
+    1af4:	86 87       	std	Z+14, r24	; 0x0e
+    1af6:	97 87       	std	Z+15, r25	; 0x0f
+    1af8:	a0 8b       	std	Z+16, r26	; 0x10
+    1afa:	b1 8b       	std	Z+17, r27	; 0x11
+	tasks[i].elapsedTime = tasks[i].period;
+    1afc:	82 8b       	std	Z+18, r24	; 0x12
+    1afe:	93 8b       	std	Z+19, r25	; 0x13
+    1b00:	a4 8b       	std	Z+20, r26	; 0x14
+    1b02:	b5 8b       	std	Z+21, r27	; 0x15
+	tasks[i].TickFct = &Button_Tick;
+    1b04:	2f e8       	ldi	r18, 0x8F	; 143
+    1b06:	30 e0       	ldi	r19, 0x00	; 0
+    1b08:	37 8b       	std	Z+23, r19	; 0x17
+    1b0a:	26 8b       	std	Z+22, r18	; 0x16
+	i++;
+	tasks[i].state = SS_start;
+    1b0c:	11 8e       	std	Z+25, r1	; 0x19
+    1b0e:	10 8e       	std	Z+24, r1	; 0x18
+	tasks[i].period = ScreenSpacePeriod;
+    1b10:	49 e1       	ldi	r20, 0x19	; 25
+    1b12:	50 e0       	ldi	r21, 0x00	; 0
+    1b14:	60 e0       	ldi	r22, 0x00	; 0
+    1b16:	70 e0       	ldi	r23, 0x00	; 0
+    1b18:	42 8f       	std	Z+26, r20	; 0x1a
+    1b1a:	53 8f       	std	Z+27, r21	; 0x1b
+    1b1c:	64 8f       	std	Z+28, r22	; 0x1c
+    1b1e:	75 8f       	std	Z+29, r23	; 0x1d
+	tasks[i].elapsedTime = tasks[i].period;
+    1b20:	46 8f       	std	Z+30, r20	; 0x1e
+    1b22:	57 8f       	std	Z+31, r21	; 0x1f
+    1b24:	60 a3       	std	Z+32, r22	; 0x20
+    1b26:	71 a3       	std	Z+33, r23	; 0x21
+	tasks[i].TickFct = &ScreenSpace_Tick;
+    1b28:	2f ef       	ldi	r18, 0xFF	; 255
+    1b2a:	38 e0       	ldi	r19, 0x08	; 8
+    1b2c:	33 a3       	std	Z+35, r19	; 0x23
+    1b2e:	22 a3       	std	Z+34, r18	; 0x22
+	i++;	
+    tasks[i].state = Lstart;
+    1b30:	15 a2       	std	Z+37, r1	; 0x25
+    1b32:	14 a2       	std	Z+36, r1	; 0x24
+    tasks[i].period = lCDPeriod;
+    1b34:	86 a3       	std	Z+38, r24	; 0x26
+    1b36:	97 a3       	std	Z+39, r25	; 0x27
+    1b38:	a0 a7       	std	Z+40, r26	; 0x28
+    1b3a:	b1 a7       	std	Z+41, r27	; 0x29
+    tasks[i].elapsedTime = tasks[i].period;
+    1b3c:	82 a7       	std	Z+42, r24	; 0x2a
+    1b3e:	93 a7       	std	Z+43, r25	; 0x2b
+    1b40:	a4 a7       	std	Z+44, r26	; 0x2c
+    1b42:	b5 a7       	std	Z+45, r27	; 0x2d
+    tasks[i].TickFct = &LCD_Tick;
+    1b44:	8d e0       	ldi	r24, 0x0D	; 13
+    1b46:	94 e0       	ldi	r25, 0x04	; 4
+    1b48:	97 a7       	std	Z+47, r25	; 0x2f
+    1b4a:	86 a7       	std	Z+46, r24	; 0x2e
+	i++;
+	tasks[i].state = LS_start;
+    1b4c:	11 aa       	std	Z+49, r1	; 0x31
+    1b4e:	10 aa       	std	Z+48, r1	; 0x30
+	tasks[i].period = LevelSpeedPeriod;
+    1b50:	84 ef       	ldi	r24, 0xF4	; 244
+    1b52:	91 e0       	ldi	r25, 0x01	; 1
+    1b54:	a0 e0       	ldi	r26, 0x00	; 0
+    1b56:	b0 e0       	ldi	r27, 0x00	; 0
+    1b58:	82 ab       	std	Z+50, r24	; 0x32
+    1b5a:	93 ab       	std	Z+51, r25	; 0x33
+    1b5c:	a4 ab       	std	Z+52, r26	; 0x34
+    1b5e:	b5 ab       	std	Z+53, r27	; 0x35
+	tasks[i].elapsedTime = tasks[i].period;
+    1b60:	86 ab       	std	Z+54, r24	; 0x36
+    1b62:	97 ab       	std	Z+55, r25	; 0x37
+    1b64:	a0 af       	std	Z+56, r26	; 0x38
+    1b66:	b1 af       	std	Z+57, r27	; 0x39
+	tasks[i].TickFct = &LS_Tick;
+    1b68:	8b e2       	ldi	r24, 0x2B	; 43
+    1b6a:	9c e0       	ldi	r25, 0x0C	; 12
+    1b6c:	93 af       	std	Z+59, r25	; 0x3b
+    1b6e:	82 af       	std	Z+58, r24	; 0x3a
+    
+	
+    DDRA = 0x00; PORTA = 0x0C; // Set A2 to be button input for
+    1b70:	11 b8       	out	0x01, r1	; 1
+    1b72:	8c e0       	ldi	r24, 0x0C	; 12
+    1b74:	82 b9       	out	0x02, r24	; 2
+    DDRC = 0xFF; PORTC = 0x00; // LCD data lines
+    1b76:	8f ef       	ldi	r24, 0xFF	; 255
+    1b78:	87 b9       	out	0x07, r24	; 7
+    1b7a:	18 b8       	out	0x08, r1	; 8
+    DDRD = 0xFF; PORTD = 0x00; // LCD control lines
+    1b7c:	8a b9       	out	0x0a, r24	; 10
+    1b7e:	1b b8       	out	0x0b, r1	; 11
+   	
+   	nokia_lcd_init();
+    1b80:	0e 94 a8 01 	call	0x350	; 0x350 <nokia_lcd_init>
+   	nokia_lcd_clear();
+    1b84:	0e 94 de 01 	call	0x3bc	; 0x3bc <nokia_lcd_clear>
+   	
+   	LCD_init();  
+    1b88:	0e 94 77 01 	call	0x2ee	; 0x2ee <LCD_init>
+	ADC_init();		
+    1b8c:	97 df       	rcall	.-210    	; 0x1abc <ADC_init>
+    
+    TimerSet(tasksPeriodGCD);
+    1b8e:	65 e0       	ldi	r22, 0x05	; 5
+    1b90:	70 e0       	ldi	r23, 0x00	; 0
+    1b92:	80 e0       	ldi	r24, 0x00	; 0
+    1b94:	90 e0       	ldi	r25, 0x00	; 0
+    TimerOn();
+    1b96:	81 df       	rcall	.-254    	; 0x1a9a <TimerSet>
+    1b98:	d0 de       	rcall	.-608    	; 0x193a <TimerOn>
+    1b9a:	ff cf       	rjmp	.-2      	; 0x1b9a <main+0xd2>
+
+00001b9c <__divmodhi4>:
+    1b9c:	97 fb       	bst	r25, 7
+    1b9e:	07 2e       	mov	r0, r23
+    1ba0:	16 f4       	brtc	.+4      	; 0x1ba6 <__divmodhi4+0xa>
+    1ba2:	00 94       	com	r0
+    1ba4:	06 d0       	rcall	.+12     	; 0x1bb2 <__divmodhi4_neg1>
+    1ba6:	77 fd       	sbrc	r23, 7
+    1ba8:	08 d0       	rcall	.+16     	; 0x1bba <__divmodhi4_neg2>
+    1baa:	14 d0       	rcall	.+40     	; 0x1bd4 <__udivmodhi4>
+    1bac:	07 fc       	sbrc	r0, 7
+    1bae:	05 d0       	rcall	.+10     	; 0x1bba <__divmodhi4_neg2>
+    1bb0:	3e f4       	brtc	.+14     	; 0x1bc0 <__divmodhi4_exit>
+
+00001bb2 <__divmodhi4_neg1>:
+    1bb2:	90 95       	com	r25
+    1bb4:	81 95       	neg	r24
+    1bb6:	9f 4f       	sbci	r25, 0xFF	; 255
+    1bb8:	08 95       	ret
+
+00001bba <__divmodhi4_neg2>:
+    1bba:	70 95       	com	r23
+    1bbc:	61 95       	neg	r22
+    1bbe:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00001bc0 <__divmodhi4_exit>:
+    1bc0:	08 95       	ret
+
+00001bc2 <__tablejump2__>:
+    1bc2:	ee 0f       	add	r30, r30
+    1bc4:	ff 1f       	adc	r31, r31
+    1bc6:	00 24       	eor	r0, r0
+    1bc8:	00 1c       	adc	r0, r0
+    1bca:	0b be       	out	0x3b, r0	; 59
+    1bcc:	07 90       	elpm	r0, Z+
+    1bce:	f6 91       	elpm	r31, Z
+    1bd0:	e0 2d       	mov	r30, r0
+    1bd2:	09 94       	ijmp
+
+00001bd4 <__udivmodhi4>:
+    1bd4:	aa 1b       	sub	r26, r26
+    1bd6:	bb 1b       	sub	r27, r27
+    1bd8:	51 e1       	ldi	r21, 0x11	; 17
+    1bda:	07 c0       	rjmp	.+14     	; 0x1bea <__udivmodhi4_ep>
+
+00001bdc <__udivmodhi4_loop>:
+    1bdc:	aa 1f       	adc	r26, r26
+    1bde:	bb 1f       	adc	r27, r27
+    1be0:	a6 17       	cp	r26, r22
+    1be2:	b7 07       	cpc	r27, r23
+    1be4:	10 f0       	brcs	.+4      	; 0x1bea <__udivmodhi4_ep>
+    1be6:	a6 1b       	sub	r26, r22
+    1be8:	b7 0b       	sbc	r27, r23
+
+00001bea <__udivmodhi4_ep>:
+    1bea:	88 1f       	adc	r24, r24
+    1bec:	99 1f       	adc	r25, r25
+    1bee:	5a 95       	dec	r21
+    1bf0:	a9 f7       	brne	.-22     	; 0x1bdc <__udivmodhi4_loop>
+    1bf2:	80 95       	com	r24
+    1bf4:	90 95       	com	r25
+    1bf6:	bc 01       	movw	r22, r24
+    1bf8:	cd 01       	movw	r24, r26
+    1bfa:	08 95       	ret
+
+00001bfc <do_rand>:
+    1bfc:	8f 92       	push	r8
+    1bfe:	9f 92       	push	r9
+    1c00:	af 92       	push	r10
+    1c02:	bf 92       	push	r11
+    1c04:	cf 92       	push	r12
+    1c06:	df 92       	push	r13
+    1c08:	ef 92       	push	r14
+    1c0a:	ff 92       	push	r15
+    1c0c:	cf 93       	push	r28
+    1c0e:	df 93       	push	r29
+    1c10:	ec 01       	movw	r28, r24
+    1c12:	68 81       	ld	r22, Y
+    1c14:	79 81       	ldd	r23, Y+1	; 0x01
+    1c16:	8a 81       	ldd	r24, Y+2	; 0x02
+    1c18:	9b 81       	ldd	r25, Y+3	; 0x03
+    1c1a:	61 15       	cp	r22, r1
+    1c1c:	71 05       	cpc	r23, r1
+    1c1e:	81 05       	cpc	r24, r1
+    1c20:	91 05       	cpc	r25, r1
+    1c22:	21 f4       	brne	.+8      	; 0x1c2c <do_rand+0x30>
+    1c24:	64 e2       	ldi	r22, 0x24	; 36
+    1c26:	79 ed       	ldi	r23, 0xD9	; 217
+    1c28:	8b e5       	ldi	r24, 0x5B	; 91
+    1c2a:	97 e0       	ldi	r25, 0x07	; 7
+    1c2c:	2d e1       	ldi	r18, 0x1D	; 29
+    1c2e:	33 ef       	ldi	r19, 0xF3	; 243
+    1c30:	41 e0       	ldi	r20, 0x01	; 1
+    1c32:	50 e0       	ldi	r21, 0x00	; 0
+    1c34:	38 d0       	rcall	.+112    	; 0x1ca6 <__divmodsi4>
+    1c36:	49 01       	movw	r8, r18
+    1c38:	5a 01       	movw	r10, r20
+    1c3a:	9b 01       	movw	r18, r22
+    1c3c:	ac 01       	movw	r20, r24
+    1c3e:	a7 ea       	ldi	r26, 0xA7	; 167
+    1c40:	b1 e4       	ldi	r27, 0x41	; 65
+    1c42:	4d d0       	rcall	.+154    	; 0x1cde <__muluhisi3>
+    1c44:	6b 01       	movw	r12, r22
+    1c46:	7c 01       	movw	r14, r24
+    1c48:	ac ee       	ldi	r26, 0xEC	; 236
+    1c4a:	b4 ef       	ldi	r27, 0xF4	; 244
+    1c4c:	a5 01       	movw	r20, r10
+    1c4e:	94 01       	movw	r18, r8
+    1c50:	52 d0       	rcall	.+164    	; 0x1cf6 <__mulohisi3>
+    1c52:	dc 01       	movw	r26, r24
+    1c54:	cb 01       	movw	r24, r22
+    1c56:	8c 0d       	add	r24, r12
+    1c58:	9d 1d       	adc	r25, r13
+    1c5a:	ae 1d       	adc	r26, r14
+    1c5c:	bf 1d       	adc	r27, r15
+    1c5e:	b7 ff       	sbrs	r27, 7
+    1c60:	03 c0       	rjmp	.+6      	; 0x1c68 <do_rand+0x6c>
+    1c62:	01 97       	sbiw	r24, 0x01	; 1
+    1c64:	a1 09       	sbc	r26, r1
+    1c66:	b0 48       	sbci	r27, 0x80	; 128
+    1c68:	88 83       	st	Y, r24
+    1c6a:	99 83       	std	Y+1, r25	; 0x01
+    1c6c:	aa 83       	std	Y+2, r26	; 0x02
+    1c6e:	bb 83       	std	Y+3, r27	; 0x03
+    1c70:	9f 77       	andi	r25, 0x7F	; 127
+    1c72:	df 91       	pop	r29
+    1c74:	cf 91       	pop	r28
+    1c76:	ff 90       	pop	r15
+    1c78:	ef 90       	pop	r14
+    1c7a:	df 90       	pop	r13
+    1c7c:	cf 90       	pop	r12
+    1c7e:	bf 90       	pop	r11
+    1c80:	af 90       	pop	r10
+    1c82:	9f 90       	pop	r9
+    1c84:	8f 90       	pop	r8
+    1c86:	08 95       	ret
+
+00001c88 <rand_r>:
+    1c88:	b9 cf       	rjmp	.-142    	; 0x1bfc <do_rand>
+
+00001c8a <rand>:
+    1c8a:	80 e0       	ldi	r24, 0x00	; 0
+    1c8c:	91 e0       	ldi	r25, 0x01	; 1
+    1c8e:	b6 cf       	rjmp	.-148    	; 0x1bfc <do_rand>
+
+00001c90 <srand>:
+    1c90:	a0 e0       	ldi	r26, 0x00	; 0
+    1c92:	b0 e0       	ldi	r27, 0x00	; 0
+    1c94:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+    1c98:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_start+0x1>
+    1c9c:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__data_start+0x2>
+    1ca0:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__data_start+0x3>
+    1ca4:	08 95       	ret
+
+00001ca6 <__divmodsi4>:
+    1ca6:	05 2e       	mov	r0, r21
+    1ca8:	97 fb       	bst	r25, 7
+    1caa:	16 f4       	brtc	.+4      	; 0x1cb0 <__divmodsi4+0xa>
+    1cac:	00 94       	com	r0
+    1cae:	0f d0       	rcall	.+30     	; 0x1cce <__negsi2>
+    1cb0:	57 fd       	sbrc	r21, 7
+    1cb2:	05 d0       	rcall	.+10     	; 0x1cbe <__divmodsi4_neg2>
+    1cb4:	24 d0       	rcall	.+72     	; 0x1cfe <__udivmodsi4>
+    1cb6:	07 fc       	sbrc	r0, 7
+    1cb8:	02 d0       	rcall	.+4      	; 0x1cbe <__divmodsi4_neg2>
+    1cba:	46 f4       	brtc	.+16     	; 0x1ccc <__divmodsi4_exit>
+    1cbc:	08 c0       	rjmp	.+16     	; 0x1cce <__negsi2>
+
+00001cbe <__divmodsi4_neg2>:
+    1cbe:	50 95       	com	r21
+    1cc0:	40 95       	com	r20
+    1cc2:	30 95       	com	r19
+    1cc4:	21 95       	neg	r18
+    1cc6:	3f 4f       	sbci	r19, 0xFF	; 255
+    1cc8:	4f 4f       	sbci	r20, 0xFF	; 255
+    1cca:	5f 4f       	sbci	r21, 0xFF	; 255
+
+00001ccc <__divmodsi4_exit>:
+    1ccc:	08 95       	ret
+
+00001cce <__negsi2>:
+    1cce:	90 95       	com	r25
+    1cd0:	80 95       	com	r24
+    1cd2:	70 95       	com	r23
+    1cd4:	61 95       	neg	r22
+    1cd6:	7f 4f       	sbci	r23, 0xFF	; 255
+    1cd8:	8f 4f       	sbci	r24, 0xFF	; 255
+    1cda:	9f 4f       	sbci	r25, 0xFF	; 255
+    1cdc:	08 95       	ret
+
+00001cde <__muluhisi3>:
+    1cde:	31 d0       	rcall	.+98     	; 0x1d42 <__umulhisi3>
+    1ce0:	a5 9f       	mul	r26, r21
+    1ce2:	90 0d       	add	r25, r0
+    1ce4:	b4 9f       	mul	r27, r20
+    1ce6:	90 0d       	add	r25, r0
+    1ce8:	a4 9f       	mul	r26, r20
+    1cea:	80 0d       	add	r24, r0
+    1cec:	91 1d       	adc	r25, r1
+    1cee:	11 24       	eor	r1, r1
+    1cf0:	08 95       	ret
+
+00001cf2 <__mulshisi3>:
+    1cf2:	b7 ff       	sbrs	r27, 7
+    1cf4:	f4 cf       	rjmp	.-24     	; 0x1cde <__muluhisi3>
+
+00001cf6 <__mulohisi3>:
+    1cf6:	f3 df       	rcall	.-26     	; 0x1cde <__muluhisi3>
+    1cf8:	82 1b       	sub	r24, r18
+    1cfa:	93 0b       	sbc	r25, r19
+    1cfc:	08 95       	ret
+
+00001cfe <__udivmodsi4>:
+    1cfe:	a1 e2       	ldi	r26, 0x21	; 33
+    1d00:	1a 2e       	mov	r1, r26
+    1d02:	aa 1b       	sub	r26, r26
+    1d04:	bb 1b       	sub	r27, r27
+    1d06:	fd 01       	movw	r30, r26
+    1d08:	0d c0       	rjmp	.+26     	; 0x1d24 <__udivmodsi4_ep>
+
+00001d0a <__udivmodsi4_loop>:
+    1d0a:	aa 1f       	adc	r26, r26
+    1d0c:	bb 1f       	adc	r27, r27
+    1d0e:	ee 1f       	adc	r30, r30
+    1d10:	ff 1f       	adc	r31, r31
+    1d12:	a2 17       	cp	r26, r18
+    1d14:	b3 07       	cpc	r27, r19
+    1d16:	e4 07       	cpc	r30, r20
+    1d18:	f5 07       	cpc	r31, r21
+    1d1a:	20 f0       	brcs	.+8      	; 0x1d24 <__udivmodsi4_ep>
+    1d1c:	a2 1b       	sub	r26, r18
+    1d1e:	b3 0b       	sbc	r27, r19
+    1d20:	e4 0b       	sbc	r30, r20
+    1d22:	f5 0b       	sbc	r31, r21
+
+00001d24 <__udivmodsi4_ep>:
+    1d24:	66 1f       	adc	r22, r22
+    1d26:	77 1f       	adc	r23, r23
+    1d28:	88 1f       	adc	r24, r24
+    1d2a:	99 1f       	adc	r25, r25
+    1d2c:	1a 94       	dec	r1
+    1d2e:	69 f7       	brne	.-38     	; 0x1d0a <__udivmodsi4_loop>
+    1d30:	60 95       	com	r22
+    1d32:	70 95       	com	r23
+    1d34:	80 95       	com	r24
+    1d36:	90 95       	com	r25
+    1d38:	9b 01       	movw	r18, r22
+    1d3a:	ac 01       	movw	r20, r24
+    1d3c:	bd 01       	movw	r22, r26
+    1d3e:	cf 01       	movw	r24, r30
+    1d40:	08 95       	ret
+
+00001d42 <__umulhisi3>:
+    1d42:	a2 9f       	mul	r26, r18
+    1d44:	b0 01       	movw	r22, r0
+    1d46:	b3 9f       	mul	r27, r19
+    1d48:	c0 01       	movw	r24, r0
+    1d4a:	a3 9f       	mul	r26, r19
+    1d4c:	70 0d       	add	r23, r0
+    1d4e:	81 1d       	adc	r24, r1
+    1d50:	11 24       	eor	r1, r1
+    1d52:	91 1d       	adc	r25, r1
+    1d54:	b2 9f       	mul	r27, r18
+    1d56:	70 0d       	add	r23, r0
+    1d58:	81 1d       	adc	r24, r1
+    1d5a:	11 24       	eor	r1, r1
+    1d5c:	91 1d       	adc	r25, r1
+    1d5e:	08 95       	ret
+
+00001d60 <_exit>:
+    1d60:	f8 94       	cli
+
+00001d62 <__stop_program>:
+    1d62:	ff cf       	rjmp	.-2      	; 0x1d62 <__stop_program>
